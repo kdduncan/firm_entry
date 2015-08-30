@@ -1,0 +1,52 @@
+\documentclass[12pt,a4paper]{article}
+
+\renewcommand{\baselinestretch}{2} 
+\usepackage[margin=1.0in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{relsize}
+\usepackage{amsthm}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{assumption}[theorem]{Assumption}
+
+
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\begin{document}
+
+
+\title{Do Taxes Impact Firm Location on the Margin? A Matched County-Pair Study}
+\author{Kevin D. Duncan}
+\date{}
+\maketitle
+
+\begin{abstract}
+This paper uses a regression discontinuity approach to test the impacts of taxes on firm entry rates between neighboring states. We utilize matched county pairs as an approximate bandwidth around the sharp discontinuity in state policies imposed at their border. This allows us to control for unobserved or unaccounted for location specific drivers of firm entry. We test an array of seven top marginal tax rates, right to work status, and minimum wage rates as drivers of differences in firm entry between counties. Our results indicate that property and sales taxes have the largest distortionary effect on firm start up rates, and in more recent years income taxes as well.
+\end{abstract}
+
+\input{introduction}
+\input{theory}
+\input{empiricaldesign}
+\input{data}
+\input{analysis}
+\input{conclusion}
+
+\end{document}

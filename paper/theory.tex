@@ -1,0 +1,58 @@
+\section{Theory}
+
+Here we develop theory that provides justification for utilizing a regression discontinuity approach to estimate policy driven determinants of firm entry. We show that under some strong assumptions we get location specific determinants of firm entry to cancel out as we take differences close to regime borders. The results show that firms pick sides with the highest expected profit from state specific policies as we get approximately close to state discontinuities.
+
+Assume there exists a spatial equilibrium where wages and capital costs are adjusted to local tax and location specific variables affecting firm level productivity. If markets are competitive firms will make zero economic profit in the long run, but in the short run demand or policy shocks can leave short run profits. We expect that if a regime changes its taxes over time, higher production costs and lower profits exist in that county, and that market will deter a relative amount of firms from entering. Since firms will bid up or down prices relative to taxes, those prices can be proxied by the tax rates directly. Firms make decisions based on information from the previous year, as governments might concurrently change policy along with market entry. Similarly, there might be time costs to set up a physical store in a chosen location.
+
+\begin{assumption}
+Assume that a firms' profit can be expressed as a linear function,
+\begin{equation}
+\pi_{i,j,t} =  \gamma+\beta_{i}+\beta_{j}+X_{i,j,t-1}\beta+\epsilon_{i,j,t}
+\end{equation}
+\begin{equation}
+\epsilon_{ijt} \sim N(0,\sigma)
+\end{equation}
+Where $i$ indexes location, $j$ a particular policy regime, and $t$ time. $X_{ijt}$ is a $1 \times K$ row vector.
+\end{assumption}
+
+Broadly, we let location specific variables be any variable that is specific to a location, such as local agglomeration figures, education attainment, and other variables driven by the distribution of labor and productive factors in each regime. Variables at the regime level tend to include variables like taxes, regulatory policies, and government expenditures. Both sets of variables are allowed to evolve over time.
+
+Now let us focus on two states be normalized on $[-1,1]$, such that for $i \in [-1,0)$ a firm is in state $A$, and for $i \in [0,1]$, they are in state $B$. Therefore, if a firm has two choices, $y \in [-1,0)$ and $\hat y \in [0,1]$, then the firm chooses $y$ over $\hat y$ if
+\begin{equation}\label{diff}
+E[\pi_{y,A,t}-\pi_{\hat y,B,t}|X_{y,A,t-1},X_{\hat y,B,t-1}] = \beta_{A}-\beta_{B}+(X_{y,A,t-1}-X_{\hat y,B,t-1})\beta > 0
+\end{equation}
+
+\begin{assumption}\label{partition}
+We can partition $X_{i,j,t-1} = [X_{i,t-1} \quad X_{j,t-1}]$, where $X_{i,t-1}$ is $1 \times K_{1}$ and $X_{j,t-1}$ is $1 \times K_{2}$. Equivalently, $\beta = [\beta_{1} \quad \beta_{2}]'$, with $\beta_{1}$ being $1 \times K_{1}$ and $\beta_{2}$ being $1 \times K_{2}$.
+\end{assumption}
+
+We let $X_{i,t-1}$ have all terms containing location specific coefficients, but this can include interaction terms with our regime specific variables $X_{j,t-1}$. Therefore this assumption simply states that our policy variables have to enter directly into the profit function. As a result, we can write the profit function.
+
+\begin{equation}\label{profit2}
+\pi_{i,j,t} =  \gamma+\beta_{i}+\beta_{j}+X_{i,t-1}\beta_{1}+X_{j,t-1}\beta_{2}+\epsilon_{i,j,t}
+\end{equation}
+
+Now we make the final set of assumptions:
+\begin{assumption}\label{cont}
+$\beta_{i}$ and $X_{i,t-1}$ are continuous locally around $0$, such that for $|y - \hat y| < \psi, \quad \exists \delta$ such that $|\beta_{y}-\beta_{\hat y}| < \delta$ and $||X_{y,t-1,k}-X_{\hat y,t-1,k})||_{2} < \delta$
+\end{assumption}
+
+\begin{theorem}\label{thrm}
+$\lim_{y \to 0^{-}} \Pi_{y,A,t}-\lim_{\hat y \to 0^{+}}\pi_{\hat y,B,t-1} \to \beta_{A}-\beta_{B}+(X_{A,t-1}-X_{B,t-1})\beta_{2}$
+\end{theorem}
+
+\begin{proof}
+We know that we can rewrite each profit function as
+$$\pi_{i,j,t} =  \beta+\beta_{i}+\beta_{j}+X_{i,t-1}\beta_{1}+X_{j,t-1}\beta_{2}+\epsilon_{i,j,t}$$
+Then, taking the difference we get
+\begin{align} \pi_{y,A,t}-\pi_{\hat y,B,t} = \beta_{y}-\beta_{\hat y}+\beta_{A}-\beta_{B}+(X_{y,t-1}-X_{\hat y,t-1})\beta_{1} \\+(X_{A,t-1}-X_{B,t-1})\beta_{2}+\epsilon_{y,A,t}-\epsilon_{\hat y,B,t}
+\end{align}
+Next we take the limit, and apply expectations. Using Assumption (\ref{cont}), we get
+$$E[\lim_{y \to 0^{-}}\pi_{y,A,t}-\lim_{\hat y \to 0^{+}}\pi_{\hat y,B,t}] = \delta(1+\beta_{1})+\beta_{A}-\beta_{B}+(X_{A,t-1}-X_{B,t-1})\beta_{2}$$
+Then, as $|y-\hat y| \to 0$, $\delta \to 0$. Therefore,
+\begin{equation}
+E[\pi_{y,A,t}-\pi_{\hat y,B,t}|X_{y,A,t-1},X_{\hat y,B,t-1}] =  \beta_{A}-\beta_{B}+(X_{A,t-1}-X_{B,t-1})\beta_{2}
+\end{equation}
+\end{proof}
+
+The theorem states that as we get arbitrarily close to the border we see that which state a firm moves into is a function of state specific variables. As we move away from the border location characteristics might mitigate the policy effect, equivalently to Brulhart et al, especially where we expect policy effects to be small. This theory favors the use of regression discontinuity techniques for estimating policy treatment effects, especially when location specific drivers of firm entry might be unknown or unobserved.

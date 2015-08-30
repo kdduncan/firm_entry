@@ -1,0 +1,115 @@
+\section{Empirical Design}
+
+Our parameters of interest are the coefficients on our top marginal tax rates. We provide two approaches to identify these parameters. We first estimate traditional count data models using Poisson and Negative Binomial Maximum Likelihood Estimation. We then explain an alternative approach to identification using a regression discontinuity approach at state border.
+
+The count data model works by showing that under a spatial equilibrium firm entry behaves like a Conditional Logit Model of entry, where there is a probability of a firm entering into particular locations. Other research has shown that by assuming structure on the profit function, we can show that estimating the conditional Logit model provides the same coefficients as estimating a Poisson regression. Our regression discontinuity approach follows directly from our theoretical section. This method takes the difference in variables from counties on either side of a state border. The border provides a sharp discontinuity in policies firms face, thus we treat counties as a closest bandwidth around the discontinuity.
+
+Consistent with most panel data work, major obstacles include several levels of unobserved heterogeneity, and our reduced form estimates might have issues in proper accounting for the incentives to locate in a particular location. Our preferred estimator might solve some of these problems.
+
+\subsection{Count Data Models}
+
+Traditional firm location choice literature is motivated by firms entering across all possible locations in the market using the profit function described in (\ref{profit2}). Our set up follows from McFadden (1974) and Wooldridge (2010, pp 619). This is done in the following fashion. First, we assume a profit function equivalent to equation \ref{profit2}, where we assume $\epsilon_{ijt}$ takes on an extreme-type-value-I distribution Weibuill distributed. Let us have $f = 1,...,F$ number of firms trying to enter in a given time period. Each state in the US is denoted as a regime, $j$, and each county is a location $i$.  Let us index them $ij = 1,...,N$. Then the probability of a firm $f$ locating at point $ij$ in period $t$ is;
+\begin{equation}\label{condlogit}
+p_{f,ij,t} = \frac{\exp(X_{i,j,t-1}\beta)}{\sum_{ij}\exp(i,j,t-1)}
+\end{equation}
+Now let $d_{f,ij,t} = 1$ if a firm $f$ enters at point $ij$ in period $t$, and $d_{f,ij,t} = 0$ otherwise. Further, let us assume that there is no time dependence element, such that we can run this as $TN$ independent events. Then the log likelihood becomes
+\begin{equation}\label{loglike}
+\log L_{cl} = \sum_{ij=1}^{TN}\sum_{ij}d_{f,ij,t}\log p_{f,ij,t}
+\end{equation}
+Here we are assuming a strong assumption that the vector of parameters $X_{i,j,t-1}$ is the same for all types of firms. Guimaraes, Figueiredo, and Woodward (2003) show that in the case where the profit function depends on the same characteristics across all firms, that (\ref{loglike}) becomes a Poisson distribution consistent up to a constant as long as we believe that firm entry is directly a Poisson distribution as well. This happens as equation (\ref{loglike}) becomes,
+\begin{equation}
+\log L_{d} = \sum_{ij}n_{j}\log p_{ij}
+\end{equation}
+With $n_{ij}$ being the number of firms that open up in location $ij$, let us assume;
+\begin{equation}\label{pois}
+E[n_{ij}] = \exp(X_{i,j,t-1}\beta)
+\end{equation}
+They show that the log likelihood of the Poisson distribution becomes proportional up to a constant of the conditional Logit. 
+Thus estimating a count data Poisson model is equivalent to estimating a full conditional log likelihood. This nice feature allows a fast and easy approach to identify the impacts of our tax variables.  Taking the exponent of (\ref{pois}) gives us the Kernel to a Poisson distribution, with $E[n_{ijt}] = X_{i,j,t-1}\beta$. As a result, the Poisson likelihood takes on the form,
+\begin{equation}
+L(\theta|X,N) = \mathlarger \Pi_{i=1}^{m}\frac{e^{n_{i}\beta'n_{i}}e^{e^{-\beta'x_{i}}}}{n_{i}!}
+\end{equation}
+
+We proceed by estimating a Poisson distribution in Table \ref{table:pois}.\footnote{Currently our estimates utilize just our matched county pair data so limits the firms' decision to just counties on the border of a state. However we plan to extend this estimation procedure over all counties. Due to time considerations leading to the existing draft of the paper this has not yet been done, but will be accomplished shortly.} We find that the the model is over dispersed by using Cameron \& Trivedi (1990) regression based test for over dispersion. As a result, we run Negative Binomial regressions using the same expected value. This gives us space to relax the assumption that $E[n_{ij}] = Var[n_{ij}]$, and allow our errors to take on a more general shape.
+
+\subsection{Regression Discontinuity Approach}
+
+There are several issues with this approach. First, firm entry may be heavily dependent on terms such as population. Similarly, individuals may place preference in areas that have been experiencing large job growth. Finding instruments for these interactions can be difficult. Further, there may be other unobserved heterogeneity at the location level that is unobserved by the researcher. Regression discontinuity techniques are a way to possibly control for these variables.
+
+By our theory we know that location specific terms, an terms shared across observations get canceled out as we take the difference while approaching the borer. Our data does not allow us to get a closer estimation to the true discontinuity than those provided by the borders of the county. The average county in our data set is 1260 square miles, or about 35 miles per side of believed to be approximately square. This distance is slightly longer than more refined approaches such as Rohlin (2011). In practice we match up counties on either side of a state border, let us denote them subject ($sub$) and neighbor ($nbr$), and their states $stA$ and $stB$. Then, taking differences, we get by applying Theorem \ref{thrm}
+
+\begin{equation}
+\ln(n_{sub,stA,t})-\ln(n_{nbr,stB,t}) = \beta_{stA}-\beta_{stB}+(X_{stA,t-1}-X_{stB,t-1})\beta_{2} + \epsilon_{sub,stA,t}-\epsilon_{nbr,stB,t}
+\end{equation}
+
+First, let us index each state-pairs $(stA,stB)$ by $g$. Next let us assume that $\beta_{stA}-\beta_{stB} = \beta_{0}$ for all $sub, nbr$ pairs. Since we assign $sub$ and $nbr$ arbitrarily, this implies that $\beta_{stA} = \beta_{stB}$.  Then we make the following definitions.
+\begin{equation}
+\ddot \ln(n_{i,g,t}) = \ln(n_{sub,stA,t})-\ln(n_{nbr,stB,t})
+\end{equation}
+
+\begin{equation}
+\ddot X_{g,t-1} = \beta_{0}+(X_{stA,t-1}-X_{stB,t-1})
+\end{equation}
+
+\begin{equation}
+\ddot \epsilon_{i,g,t} = \epsilon_{sub,stA,t}-\epsilon_{nbr,stB,t}
+\end{equation}
+
+Assume $\ddot \epsilon_{i,g,t}$ be an i.i.d white noise draw, then let $\ddot X_{g} = (\ddot X_{g,0}',...,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{j})$ matrix, and $\ddot \epsilon_{ig} = (\ddot \epsilon_{i,g,1},...,\ddot \epsilon_{i,g,T})'$ be a $T \times 1$ vector. Next we assume the traditional OLS moment conditions.
+
+\begin{assumption}\label{noend}
+Let  $\ddot X_{g} = (\ddot X_{g,0}', ... ,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{j})$, and $\ddot \epsilon_{i,g} = (\ddot\epsilon_{i,j,1},...,\ddot\epsilon_{i,j,T})'$ a $T \times 1$ vector. Then 
+\begin{equation}E[\ddot X'\ddot \epsilon] = 0, \quad \forall i,g\end{equation}
+\end{assumption}
+
+\begin{assumption}\label{fullrank}
+ \begin{equation}E[\ddot X_{g}'\ddot X_{g}] = 1+K_{j}: \quad \forall g\end{equation}
+\end{assumption}
+
+We can estimate a pooled OLS estimator using Assumption's \ref{noend} and \ref{fullrank}. This gives us the POLS estimator;
+\begin{equation}\label{pols}
+\hat \beta_{2} = \left(\frac{1}{N^{*}} \sum_{k=1}^{T}\sum_{i=1}^{G}\sum_{j=1}^{N_{G}}\ddot X_{g,t-1}'\ddot X_{g,t-1}\right)^{-1}\left(\frac{1}{N^{*}}\sum_{k=1}^{T}\sum_{i=1}^{G}\sum_{j=1}^{N_{G}}\ddot X_{g,t-1}'\ddot \ln(n_{igt})\right)
+\end{equation}
+\begin{equation}
+N^{*} = T(\sum_{g}^{G}N_{g})
+\end{equation}
+
+Donald and Lang (2007) show that increasing individual observations for each group doesn't provide better inference. They use a two stage estimator where they first calculate the mean for each side to show asymotitics with respect to the number of groups.Our estimator is a mean weighted version of their two stage estimator. We can rewrite \ref{pols} as:
+\begin{equation}\label{pols_2s}
+\hat \beta_{2} = \left(\frac{1}{TG} \sum_{t=1}^{T}\sum_{g=1}^{G}\frac{\sum_{i=1}^{N_{g}}\ddot X_{g,t-1}'\ddot X_{g,t-1}}{E[N_{g}]}\right)^{-1}\left(\frac{1}{TG}\sum_{t=1}^{T}\sum_{g=1}^{G}X_{g,t-1}'\frac{\sum_{i=1}^{N_{G}}\ddot \ln(n_{igt})}{E[N_{g}]}\right)
+\end{equation}
+
+\begin{equation}
+E[N_{g}] = \frac{\sum_{g=1}^{G}N_{g}}{G}
+\end{equation}
+Compared to Donald and Lang's two stage estimator we underweight observations we observe only a few times compared to their true mean, and overweight observations we see many times compared to their true mean. Increasing $N_{g}$ for some $g$ doesn't improve our estimator, and only increase $E[N_{g}]$. Trying to keep $E[N_{g}]$ static requires making our asymptotics with respect to the number of group-pairings we have, $G$.
+
+When doing inference there may be shocks to the state-pair border, for example the Mississippi river flooding along a border pair, but not shared with all other pairs in the sample. Therefore we use clustered errors on the state pair. Let $\ddot X$ be the $(\sum_{g}^{G}N_{G} \times T) \times (1+K_{j}) $ regressor matrix. Thus our variance co-variance matrix takes on the form
+\begin{equation}\label{var}
+\hat V =\frac{1}{G-2}\frac{\sum_{g=1}^{G}N_{g}-1}{\sum_{g=1}^{G}N_{g}-2}(\ddot X'\ddot X)^{-1}(\sum_{t}^{T}\sum_{g}^{G}u_{s}u_{s}')(\ddot X'\ddot X)^{-1}
+\end{equation}
+\begin{equation}\label{error}
+u_{s} = \sum_{i}\hat \ddot \epsilon_{i,j,t-1}\ddot X_{g,t-1}
+\end{equation}
+We assume this lag structure to indicate that firms respond to variables from the previous time period, and as they are starting up government's may choose to alter policies for the current year. In practice though most of our variables are heavily inter-temporally correlated, so no major difference occurs in sign, significance, or fit appears from using different lag structures.
+
+\subsection{Sensitivity Tests}
+
+We subject our estimator to a series of robustness checks. For all of our regressions, we test models with and without amenities. We want to check whether or not our tax and regulatory variables become statistically insignificant once we account for these additions, and in our second model check whether or not they properly become indistinguishable from zero. Next, we test a version of this model where we do not impose the coefficients are the same across borders.
+\begin{equation}\label{sense1}
+\ddot \ln(n_{g,t}) = X_{stA,t-1}\beta_{sub}+X_{stB,t-1}\beta_{nbr}+ e_{igt} 
+\end{equation}
+
+Instead we let coefficients take on their own value in the difference, and do a set of F-tests on whether or not our assumption that $\beta_{i,A} = -\beta_{i,B}$ holds in the difference as assumed. The results of this regression are reported in Table \ref{table:equal}. Corresponding F tests are presented in Table \ref{table:Ftests}. Next we run our regression discontinuity estimator while forcing the coefficients to be the same. We present results for this model in \ref{table:canon}.
+
+In Table \ref{table:stable} we test a set of regressions where we estimate period-specific coefficients and compare them to our pooled estimator to try and estimate of whether or not it is safe to assume that profit parameters are roughly stable over time. 
+\begin{equation}\label{sense2}
+\ddot \ln(n_{g,t})  = X_{stA,t-1}\beta_{stA}+X_{stB,t-1}\beta_{stB}+ e_{i,g,t}: \quad t = 1999,...,2008
+\end{equation}
+Which leads to the POLS coefficient;
+\begin{equation}
+\hat \beta_{2} = \left(\frac{1}{G}\sum_{i=1}^{G}\frac{\ddot X_{g,t-1}'\ddot X_{g,t-1}}{E[N_{g}]}\right)^{-1}\left(\frac{1}{G}\sum_{i=1}^{G}\ddot X_{g,t-1}'\frac{\sum_{j=1}^{N_{G}}\ddot \ln(n_{igt})}{E[N_{g}]})\right)
+\end{equation}
+Next we test a version of our model that includes a dummy variable for each state-pair in our sample. By construction of our estimator, we are claiming that any county level fixed effects take the form of location specific terms, which have to cancel out when we take the difference but state specific fixed effects may remain. We favor using dummy variables over Fixed Effect or First Difference transformations because our policy variables are incredibly stable over time. States very rarely change tax policies, and correlations with current tax rates with each of five periods of lags shows that taxes even at their weakest are still more than 85\% correlated with each other. Equivalently, right to work status changes once in our sample, and minimum wages rarely alter at the state level as well. Therefore these transformations do not provide enough variation to get valid inference.
+
+Finally, we do not test for general endogeneity where states change taxes in response to the difference in firm entry rates. This is because the aforementioned stability of all of our policy parameters, it seems unlikely that they are responding to comparatively more volatile firm start up rates. Further, there is no reason to assume counties favor one set of borders over any other, unless counties find themselves systemically at a loss compared to neighbors, a corner solution we do not check for.
