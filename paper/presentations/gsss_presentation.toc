@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Introduction \& Motivation}{3}{0}{1}
+\beamer@sectionintoc {2}{Literature Review}{5}{0}{2}
+\beamer@sectionintoc {3}{Theory}{6}{0}{3}
+\beamer@sectionintoc {4}{Empirical Design \& Results}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{Count Data Models}{11}{0}{4}
+\beamer@subsectionintoc {4}{2}{Regression Discontinuity Design}{14}{0}{4}
+\beamer@subsectionintoc {4}{3}{Sensitivity Tests}{18}{0}{4}
+\beamer@sectionintoc {5}{Analysis}{25}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{27}{0}{6}
