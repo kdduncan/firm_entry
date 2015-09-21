@@ -171,7 +171,6 @@ for (m in 1:length(naics)){
   # merge together with the increased_band pairs
   band_master <- merge(increased_band, master_sub, by.x = c("year","cofip_sub"), by.y = c("year","FIPS.Code"))
   band_master <- merge(band_master, master_nbr, by.x = c("year","cofip_nbr_nbr"), by.y = c("year","FIPS.Code"))
-
   
   write.csv(master, file = paste("~/papers/firm_entry/build/output/",naics[m],"master.csv", sep = "_")) 
   write.csv(border_master, file = paste("~/papers/firm_entry/build/output/",naics[m],"border_master.csv", sep = "_"))

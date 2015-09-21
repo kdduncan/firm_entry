@@ -76,6 +76,8 @@ for (m in 1:length(naics)){
  # eclude data we only see once
  master <- master[table(master$stpr_id) != 11,]
  
+ 
+ 
  # count data, not imposing equality, amenities
  pols1_amen_count <- lm(master$births_diff ~  master$ptax_sub + master$ptax_nbr + master$inctax_sub +  master$inctax_nbr
                         + master$capgntax_sub + master$capgntax_nbr + master$salestax_sub + master$salestax_nbr +
@@ -229,7 +231,7 @@ for (m in 1:length(naics)){
  simple.pop.1s<- lm(pop_diff ~ WATER.AR.Z_diff, data = master)
  # very significant, but R^2 only about 0.04, so probably a weak instrument?
 
- master$pop.pred<- predict(simple.pop.1s, data = master)
+ master$pop.pred<- predict(simple.pop.1s, newdata = master)
  simple.pop.2s<- lm(master$births_ratio ~ master$ptax_diff + master$inctax_diff + master$capgntax_diff
                    + master$salestax_diff  + master$corptax_diff  + master$wctax_diff  + master$uitax_diff
                    + master$educ_pc_L1_diff + master$hwy_pc_L1_diff + master$welfare_pc_L1_diff
@@ -270,7 +272,97 @@ for (m in 1:length(naics)){
                  column.labels = c("OLS","OLS","FE", "FE","IV"),
                  no.space = TRUE, title = paste("Pseudo-Regression Models for ", naics_names[m], "Firm Births", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "rd_results.tex", sep = "_"))
  
- rm(master)
+#### morph dataset into donald and lang (2007) estimator
+# set up mean border areas to use
+mean_births_sub <- c()
+mean_births_nbr <- c()
+dep_var <- c();
+# array to use target should be 107*11 = 1177
+k = 1
+for (i in 1:length(unique(master$stpr_id))){
+  for (j in 1:length(unique(master$year))){
+    # first pull out just state-pair information
+    tmp <- master[master$stpr_id == unique(master$stpr_id)[i] & master$year == unique(master$year)[j],]
+    # restrict each side to only have unique county observations on each side
+    tmp_sub <- tmp[!duplicated(tmp$cofip_sub),]
+    tmp_nbr <- tmp[!duplicated(tmp$cofip_nbr),]
+    rm(tmp)
+    
+    # calculate means
+    dep_var <- rbind(dep_var,tmp_sub[1,87:109])
+    mean_births_sub[k] <- sum(tmp_sub$births_sub)/length(tmp_sub[,1]) 
+    mean_births_nbr[k] <- sum(tmp_nbr$births_nbr)/length(tmp_nbr[,1])
+    k <- k +1
+  }
+}
+dl_master <- as.data.frame(dep_var)
+dl_master$mean_births_sub <- mean_births_sub
+dl_master$mean_births_nbr <- mean_births_nbr
+dl_master$births_ratio <- log(mean_births_sub) - log(mean_births_nbr)
+
+pols_amen_r <- lm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+                  + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+                  + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+                  + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+                  + dl_master$popdensity_diff + dl_master$pctmanuf_dif + dl_master$JAN.TEMP.Z_diff
+                  + dl_master$JAN.SUN.Z_diff + dl_master$JUL.TEMP.Z_diff + dl_master$JUL.HUM.Z_diff
+                  + dl_master$TOPOG.Z_diff + dl_master$WATER.AR.Z_diff)
+stprid_c_vcov <- cluster.vcov(pols_amen_r, dl_master$stpr_id)
+dl_amen_r_coef <- coeftest(pols_amen_r, vcov = stprid_c_vcov)
+
+pols_namen_r <- lm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+                   + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+                   + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+                   + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+                   + dl_master$popdensity_diff + dl_master$pctmanuf_dif)
+stprid_c_vcov <- cluster.vcov(pols_namen_r,  dl_master$stpr_id)
+dl_namen_r_coef <- coeftest(pols_namen_r, vcov = stprid_c_vcov)
+
+# iv estimation
+simple.pop.1s<- lm(pop_diff ~ WATER.AR.Z_diff, data = dl_master)
+# very significant, but R^2 only about 0.04, so probably a weak instrument?
+
+dl_master$pop.pred<- predict(simple.pop.1s, newdata = dl_master)
+dl.pop.2s<- lm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+                   + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+                   + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+                   + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+                   + dl_master$popdensity_diff + dl_master$pctmanuf_dif + dl_master$pop.pred)
+stprid_c_vcov <- cluster.vcov(dl.pop.2s,  dl_master$stpr_id)
+dl.pop.2s_coef <- coeftest(dl.pop.2s, vcov = stprid_c_vcov)
+
+# fixed effect model
+dl_master$stpr_fe <- factor(dl_master$stpr_id)
+
+dl_master <- dl_master[is.finite(dl_master$births_ratio),]
+
+dl_amen_fe  <- felm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+                      + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+                      + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+                      + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+                      + dl_master$popdensity_diff + dl_master$pctmanuf_dif  + dl_master$JAN.TEMP.Z_diff
+                      + dl_master$JAN.SUN.Z_diff + dl_master$JUL.TEMP.Z_diff + dl_master$JUL.HUM.Z_diff
+                      + dl_master$TOPOG.Z_diff + dl_master$WATER.AR.Z_diff  | dl_master$stpr_fe | 0 | dl_master$stpr_id)
+
+dl_fe <- felm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+                + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+                + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+                + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+                + dl_master$popdensity_diff + dl_master$pctmanuf_dif | dl_master$stpr_fe | 0 | dl_master$stpr_id)
+
+write(stargazer(dl_amen_r_coef, dl_namen_r_coef, dl_amen_fe, dl_fe, dl.pop.2s_coef, 
+                dep.var.labels = c("births ratio"),
+                covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
+                                     "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
+                                     "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
+                                     "Welfare Spending Per Cap Diff", "Pct Highschool Diff", "Real Fuel Price Diff",
+                                     "Pct Union Diff", "Pop Density Diff", "Pct Manufacturing Diff", "Population Diff"),
+                omit = c("Z"), omit.labels = c("amenities"), omit.table.layout = "sn",
+                column.labels = c("OLS","OLS","FE", "FE","IV"),
+                no.space = TRUE, title = paste("Pseudo-Regression Models for ", naics_names[m], "Firm Births using Donald and Lang (2007)", sep = " ")), 
+      paste("~/papers/firm_entry/analysis/output/", naics[m], "dl_rd_results.tex", sep = "_"))
+
+##### EXTEND THE BANDWIDTH
 
   # now we repeat for the expanded rd-design
   master <- read.csv(paste("~/papers/firm_entry/build/output/",naics[m],"band_master.csv", sep = "_"))
@@ -330,6 +422,7 @@ for (m in 1:length(naics)){
   master$pop_diff <- log(master$pop_sub)- log(master$pop_nbr)
   
   master$stpr_id <- paste(master$statefips.x,master$statefips.y, by = "")
+
   # eclude data we only see once
   master <- master[table(master$stpr_id) != 11,]
 
@@ -396,6 +489,80 @@ for (m in 1:length(naics)){
                   omit = c("Z"), omit.labels = c("amenities"), omit.table.layout = "sn",
                   column.labels = c("OLS","OLS","FE", "FE","IV"),
                   no.space = TRUE, title = paste("Extended Bandwidth Models for ", naics_names[m], "Firm Births", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "extended_rd_results.tex", sep = "_"))
-  
+
+#### morph dataset into donald and lang (2007) estimator
+# set up mean border areas to use
+mean_births_sub <- c()
+mean_births_nbr <- c()
+dep_var <- c();
+# array to use target should be 107*11 = 1177
+k = 1
+for (i in 1:length(unique(master$stpr_id))){
+  for (j in 1:length(unique(master$year))){
+    # first pull out just state-pair information
+    tmp <- master[master$stpr_id == unique(master$stpr_id)[i] & master$year == unique(master$year)[j],]
+    # restrict each side to only have unique county observations on each side
+    tmp_sub <- tmp[!duplicated(tmp$cofip_sub),]
+    tmp_nbr <- tmp[!duplicated(tmp$cofip_nbr),]
+    rm(tmp)
+    
+    # calculate means
+    dep_var <- rbind(dep_var,tmp_sub[1,88:112])
+    mean_births_sub[k] <- sum(tmp_sub$births_sub)/length(tmp_sub[,1]) 
+    mean_births_nbr[k] <- sum(tmp_nbr$births_nbr)/length(tmp_nbr[,1])
+    k <- k +1
+  }
+}
+dl_master <- as.data.frame(dep_var)
+dl_master$mean_births_sub <- mean_births_sub
+dl_master$mean_births_nbr <- mean_births_nbr
+dl_master$births_ratio <- log(mean_births_sub) - log(mean_births_nbr)
+
+pols_amen_r <- lm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+                  + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+                  + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+                  + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+                  + dl_master$popdensity_diff + dl_master$pctmanuf_dif + dl_master$JAN.TEMP.Z_diff
+                  + dl_master$JAN.SUN.Z_diff + dl_master$JUL.TEMP.Z_diff + dl_master$JUL.HUM.Z_diff
+                  + dl_master$TOPOG.Z_diff + dl_master$WATER.AR.Z_diff)
+stprid_c_vcov <- cluster.vcov(pols_amen_r, dl_master$stpr_id)
+dl_amen_r_coef <- coeftest(pols_amen_r, vcov = stprid_c_vcov)
+
+pols_namen_r <- lm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+                   + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+                   + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+                   + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+                   + dl_master$popdensity_diff + dl_master$pctmanuf_dif)
+stprid_c_vcov <- cluster.vcov(pols_namen_r,  dl_master$stpr_id)
+dl_namen_r_coef <- coeftest(pols_namen_r, vcov = stprid_c_vcov)
+
+# iv estimation
+simple.pop.1s <- lm(pop_diff ~ WATER.AR.Z_diff, data = dl_master)
+# very significant, but R^2 only about 0.04, so probably a weak instrument?
+
+dl_master$pop.pred <- predict(simple.pop.1s, newdata = dl_master)
+dl.pop.2s<- lm(dl_master$births_ratio ~ dl_master$ptax_diff + dl_master$inctax_diff + dl_master$capgntax_diff
+               + dl_master$salestax_diff  + dl_master$corptax_diff  + dl_master$wctax_diff  + dl_master$uitax_diff
+               + dl_master$educ_pc_L1_diff + dl_master$hwy_pc_L1_diff + dl_master$welfare_pc_L1_diff
+               + dl_master$hsplus_diff + dl_master$realfuelpr_diff + dl_master$unionmem_diff
+               + dl_master$popdensity_diff + dl_master$pctmanuf_dif + dl_master$pop.pred)
+stprid_c_vcov <- cluster.vcov(dl.pop.2s,  dl_master$stpr_id)
+dl.pop.2s_coef <- coeftest(dl.pop.2s, vcov = stprid_c_vcov)
+
+# fixed effect model
+## is this required?
+
+write(stargazer(dl_amen_r_coef, dl_namen_r_coef, dl.pop.2s_coef, 
+                dep.var.labels = c("births ratio"),
+                covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
+                                     "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
+                                     "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
+                                     "Welfare Spending Per Cap Diff", "Pct Highschool Diff", "Real Fuel Price Diff",
+                                     "Pct Union Diff", "Pop Density Diff", "Pct Manufacturing Diff", "Population Diff"),
+                omit = c("Z"), omit.labels = c("amenities"), omit.table.layout = "sn",
+                column.labels = c("OLS","OLS","FE", "FE","IV"),
+                no.space = TRUE, title = paste("Extended Bandwidth Models for ", naics_names[m], "Firm Births using Donald and Lang (2007)", sep = " ")), 
+      paste("~/papers/firm_entry/analysis/output/", naics[m], "extended_dl_results.tex", sep = "_"))  
+
   rm(master)
 }

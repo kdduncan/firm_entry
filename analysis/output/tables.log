@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.11)  16 SEP 2015 19:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.11)  19 SEP 2015 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -82,6 +82,30 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
 )
 \openout1 = `tables.aux'.
 
@@ -111,15 +135,23 @@ Overfull \hbox (66.08418pt too wide) in paragraph at lines 7--74
 LaTeX Warning: Float too large for page by 203.54454pt on input line 74.
 
 ) (./_--_rd_results.tex
-Overfull \hbox (87.29343pt too wide) in paragraph at lines 7--58
+Overfull \hbox (98.09903pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
 
 LaTeX Warning: Float too large for page by 6.13899pt on input line 58.
 
+) (./_--_dl_rd_results.tex
+Overfull \hbox (109.58514pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.69455pt on input line 58.
+
 ) (./_--_extended_rd_results.tex
-Overfull \hbox (70.82117pt too wide) in paragraph at lines 7--58
+Overfull \hbox (74.90453pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -127,7 +159,7 @@ Overfull \hbox (70.82117pt too wide) in paragraph at lines 7--58
 LaTeX Warning: Float too large for page by 4.19455pt on input line 58.
 
 ) (./_11_rd_results.tex
-Overfull \hbox (78.09897pt too wide) in paragraph at lines 7--58
+Overfull \hbox (94.01567pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -135,7 +167,23 @@ Overfull \hbox (78.09897pt too wide) in paragraph at lines 7--58
 LaTeX Warning: Float too large for page by 18.13899pt on input line 58.
 
 ) (./_11_extended_rd_results.tex
-Overfull \hbox (74.00174pt too wide) in paragraph at lines 7--58
+Overfull \hbox (79.00175pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.13899pt on input line 58.
+
+) (./_11_dl_rd_results.tex
+Overfull \hbox (109.58514pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.69455pt on input line 58.
+
+) (./_11_extended_rd_results.tex
+Overfull \hbox (79.00175pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -143,7 +191,7 @@ Overfull \hbox (74.00174pt too wide) in paragraph at lines 7--58
 LaTeX Warning: Float too large for page by 18.13899pt on input line 58.
 
 ) (./_31-33_rd_results.tex
-Overfull \hbox (87.29343pt too wide) in paragraph at lines 7--58
+Overfull \hbox (97.69624pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -151,7 +199,23 @@ Overfull \hbox (87.29343pt too wide) in paragraph at lines 7--58
 LaTeX Warning: Float too large for page by 6.13899pt on input line 58.
 
 ) (./_31-33_extended_rd_results.tex
-Overfull \hbox (63.43228pt too wide) in paragraph at lines 7--58
+Overfull \hbox (68.4323pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 6.13899pt on input line 58.
+
+) (./_31-33_dl_rd_results.tex
+Overfull \hbox (109.58514pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.69455pt on input line 58.
+
+) (./_31-33_extended_rd_results.tex
+Overfull \hbox (68.4323pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -159,7 +223,7 @@ Overfull \hbox (63.43228pt too wide) in paragraph at lines 7--58
 LaTeX Warning: Float too large for page by 6.13899pt on input line 58.
 
 ) (./_44-45_rd_results.tex
-Overfull \hbox (83.09898pt too wide) in paragraph at lines 7--58
+Overfull \hbox (98.09903pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -167,7 +231,23 @@ Overfull \hbox (83.09898pt too wide) in paragraph at lines 7--58
 LaTeX Warning: Float too large for page by 6.13899pt on input line 58.
 
 ) (./_44-45_extended_rd_results.tex
-Overfull \hbox (62.51563pt too wide) in paragraph at lines 7--58
+Overfull \hbox (67.51564pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 4.19455pt on input line 58.
+
+) (./_44-45_dl_rd_results.tex
+Overfull \hbox (109.58514pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.69455pt on input line 58.
+
+) (./_44-45_extended_rd_results.tex
+Overfull \hbox (67.51564pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -175,7 +255,7 @@ Overfull \hbox (62.51563pt too wide) in paragraph at lines 7--58
 LaTeX Warning: Float too large for page by 4.19455pt on input line 58.
 
 ) (./_52_rd_results.tex
-Overfull \hbox (96.79346pt too wide) in paragraph at lines 7--58
+Overfull \hbox (98.1129pt too wide) in paragraph at lines 7--58
  [][] 
  []
 
@@ -190,30 +270,603 @@ Overfull \hbox (62.51563pt too wide) in paragraph at lines 7--58
 
 LaTeX Warning: Float too large for page by 4.19455pt on input line 58.
 
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
-[6] [7] [8] [9] [10] [11] (./tables.aux)
+) (./_52_dl_rd_results.tex
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \begin{table}[!htbp]
+                         \centering
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.4 \begin{table}[!htbp]
+                         \centering
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \color@vbox 
+l.4 \begin{table}[!htbp]
+                         \centering
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+Overfull \hbox (105.48792pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@largefloatcheck ...nce \@tempdima \ht \@currbox 
+                                                  \@latex@warning {Float too...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+LaTeX Warning: Float too large for page by 18.69455pt on input line 58.
+
+! Undefined control sequence.
+\@largefloatcheck ...he \@tempdima }\ht \@currbox 
+                                                  \textheight \fi 
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Bad register code (36044800).
+\@largefloatcheck ...a }\ht \@currbox \textheight 
+                                                  \fi 
+l.58 \end{table}
+                
+A register number must be between 0 and 32767.
+I changed this one to zero.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \begingroup 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \begingroup 
+l.58 \end{table}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.58 \end{table}
+                
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.58 \end{table}
+                
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.58 \end{table}
+                
+I'm ignoring this; it doesn't match any \if.
+
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.58 \end{table}
+                
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.58 \end{table}
+                
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.58 \end{table}
+                
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+) (./_52_extended_rd_results.tex
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \begin{table}[!htbp]
+                         \centering
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.4 \begin{table}[!htbp]
+                         \centering
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \color@vbox 
+l.4 \begin{table}[!htbp]
+                         \centering
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+Overfull \hbox (62.51563pt too wide) in paragraph at lines 7--58
+ [][] 
+ []
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@largefloatcheck ...nce \@tempdima \ht \@currbox 
+                                                  \@latex@warning {Float too...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+LaTeX Warning: Float too large for page by 4.19455pt on input line 58.
+
+! Undefined control sequence.
+\@largefloatcheck ...he \@tempdima }\ht \@currbox 
+                                                  \textheight \fi 
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Bad register code (36044800).
+\@largefloatcheck ...a }\ht \@currbox \textheight 
+                                                  \fi 
+l.58 \end{table}
+                
+A register number must be between 0 and 32767.
+I changed this one to zero.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \begingroup 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \begingroup 
+l.58 \end{table}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.58 \end{table}
+                
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{table}
+                
+Call for help
+
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.58 \end{table}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.58 \end{table}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.58 \end{table}
+                
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.58 \end{table}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.58 \end{table}
+                
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
+[6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] (./tables.aux
+)
 
 LaTeX Warning: There were multiply-defined labels.
 
- ) 
+ )
+(\end occurred when \ifnum on line 58 was incomplete)
+(\end occurred when \ifnum on line 58 was incomplete)
+(\end occurred when \ifx on line 58 was incomplete)
+(\end occurred when \ifnum on line 58 was incomplete)
+(\end occurred when \ifnum on line 58 was incomplete)
+(\end occurred when \ifnum on line 58 was incomplete)
+(\end occurred when \ifnum on line 58 was incomplete)
+(\end occurred when \ifnum on line 58 was incomplete) 
 Here is how much of TeX's memory you used:
- 922 strings out of 494985
- 18380 string characters out of 6180355
- 187703 words of memory out of 5000000
+ 945 strings out of 494985
+ 18939 string characters out of 6180355
+ 308929 words of memory out of 5000000
  4157 multiletter control sequences out of 15000+600000
  3986 words of font info for 15 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  41i,9n,51p,268b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tables.pdf (11 pages, 85094 bytes).
+</usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb>
+Output written on tables.pdf (19 pages, 100690 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
