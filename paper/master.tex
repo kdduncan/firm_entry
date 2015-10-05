@@ -12,6 +12,9 @@
 \usepackage{relsize}
 \usepackage{amsthm}
 
+\usepackage{pgffor}%
+\usepackage{geometry}
+\usepackage{pdflscape}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -34,7 +37,7 @@
 
 
 \title{Do Taxes Impact Firm Location on the Margin? A Matched County-Pair Study}
-\author{Kevin D. Duncan}
+\author{Kevin D. Duncan \thanks{Address: 80A Heady Hall, Iowa State University, Ames, IA 50011. Email: \url{kdduncan@iastate.edu}, Web: \url{kdduncan.github.io}. I would like to thank Geogeanne Artz, Peter Orazem, David Keiser, and Brent Keiser for helpful comments and discussion.}}
 \date{}
 \maketitle
 
@@ -48,5 +51,65 @@ This paper uses a regression discontinuity approach to test the impacts of taxes
 \input{data}
 \input{analysis}
 \input{conclusion}
+\renewcommand{\baselinestretch}{1} 
+
+\section{Appendix: Tables}
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_--_rd_results}
+\end{landscape}
+\restoregeometry
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_--_eb_results}
+\end{landscape}
+\restoregeometry
+
+\input{../analysis/output/_--_no_equality_rd_results}
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_--_year_rd_results}
+\end{landscape}
+\restoregeometry
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_11_rd_results}
+\end{landscape}
+\restoregeometry
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_31-33_rd_results}
+\end{landscape}
+\restoregeometry
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_44-45_rd_results}
+\end{landscape}
+\restoregeometry
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_52_rd_results}
+\end{landscape}
+\restoregeometry
+
+% DL results
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_--_dl_rd_results}
+\end{landscape}
+\restoregeometry
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/_--_dl_eb_results}
+\end{landscape}
+\restoregeometry
 
 \end{document}

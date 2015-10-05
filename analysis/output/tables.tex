@@ -1,54 +1,99 @@
 \documentclass{article}
 \usepackage{pgffor}%
+\usepackage{geometry}
+\usepackage{pdflscape}
 
 \begin{document}
 
-\input{_--_state_cdm_results}
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Oct 04, 2015 - 07:24:29 PM
+\begin{table}[!htbp] \centering 
+  \caption{Pseudo-RD Models for  Total Firm Births} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{births ratio} \\ 
+ & OLS & OLS & OLS & OLS \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ Property Tax Difference & $-$0.293$^{**}$ & $-$0.366$^{**}$ & $-$0.128 & $-$0.198 \\ 
+  & (0.149) & (0.145) & (0.146) & (0.149) \\ 
+  Income Tax Difference & $-$0.075$^{***}$ & $-$0.085$^{***}$ & $-$0.087$^{***}$ & $-$0.093$^{***}$ \\ 
+  & (0.026) & (0.026) & (0.028) & (0.027) \\ 
+  Capital Gains Tax Difference & 0.019 & 0.008 & 0.028 & 0.017 \\ 
+  & (0.024) & (0.024) & (0.024) & (0.023) \\ 
+  Sales Tax Difference & $-$0.088$^{***}$ & $-$0.104$^{***}$ & $-$0.111$^{***}$ & $-$0.115$^{***}$ \\ 
+  & (0.031) & (0.029) & (0.028) & (0.029) \\ 
+  Corp Tax Difference & 0.009 & 0.016 & 0.013 & 0.021 \\ 
+  & (0.019) & (0.018) & (0.020) & (0.020) \\ 
+  Workers Comp Tax Difference & 0.049 & 0.093 & $-$0.010 & 0.004 \\ 
+  & (0.105) & (0.108) & (0.095) & (0.112) \\ 
+  Unemp. Tax Difference & $-$0.004 & 0.015 & 0.00001 & 0.011 \\ 
+  & (0.039) & (0.036) & (0.042) & (0.040) \\ 
+  Educ Spending Per Cap Diff & $-$0.0002 & $-$0.0003 & $-$0.0002 & $-$0.0002 \\ 
+  & (0.0003) & (0.0003) & (0.0003) & (0.0002) \\ 
+  Highway Spending Per Cap Diff & 0.0003 & 0.0004 & 0.0002 & 0.0004 \\ 
+  & (0.0004) & (0.0004) & (0.0004) & (0.0004) \\ 
+  Welfare Spending Per Cap Diff & 0.0005$^{*}$ & 0.001$^{**}$ & 0.001$^{**}$ & 0.001$^{**}$ \\ 
+  & (0.0003) & (0.0003) & (0.0003) & (0.0002) \\ 
+  hsplus.cont\_diff &  & 0.004 &  & 0.010 \\ 
+  &  & (0.018) &  & (0.019) \\ 
+  realfuelpr.cont\_diff &  & 0.081$^{***}$ &  & 0.075$^{***}$ \\ 
+  &  & (0.028) &  & (0.027) \\ 
+  unionmem.cont\_diff &  & $-$0.006 &  & 0.014 \\ 
+  &  & (0.014) &  & (0.015) \\ 
+  popdensity.cont\_diff &  & 0.0004 &  & 0.0001 \\ 
+  &  & (0.0004) &  & (0.0004) \\ 
+  pctmanuf.cont\_diff &  & $-$0.744 &  & $-$0.583 \\ 
+  &  & (1.003) &  & (1.004) \\ 
+  JAN.TEMP.Z\_diff &  &  & 0.848$^{***}$ & 0.855$^{**}$ \\ 
+  &  &  & (0.313) & (0.338) \\ 
+  JAN.SUN.Z\_diff &  &  & 0.171 & 0.159 \\ 
+  &  &  & (0.123) & (0.129) \\ 
+  JUL.TEMP.Z\_diff &  &  & 0.053 & 0.028 \\ 
+  &  &  & (0.116) & (0.118) \\ 
+  JUL.HUM.Z\_diff &  &  & $-$0.052 & $-$0.012 \\ 
+  &  &  & (0.175) & (0.176) \\ 
+  TOPOG.Z\_diff &  &  & 0.106 & 0.100 \\ 
+  &  &  & (0.071) & (0.069) \\ 
+  WATER.AR.Z\_diff &  &  & 0.300$^{***}$ & 0.291$^{***}$ \\ 
+  &  &  & (0.065) & (0.067) \\ 
+  Constant & $-$0.048 & $-$0.058 & $-$0.038 & $-$0.046 \\ 
+  & (0.085) & (0.084) & (0.085) & (0.082) \\ 
+ \hline \\[-1.8ex] 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+%\input{_--_state_cdm_results}
+%\input{_--_cdm_diff_results}
+\newgeometry{margin=1cm}
+\begin{landscape}
 \input{_--_rd_results}
-\input{_--_dl_rd_results}
-\input{_--_extended_rd_results}
-%\input{_--_extended_dl_results}
-%\input{_--_fe_rd_results}
-%\input{_--_no_equality_rd_results}
-%\input{_--_year_rd_results}
+\input{_--_eb_results}
 
+\end{landscape}
+\restoregeometry
 
-%\input{_11_state_cdm_results}
+\input{_--_no_equality_rd_results}
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{_--_year_rd_results}
 \input{_11_rd_results}
-\input{_11_extended_rd_results}
-\input{_11_dl_rd_results}
-\input{_11_extended_rd_results}
-%\input{_11_fe_rd_results}
-%\input{_11_no_equality_rd_results}
-%\input{_11_year_rd_results}
-
-%\input{_31-33_state_cdm_results}
 \input{_31-33_rd_results}
-\input{_31-33_extended_rd_results}
-\input{_31-33_dl_rd_results}
-\input{_31-33_extended_rd_results}
-%\input{_31-33_fe_rd_results}
-%\input{_31-33_no_equality_rd_results}
-%\input{_31-33_year_rd_results}
-
-%\input{_44-45_state_cdm_results}
 \input{_44-45_rd_results}
-\input{_44-45_extended_rd_results}
-\input{_44-45_dl_rd_results}
-\input{_44-45_extended_rd_results}
-%\input{_44-45_fe_rd_results}
-%\input{_44-45_no_equality_rd_results}
-%\input{_44-45_year_rd_results}
-
-%\input{_52_state_cdm_results}
 \input{_52_rd_results}
-\input{_52_extended_rd_results}
-\input{_52_dl_rd_results}
-\input{_52_extended_rd_results}
-%\input{_52_fe_rd_results}
-%\input{_52_no_equality_rd_results}
-%\input{_52_year_rd_results}
 
+% DL results
+\input{_--_dl_rd_results}
+\input{_--_dl_eb_results}
+\end{landscape}
+\restoregeometry
 
 
 

@@ -86,14 +86,11 @@ bandwidth <- c()
 # extend the data set over every year.
 for (i in 1:length(unique(border_pairs$year))){
   for (j in 1:length(master[,1])){
-    bandwidth <- rbind(bandwidth, c(border_pairs$year[i], master[j,1:2]))
+    bandwidth <- rbind(bandwidth, c(unique(border_pairs$year)[i], master[j,1:2]))
   }
 }
+bandwidth <- as.data.frame(lapply(bandwidth,unlist))
 names(bandwidth)[1] <- "year"
 
 # write to a csv to be used elsewhere
 write.csv(bandwidth, file = "~/papers/firm_entry/build/output/increased_bandwidth.csv") 
-
-# stuff.
-
-test <- county.fips[ county.fips[,1] %in% master]
