@@ -1,18 +1,17 @@
 \section{Empirical Design}
 
-Our parameters of interest are the coefficients on our top marginal tax rates. Estimation of this marginal effect is historically difficult. Tax and other policy parameters tend to feature prolongued periods of stability, and changes may be endogenous to many common dependent variables, such that changes in GDP, wages, and employment will entice government officials to try and improve economic performance. This has led to time series applications to use narrative approaches to try and identify the impacts of exogenous shocks to tax rates on macroeconomic variables (Romer and Romer (2008), Mertens and Raven (2012)). 
-
-We estimate a pseudo-regression discontinuity approach as a way of trying to remove local drivers of firm entry identified in count data models, as well as shared responses to larger macroeconomic shocks. In the limit as firms approach borders from either side leads to the policy discontinuity to be locally exogenous....
+As outlined in the previous section, the main parameters of interest are the impacts of top marginal tax rates on firm start up rates. We estimate a pseudo-regression discontinuity approach as a way of trying to remove local determinants of firm entry, as well as shared responses to larger macroeconomic shocks.
 
 \subsection{Regression Discontinuity Approach}
 
-By our theory we know that location specific terms, an terms shared across observations get canceled out as we take the difference while approaching the borer. Our data does not allow us to get a closer estimation to the true discontinuity than those provided by the borders of the county. The average county in our data set is 1260 square miles, or about 35 miles per side of believed to be approximately square. This distance is slightly longer than more refined approaches such as Rohlin (2011). In practice we match up counties on either side of a state border, let us denote them subject ($sub$) and neighbor ($nbr$), and their states $stA$ and $stB$. Then, taking differences, we get by applying Theorem \ref{thrm}
+Our theory section showed that as the entry choice of firms centers around a border the location specific terms become insignificant in the difference in expected profits. We estimate this bandwidth by using county level data on firm entry rates. The average county in our data set is 1260 square miles, or about 35 miles per side if believed to be approximately square. This distance is slightly longer than more refined approaches such as Rohlin, Rosenthal, and Ross (2014). Then, our first each county-pair, the estimated model is,
 
-\begin{equation}
-\ln(n_{sub,stA,t})-\ln(n_{nbr,stB,t}) = \beta_{stA}-\beta_{stB}+(X_{stA,t-1}-X_{stB,t-1})\beta_{2} + \epsilon_{sub,stA,t}-\epsilon_{nbr,stB,t}
+\begin{equation}\label{pref}
+\ln(n_{sub,stA,t})-\ln(n_{nbr,stB,t}) = (X_{stA,t-1}-X_{stB,t-1})\beta_{2} + \epsilon_{sub,stA,t}-\epsilon_{nbr,stB,t}
 \end{equation}
 
-First, let us index each state-pairs $(stA,stB)$ by $g$. Next let us assume that $\beta_{stA}-\beta_{stB} = \beta_{0}$ for all $sub, nbr$ pairs. Since we assign $sub$ and $nbr$ arbitrarily, this implies that $\beta_{stA} = \beta_{stB}$.  Then we make the following definitions.
+Larger and shorter lags where also tested, but our variables are heavily inter-temporally correlated, so there was no major difference occurs in sign or significance, such that only fit deteriorates as we extended the lag structure. This model imposes $\beta_{stA},\beta_{stB} = 0$ from Equation (\ref{prof}). We index each state-pairs $(stA,stB)$ by $g = 1,...,G$, and index each $(sub, nbr)$ pairs by $ i_{g} = 1,...,N_{g}$. Then we make the following definitions.
+
 \begin{equation}
 \ddot \ln(n_{i,g,t}) = \ln(n_{sub,stA,t})-\ln(n_{nbr,stB,t})
 \end{equation}
@@ -25,26 +24,18 @@ First, let us index each state-pairs $(stA,stB)$ by $g$. Next let us assume that
 \ddot \epsilon_{i,g,t} = \epsilon_{sub,stA,t}-\epsilon_{nbr,stB,t}
 \end{equation}
 
-Assume $\ddot \epsilon_{i,g,t}$ be an i.i.d white noise draw, then let $\ddot X_{g} = (\ddot X_{g,0}',...,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{j})$ matrix, and $\ddot \epsilon_{ig} = (\ddot \epsilon_{i,g,1},...,\ddot \epsilon_{i,g,T})'$ be a $T \times 1$ vector. Next we assume the traditional OLS moment conditions.
+Assume $\ddot \epsilon_{i,g,t}$ be an i.i.d white noise draw, $\ddot X_{g} = (\ddot X_{g,0}',...,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{2})$ matrix, and $\ddot \epsilon_{ig} = (\ddot \epsilon_{i,g,1},...,\ddot \epsilon_{i,g,T})'$ be a $T \times 1$ vector. Next we assume the traditional OLS moment conditions.
 
 \begin{assumption}\label{noend}
-Let  $\ddot X_{g} = (\ddot X_{g,0}', ... ,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{j})$, and $\ddot \epsilon_{i,g} = (\ddot\epsilon_{i,j,1},...,\ddot\epsilon_{i,j,T})'$ a $T \times 1$ vector. Then 
+Let  $\ddot X_{g} = (\ddot X_{g,0}', ... ,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{2})$, and $\ddot \epsilon_{i,g} = (\ddot\epsilon_{i,j,1},...,\ddot\epsilon_{i,j,T})'$ a $T \times 1$ vector. Then 
 \begin{equation}E[\ddot X'\ddot \epsilon] = 0, \quad \forall i,g\end{equation}
 \end{assumption}
 
 \begin{assumption}\label{fullrank}
- \begin{equation}E[\ddot X_{g}'\ddot X_{g}] = 1+K_{j}: \quad \forall g\end{equation}
+ \begin{equation}E[\ddot X_{g}'\ddot X_{g}] = 1+K_{2}: \quad \forall g\end{equation}
 \end{assumption}
 
-We can estimate a pooled OLS estimator using Assumption's \ref{noend} and \ref{fullrank}. This gives us the POLS estimator;
-\begin{equation}\label{pols}
-\hat \beta_{2} = \left(\frac{1}{N^{*}} \sum_{k=1}^{T}\sum_{i=1}^{G}\sum_{j=1}^{N_{G}}\ddot X_{g,t-1}'\ddot X_{g,t-1}\right)^{-1}\left(\frac{1}{N^{*}}\sum_{k=1}^{T}\sum_{i=1}^{G}\sum_{j=1}^{N_{G}}\ddot X_{g,t-1}'\ddot \ln(n_{igt})\right)
-\end{equation}
-\begin{equation}
-N^{*} = T(\sum_{g}^{G}N_{g})
-\end{equation}
-
-We can rewrite \ref{pols} as:
+As a result of applying assumption \ref{noend} and \ref{fullrank} to Equation \ref{pref}, our estimator takes the form,
 \begin{equation}\label{pols_2s}
 \hat \beta_{2} = \left(\frac{1}{TG} \sum_{t=1}^{T}\sum_{g=1}^{G}\frac{\sum_{i=1}^{N_{g}}\ddot X_{g,t-1}'\ddot X_{g,t-1}}{E[N_{g}]}\right)^{-1}\left(\frac{1}{TG}\sum_{t=1}^{T}\sum_{g=1}^{G}X_{g,t-1}'\frac{\sum_{i=1}^{N_{G}}\ddot \ln(n_{igt})}{E[N_{g}]}\right)
 \end{equation}
@@ -53,64 +44,47 @@ We can rewrite \ref{pols} as:
 E[N_{g}] = \frac{\sum_{g=1}^{G}N_{g}}{G}
 \end{equation}
 
-When doing inference there may be shocks to the state-pair border, for example the Mississippi river flooding along a border pair, but not shared with all other pairs in the sample. Therefore we use clustered errors on the state pair. Let $\ddot X$ be the $(\sum_{g}^{G}N_{G} \times T) \times (1+K_{j}) $ regressor matrix. Thus our variance co-variance matrix takes on the form
-\begin{equation}\label{var}
-\hat V =\frac{1}{G-2}\frac{\sum_{g=1}^{G}N_{g}-1}{\sum_{g=1}^{G}N_{g}-2}(\ddot X'\ddot X)^{-1}(\sum_{t}^{T}\sum_{g}^{G}u_{s}u_{s}')(\ddot X'\ddot X)^{-1}
-\end{equation}
-\begin{equation}\label{error}
-u_{s} = \sum_{i}\hat \ddot \epsilon_{i,j,t-1}\ddot X_{g,t-1}
-\end{equation}
-We assume this lag structure to indicate that firms respond to variables from the previous time period, and as they are starting up government's may choose to alter policies for the current year. In practice though most of our variables are heavily inter-temporally correlated, so no major difference occurs in sign, significance, or fit appears from using different lag structures.
+There may be shocks to the state-pair border, so we use clustered standard errors on the state pair grouping. An example of border specific shocks would be if the Mississippi river floods. This will affect states that are divided by the river, but not along borders far away from the river.
 
 \subsection{Sensitivity Tests}
 
 \subsubsection{Added Controls}
 
-We first test our regressions with a variety of controls. We first report our benchmark model, which includes just our seven top marginal tax rates, and our three sources of government expenditures. We then have two sets of controls, county level geographic amenities, and state level economic controls. We estimate models that include and exclude one of each, and then include both. We want to check whether or not our tax and regulatory variables become statistically insignificant once we account for these additions, and in our second model check whether or not they properly become indistinguishable from zero. 
+The first sensitivity test we implement is to run Equation (\ref{pref}) with a variety of controls. We first report our benchmark model, which includes our seven top marginal tax rates, and our three sources of government expenditures. We then have two sets of controls, county level geographic amenities, and state level economic controls. We estimate models that include and exclude one of each, and then include both. We want to check whether or not our tax and regulatory variables become statistically insignificant once we account for these additions, and in our second model check whether or not they properly become indistinguishable from zero. 
 
-\subsubsection{State-Pair Fixed Effects}
-Then, we test a version of our model that includes a state-pair fixed effects. By construction of our estimator, we are claiming that any county level fixed effects take the form of location specific terms, which have to cancel out when we take the difference but state specific fixed effects may remain. This might include unaccounted government policies, such as usury laws, or other unobserved state specific characteristics.
+As a final round of controls, we estimate our model with state-pair fixed effects. This allows $\beta_{stA} \neq 0, \beta_{stB} \neq 0$ for all state-pairs. This is equivalent to the difference in expected profit when there exist state specific fixed effects as shown in Equation (\ref{prof})
 
-\subsubsection{IV}
+\begin{equation}\label{fe}
+\ddot \ln(n_{i,g,t}) = \beta_{stA}-\beta_{stB}+\ddot X_{g,t-1}\beta_{2} + \ddot \epsilon_{i,g,t}
+\end{equation}
 
-We use the difference in Log Water Area Z score as an instrument for population...
+Our theory indicated that the difference in county level fixed effects becomes negligible when we take the difference, but state specific fixed effects may remain. This model allows those effects to be non zero.
 
 \subsubsection{Extended Bandwidth}
 
-We then extend the bandwidth of our estimator. This is done by matching every "subject" county with every neighbor's neighbor that they weren't previously matched with. This estimate extends the distance between each of our observations, such that we expect state tax differentials to play a less important role, and local economic activity controls become more important.
+We then extend the bandwidth of our estimator. This used the extended bandwidth match from our Data section. We matched every subject county with every neighbor's neighbor that the subject county was not previously matched with. This estimate extends the distance between each of our observations so we expect state tax differentials to play a less important role. Our new match becomes the model,
 
-\subsubsection{Relaxing Coefficient Symmetry}
-We then test a version of this model where we do not impose the coefficients are the same across borders.
-\begin{equation}\label{sense1}
-\ddot \ln(n_{g,t}) = X_{stA,t-1}\beta_{sub}+X_{stB,t-1}\beta_{nbr}+ e_{igt} 
+\begin{equation}
+\ln(n_{sub,stA,t})-\ln(n_{nbr\_nbr,stB,t}) = (X_{stA,t-1}-X_{stB,t-1})\beta_{2} + \epsilon_{sub,stA,t}-\epsilon_{nbr\_nbr,stB,t}
 \end{equation}
 
-Instead we let coefficients take on their own value in the difference, and do a set of F-tests on whether or not our assumption that $\beta_{i,A} = -\beta_{i,B}$ holds in the difference as assumed. The results of this regression are reported in Table \ref{table:equal}. Corresponding F tests are presented in Table \ref{table:Ftests}. Next we run our regression discontinuity estimator while forcing the coefficients to be the same. We present results for this model in \ref{table:canon}.
+\subsubsection{Relaxing Coefficient Symmetry}
+We then test a version of this model where we do not impose symmetry in the coefficients across borders.Instead we let coefficients take on their own value in the difference, and do a set of F-tests on whether or not our assumption that $\beta_{k,A} = -\beta_{k,B}$, $\forall k \in \{1,...,K_{2}\}$ holds in the difference as assumed.
+
+\begin{equation}\label{sense1}
+\ddot \ln(n_{g,t}) = X_{stA,t-1}\beta_{2,sub}+X_{stB,t-1}\beta_{2,nbr}+ \ddot e_{igt} 
+\end{equation}
 
 \subsubsection{Period Specific Cross Section Analysis}
-Third, we test a set of regressions where we estimate period-specific coefficients and compare them to our pooled estimator to try and estimate of whether or not it is safe to assume that profit parameters are roughly stable over time. 
+Forth, we test a set of regressions where we estimate cross-sectional models for each year in our sample. We then compare these estimates to our pooled OLS estimates to gauge if tax incidence on firm start up rates remains stable over time. 
 \begin{equation}\label{sense2}
 \ddot \ln(n_{g,t})  = X_{stA,t-1}\beta_{stA}+X_{stB,t-1}\beta_{stB}+ e_{i,g,t}: \quad t = 1999,...,2008
 \end{equation}
-Which leads to the POLS coefficient;
-\begin{equation}
-\hat \beta_{2} = \left(\frac{1}{G}\sum_{i=1}^{G}\frac{\ddot X_{g,t-1}'\ddot X_{g,t-1}}{E[N_{g}]}\right)^{-1}\left(\frac{1}{G}\sum_{i=1}^{G}\ddot X_{g,t-1}'\frac{\sum_{j=1}^{N_{G}}\ddot \ln(n_{igt})}{E[N_{g}]})\right)
-\end{equation}
 
-\subsubsection{Industry Subcodes}
-As a final control, we further run our main regression for a variety of NAICS subcodes. Specifically, we test for the stability of our coefficients across, agriculture, fishing, forestry, and hunting; retail trade; manufacturing; and finance and insurance.
+\subsubsection{Industry Sub codes}
 
-
-\subsubsection{Two-Stage Estimator}
-Another similar estimator to ours is common in the literature. Donald and Lang (2007) suggest an alternative version of our estimator, where they first calculate $E[n_{jt}] = \frac{\sum_{i=1}^{N_{g}}n_{ijt}}{N_{g}}$, then letting $\ddot y_{gt} = E[n_{A,t}]-E[n_{B,t}]$. Then they suggest the usual POLS estimator
-\begin{equation}\label{dl}
-\hat \beta_{DL} = \left(\frac{1}{TG} \sum_{t=1}^{T}\sum_{g=1}^{G}\ddot X_{g,t-1}'\ddot X_{g,t-1}\right)^{-1}\left(\frac{1}{TG}\sum_{t=1}^{T}\sum_{g=1}^{G}\ddot X_{g,t-1}'\ddot y_{gt}\right)
-\end{equation}
-
-Compared to Donald and Lang's two stage estimator our estimator underweights observations we observe only a few times compared to their true mean, and overweight observations we see many times compared to their true mean. We therefore run all of our estimates for both our original estimator, as well as the Donald and Lang two-stage estimator to see if there is any divergence in their results.
-
+As a final control, we estimated main model, Equation (\ref{pref}), on NAICS code level firm entry. This is meant to test for the stability of our coefficients across Agriculture, Fishing, Forestry, and Hunting; Retail Trade; Manufacturing; and Finance and Insurance.
 
 \subsubsection{Endogeneity along the Borders}
-Finally, we do not test for general endogeneity where states change taxes in response to the difference in firm entry rates. This is because the aforementioned stability of all of our policy parameters, it seems unlikely that they are responding to comparatively more volatile firm start up rates. Further, there is no reason to assume counties favor one set of borders over any other, unless counties find themselves systemically at a loss compared to neighbors, a corner solution we do not check for.
 
-
+Finally, we do not test for endogeneity where states change taxes in response to the difference in firm entry rates. Due to the stability of our policy parameters, it seems unlikely that governments are responding to firm start up rates in particular counties as modeled by our estimator.

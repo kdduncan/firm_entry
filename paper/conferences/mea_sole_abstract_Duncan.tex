@@ -1,32 +1,37 @@
-\documentclass[12 pt, a4paper]{article}
+\documentclass[12 pt,a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+% Please, do not change any of the above lines
 
 \begin{document}
 
 \title{Impacts of Taxes on Firm Entry Rates Along State Borders}
-\author{Kevin D. Duncan}
+\author{Kevin D. Duncan \\ Iowa State University \\ 978-390-3459}
 \maketitle
 
-Current research on the impacts of firm entry have focused on the role that complementary agglomeration economies plays in firm entry. Recent examples include sector specific human capital, examined by Zucker and Darby (2014) and local agglomeration in the form of population density studied by Brulhart et al (2012). These studies show that local agglomeration economies are a recurring driver of new firm entry. However these papers lack solid identification of the effects of tax policy on firm entry. This identification has been difficult due to the lack of variation in tax and regulatory policies, anticipated changes, or endogenous responses to local conditions.
+Economists have long been interested in the role that barriers to entry play into firm start up rates. The effects of tax rates are particularly appealing as they offer policy makers a means to bring about change in their communities. Recent work in estimating the effects of taxes on firm entry either do not use top marginal tax rates, such as Gabe and Bell (2004) and Ojede and Yamarik (2012), or do not include a full array of top marginal tax rates, such as Rathelot and Sillard (2008) and Brulhart et al (2012). Theory indicates that marginal rates are what matter to entrepreneurs looking to start firms, and that policy makers may use several different taxes in conjunction to accomplish policy goals. As a result, these papers may suffer from either poor identification or omitted variable bias.
 
-Our paper fills this gap by using a regression discontinuity technique in order to estimate the policy effect of seven top marginal tax rates on firm entry behavior. We take the difference in firm start up rates on either side of a state border for all 48 continental US states. This difference removes location specific determinants of firm entry under assumptions of continuity around the border, as well as responses to shared macroeconomic shocks. As we approach the border from either side. In the limit the policy discontinuity in taxes is strictly exogenous, allowing for identification of the true policy effect. 
+We fix this gap in the literature by creating a data set that covers a larger set of top marginal tax rates than the existing studies, and then use a matched county-pair techniques to control for location specific determinants of firm entry and endogenous components in our policy variables. This is done by taking the difference in firm start up rates and taxes between adjacent counties on either side of a state border. Variations on this technique have become increasingly common in studying the role government policies play on firm entry, including many of the cited studies. Our work is very similar to Rohlin, Rosenthal, \& Ross (2014), who utilize top marginal tax rates for corporate, income, and sales tax rates, to estimate a linear probability model of firm entry along state borders using GIS coded data.
 
-Equivalent techniques have been used in Holmes (1998), Rohlin (2011), and Dube et al (2010) to study the impacts right to work status and minimum wages. and allows us to estimate the local average treatment effect of changing one of our tax rates by 1\%.
+Comparably, we use county level data on firm births from the US Census Bureau to look at the impact of seven top marginal tax rates, including property, sales, income, corporate, capital gains, workers compensation, and unemployment insurance tax to study their impact on relative firm start up rates. Our data matches 1202 counties across 107 state-pair borders between 1999 and 2009. The result of our work shows that property, sales, and income taxes have a negative and statistically significant impact on firm start up rates. 
 
-We use data on firm births from the US Census Bureau, along with a compiled data set of seven top marginal tax rates that includes property, sales, income, corporate, capital gains, workers compensation, and unemployment insurance tax rates. We further include log expenditures per capita on highways, education, and welfare as an additional determinant of the sorting behavior of entrepreneurs into preferred neighborhoods following McKinnish (2007), which used the border technique to estimate whether or not people migrated to towns on opposite sides of the border in response to higher welfare spending. We then estimate a model that takes the difference in log firm start ups and independent variables between randomly assigned subject and neighbor counties, as well as the two stage Donald and Lang (2007) estimator which takes the difference in mean firm start up rates along an entire state border.
+Our estimates indicate that a 1\% increase in income and sales tax differentials decreases relative firm start up rates by 0.1\%, while a 1\% increase in the relative property tax differential decreases firm start up rates by 0.3\%. These findings coincide with characteristics of new firms, where the majority of entrants are both small in size, with a short expected life time. As a result, the majority of firms are S corporations where the owners still by income taxes, and property and sales taxes may account for the largest share of tax incidence on their profits.
 
-Our estimates show that property, sales, and income taxes have a negative and statistically significant impact on firm start up rates, and that as the bandwidth increases the effect becomes indistinguishable from zero. These results remain significant even when run on NAICS sub codes, and for cross sectional  regressions for each time period in our sample for both of our estimators. Our estimates find that a 1\% increase in the relative income and sales tax differentials decreases relative firm start up rates by 0.1\%, while a 1\% increase in the relative property tax differential decreases firm start up rates by 0.3\%. Finally, we find evidence that relative welfare spending per capita is positive and statistically significantly related to firm entry rate, while highway and education spending per capita is not.
+A final output of our study is an index of where the tax differentials are the largest. This is calculated by multiplying our estimated coefficients by the existing marginal tax rates in each state. This allows readers to better visualize the aggregate impact of taxes on firm entry, as well as what borders currently have the largest amount of firm start up differential imposed by their regulatory choices. We further generate a comparison between the mean difference in firm start up rates and the tax differential, to compare how often the side with the preferred tax differential also has higher firm start up rates.
 
-Our findings that property, income, and sales tax rates have the largest impact on firm entry rate appear consistent with the fact that the majority of firms that enter in a given year are small firms with a short expected lifespan. Comparably we would expect capital gains and corporate tax rates to have a higher impact on large firms that expect to have a long life. As a final output of our paper we calculate what borders have the highest discrepancy in weighted tax differential, which multiplies our coefficients by the top marginal tax rate of each state. We then show which states have space to adjust their tax code in order to attract new firm entrants. We find that despite the low fit of our models, most of the states with the largest difference in firm start up rates feature a preferential weighted tax differential. In conclusion, by using regression discontinuity along state borders we are able to estimate the impacts of top marginal tax rates on firm entry rates, and find that sales and income taxes impact firm entry rates, results that are congruent with the structure of firm entry.
-
+In conclusion, we provide a new and larger data set of top marginal tax rates for researchers to utilize in studying the effects of taxes. We further use a regression discontinuity technique along state borders to estimate the impacts of top marginal tax rates on firm entry rates. We find that sales and income taxes impact firm entry rates, results that are consistent with the characteristics of new firm entrants.
+\\
+\\
+JEL Classifications: H73, L26, R30
 \end{document}
-
-\begin{thebibliography}{9}
-\bibitem{moretti2004}
-Moretti, Enrico. “Workers’ Education, Spillovers, and Productivity: Evidence from Plant-level Production Functions.” American Economic Review (June 2004): 656-690.
-\bibitem{moretti2010}
-Greenstone, Michael, Hornbeck, Richard, and Moretti, Enrico. 2010. “Identifying Agglomeration Spillovers: Evidence from Winners and Losers of Large Plant Openings.” Journal of Political Economy 118(3):536-598.
-\bibitem{ZuckerDarby}
-Lynne G. Zucker and Michael R. Darby, "Movement of Star Scientists and Engineers and High-Tech Firm Entry," Annals of Economics and Statistics, No. 115-116, SPECIAL ISSUE ON KNOWLEDGE CAPITAL IN NANOTECHNOLOGY AND OTHER HIGH TECHNOLOGY INDUSTRIES (December 2014), pp. 125-175
-\bibitem{djankov}
-Simeon Djankov, Tim Ganser, Caralee McLiesh, Rita Ramalho and Andrei Shleifer, "The Effect of Corporate Taxes on Investment and Entreprenuership" American economic Journal: Macroeconomics. Vol. 2, No. 3 (July 2010), pp. 31-64
-\end{thebibliography}

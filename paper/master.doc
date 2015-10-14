@@ -1,0 +1,1544 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\fswiss\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\froman\fprq0\fcharset128 Liberation Sans{\*\falt Arial};}{\f6\froman\fprq0\fcharset128 Courier New;}{\f7\fswiss\fprq0\fcharset128 Liberation Sans{\*\falt Arial};}{\f8\froman\fprq0\fcharset128 Liberation Serif{\*\falt Times New Roman};}{\f9\fnil\fprq2\fcharset0 Droid Sans Fallback;}{\f10\fnil\fprq2\fcharset0 Courier New;}{\f11\fnil\fprq2\fcharset0 FreeSans;}{\f12\fswiss\fprq0\fcharset128 FreeSans;}}
+{\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033 Normal;}
+{\s1\sbasedon18\snext1\ql\widctlpar\sb440\sa60\keepn\ltrpar\b\dbch\af9\dbch\af11\afs28\loch\f7\fs34 Heading 1;}
+{\s2\sbasedon18\snext2\ql\widctlpar\sb440\sa60\keepn\ltrpar\b\dbch\af9\dbch\af11\afs28\loch\f7\fs28 Heading 2;}
+{\s3\sbasedon18\snext3\ql\widctlpar\sb440\sa60\keepn\ltrpar\b\dbch\af9\dbch\af11\afs28\loch\f7\fs24 Heading 3;}
+{\s4\sbasedon18\snext4\ql\widctlpar\sb440\sa60\keepn\ltrpar\b\dbch\af9\dbch\af11\afs28\loch\f7\fs24 Heading 4;}
+{\*\cs15\snext15\super\fs20 Endnote Anchor;}
+{\*\cs16\snext16\super\fs20 Footnote Anchor;}
+{\*\cs17\snext17 Endnote Characters;}
+{\s18\sbasedon0\snext19\ql\widctlpar\sb240\sa120\keepn\ltrpar\dbch\af9\dbch\af11\afs28\loch\f4\fs28 Heading;}
+{\s19\sbasedon0\snext19\sl288\slmult1\ql\widctlpar\sb0\sa140\ltrpar\dbch\af10\loch\f8\fs24 Text Body;}
+{\s20\sbasedon19\snext20\sl288\slmult1\ql\widctlpar\sb0\sa140\ltrpar\dbch\af10\dbch\af12\loch\f8\fs24 List;}
+{\s21\sbasedon0\snext21\ql\widctlpar\sb120\sa120\noline\ltrpar\i\dbch\af10\dbch\af12\afs24\ai\loch\f8\fs24 Caption;}
+{\s22\sbasedon0\snext22\ql\widctlpar\noline\ltrpar\dbch\af10\dbch\af12\loch\f8\fs24 Index;}
+{\s23\snext23\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Arrowhead List;}
+{\s24\sbasedon0\snext24\ql\widctlpar\li1440\ri1440\lin1440\rin1440\fi0\sb0\sa120\ltrpar\dbch\af10\loch\f8\fs24 Block Text;}
+{\s25\snext25\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Box List;}
+{\s26\snext26\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Bullet List;}
+{\s27\snext27\tx1584\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Chapter Heading;}
+{\s28\sbasedon22\snext28\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\noline\ltrpar\dbch\af10\dbch\af12\loch\f8\fs24 Contents 1;}
+{\s29\sbasedon22\snext29\ql\widctlpar\li1440\ri0\lin1440\rin0\fi-431\noline\ltrpar\dbch\af10\dbch\af12\loch\f8\fs24 Contents 2;}
+{\s30\sbasedon22\snext30\ql\widctlpar\li2160\ri0\lin2160\rin0\fi-431\noline\ltrpar\dbch\af10\dbch\af12\loch\f8\fs24 Contents 3;}
+{\s31\sbasedon22\snext31\ql\widctlpar\li2880\ri0\lin2880\rin0\fi-431\noline\ltrpar\dbch\af10\dbch\af12\loch\f8\fs24 Contents 4;}
+{\s32\snext32\qc\sb240\sa120\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\b\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f5\fs32\lang1033 Contents Header;}
+{\s33\snext33\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Dashed List;}
+{\s34\snext34\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Diamond List;}
+{\s35\sbasedon0\snext35\ql\widctlpar\li288\ri0\lin288\rin0\fi-288\ltrpar\dbch\af10\loch\f8\fs24 Endnote;}
+{\s36\snext36\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Endnote Symbol;}
+{\s37\sbasedon0\snext37\ql\widctlpar\li288\ri0\lin288\rin0\fi-288\ltrpar\dbch\af10\loch\f8\fs20 Footnote;}
+{\s38\snext38\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Hand List;}
+{\s39\snext39\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Heart List;}
+{\s40\snext40\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Implies List;}
+{\s41\snext41\li720\ri0\lin720\rin0\fi-431\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Lower Case List;}
+{\s42\snext42\li720\ri0\lin720\rin0\fi-431\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Lower Roman List;}
+{\s43\snext43\tx431\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Numbered Heading 1;}
+{\s44\snext44\tx431\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Numbered Heading 2;}
+{\s45\snext45\tx431\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af9\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Numbered Heading 3;}
+{\s46\snext46\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Numbered List;}
+{\s47\sbasedon0\snext47\ql\widctlpar\ltrpar\dbch\af10\loch\f6\fs24 Plain Text;}
+{\s48\sbasedon43\snext48\tx1584 Section Heading;}
+{\s49\snext49\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Square List;}
+{\s50\snext50\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Star List;}
+{\s51\snext51\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Tick List;}
+{\s52\snext52\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f3\fs24\lang1033 Triangle List;}
+{\s53\sbasedon46\snext53\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar\dbch\af10\loch\f3\fs24 Upper Case List;}
+{\s54\sbasedon46\snext54\ql\widctlpar\li720\ri0\lin720\rin0\fi-431\ltrpar\dbch\af10\loch\f3\fs24 Upper Roman List;}
+}{\info{\creatim\yr0\mo0\dy0\hr0\min0}{\revtim\yr0\mo0\dy0\hr0\min0}{\printim\yr0\mo0\dy0\hr0\min0}{\comment LibreOffice}{\vern67241986}}\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720\deftab720
+\viewscale120
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pgdscnxt0 Default Style;}
+{\pgdsc1\pgdscuse451\pgndec\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt1 Endnote;}
+{\pgdsc2\pgdscuse451\pgndec\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pgdscnxt2 Converted1;}
+{\pgdsc3\pgdscuse451\pgndec\pgwsxn12240\pghsxn15840\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\pgdscnxt3 Converted2;}}
+\formshade\paperh16838\paperw11906\margl1440\margr1440\margt1440\margb1440\sectd\sbknone\sectunlocked1\pgndec\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnar
+\pgndec\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Impacts of Taxes on Firm Entry Rates Along State}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Borders}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Kevin D. Duncan}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\lang1033
+\u8727\'2a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Abstract}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+This paper uses a regression discontinuity approach to estimate the impacts of}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+taxes on firm entry rates between neighboring states. We utilize matched county}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+pairs as an approximate bandwidth around the discontinuity in state policies imposed at their border. This controls for unobserved location specific determinants}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of firm entry, as well as policy responses to shocks shared across borders. We then}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimate the impacts of property, income, sales, corporate, capital gains, workers}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+compensation, and unemployment insurance top marginal tax rates on the differences in firm entry between counties. Our array of taxes controls for joint changes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+in tax policy that governments may implement to accomplish policy goals. We}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimate this impact using a sample of 107 state-border pairs between 1999 and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+2009. Our results indicate that property and sales taxes have the largest negative}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+effect on firm start up rates, and in more recent years income taxes as well.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\lang1033
+\u8727\'2a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Address: 80A Heady Hall, Iowa State University, Ames, IA 50011. Email: kdduncan@iastate.edu,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Web: kdduncan.github.io. I would like to thank Geogeanne Artz, Peter Orazem, David Keiser, and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Brent Kreider for helpful comments and discussion.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+1}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+1}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Introduction}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+This paper tests whether or not taxes impact firm entry rates between neighboring states.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Estimation of this marginal effect has been historically difficult. Tax and other policy parameters tend to feature prolongued periods of stability, and changes may be endogenous}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+to many common dependent variables, such that changes in GDP, wages, and employment will entice government officials to try and improve economic performance. This has}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+led to time series applications to use narrative approaches to try and identify the impacts}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of exogenous shocks to tax rates on macroeconomic variables (Romer and Romer (2008),}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Mertens and Raven (2012)).}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We use a border-differencing technique to establish local estimates of the impacts}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of taxes on firm start up rates. This method controls for endogeneity of government}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+policy in response to local economic outcomes. For example, high economic activity}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+states may raise their taxes knowing that local agglomeration factors will continue to}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+attract an asymmetrically high amount of new firm start ups, while low economic activity}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+states may lower taxes to attract new businesses. This response would upwards-bias the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimate of the impacts of taxes. Using the differences in firm start up rates along state}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+borders controls for local agglomeration factors, and treat differences in policy variables}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+as exogenous.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+This technique relies on the assumption that new firms pick entry locations within a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+local choice set. Recent studies on agglomeration economies seem to support this view,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+where Rosenthal and Strange (2003, 2005), and Arzaghi and Henderson (2008)) show that}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+entrepreneurs weight locations within a mile of them significantly higher than distances}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+further away. Use of border discontinuity designs started with Holmes (1998), though}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+has quickly been adopted by researchers looking to identify effects of policies across}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+2}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+public economics, including minimum wages (Dube et al (2008), Rohlin (2011)), welfare}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(McKinnish (2005, 2007)), and school quality by Dhar and Ross (2012). It has even been}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+used by recent papers looking at the impacts of taxes on firm start up rates, including}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Rathelot and Sillard (2008), Duranton and Overman (2011), and Rohlin, Rosenthal, and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Ross (2014),}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our paper builds on a longer literature looking at determinants of firm entry. Early}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+papers such as Carlton (1979, 1983) and Schmenner (1982, 1987) failed to find incidence}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of taxes on firm entry rates, instead finding that higher taxes could attract more firms.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Starting in the 80\u8217\'92s methods and data allowed for cleaner identification, such that authors}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+started to more definitively show that taxes had an impact on business activity, including}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Wasylenko & McGuire (1985), Bartick (1989), Papke (1991), and Hines (1996).}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+The literature studying the impacts of taxes on firm entry behavior has not settled on}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the best variables to use for identifying the effects of taxes on firm start up rates. Carlton}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(1983) used top marginal tax rates for corporate and income tax, but weighted them}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+together, as well as property tax rates. Schmenner (1987) uses state and local property}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+tax revenues per dollar of personal income. Helms (1985) used a budget constraint to}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimate the impacts of rising tax revenue on explanatory variables. All three versions}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+have modern equivalents and the literature has not settled on a single best practice to}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+recover the proper marginal effects.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Theory indicates that marginal tax rates are what matter to individuals, and measures}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of average tax burden change due to both fluctuations in wages or profits, as well as to}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+changes in tax rates.Using average tax rates may add endogeneity into models. Also,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+politicians may alter multiple taxes at once in order to accomplish policy goals, such that}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+excluding taxes may imply omitted variable bias. Therefore, we argue that using top}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+3}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+marginal tax rates is the preferred method of estimating marginal effects of taxes.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We use a data set that includes property, income, corporate, capital gains, sales,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+workers compensation, and unemployment insurance top marginal tax rates. We further}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+add variables for government expenditures, including highways, education, and welfare.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+This mirrors the balanced budget approach of Helms (1985), Gabe and Bell (2004), and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Ojede and Yamarik (2012). Entrepreneurs sorting along by government expenditures}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+would imply that increasing tax rates to pay for certain services may not have negative}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+effects on firm start up rates.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+The paper proceeds in the following manner. First, we review literature relating to}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimating the determinants of firm entry. We then provide a model to show how utilizing discontinuities along state borders allow researchers to control for location specific}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+determinants of firm entry. Next, we explain our empirical design, which uses matched}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+county pairs on either side of state borders to identify the effects on taxes on firm start}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+up rates. We then provide estimates of these impacts. We conclude by showing which}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+borders have the largest firm start up discrepancy, and talk about applications of our}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+work.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+2}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Literature Review}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Location choice of firms and individuals has a rich history in economics. At its core, the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+question is what drives sorting behavior of firms into particular communities. One of}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the earliest models to approach sorting behavior of individuals was Tiebout (1956), who}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+argued that individuals sorted into locations through preferences for prices and public}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+amenities. Tiebout posited that counties as a result of this sorting behavior receive}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+pressure on their provision of services in order to attract individuals.1}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As a result Tiebout\u8217\'92s model, the early firm entry literature focused on sorting over}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+all available possible markets. These papers used conditional Logit models to explain}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the probability of agents entering into particular markets. McFadden (1974) showed a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+general framework on how to use conditional Logit function to estimate firm entry sorting.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Dowding, John, and Biggs (1994) review 200 articles and books that there is evidence that}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+taxes and services affect location decisions of firms and households, and less assuredly,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+property values as is implied in the traditional Tiebout models.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Guimaraes, Figueirido, and Woodward (2003) showed that the conditional Logit models of firm entry can be estimated by a Poisson distribution under relatively mild assumptions. Gabe and Bell (2004) used Poisson and Negative Binomial regressions show how}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+taxes and government spending on education impact firm location in Maine. They recover}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the coefficient on taxes by imposing a balanced budget requirement equivalent to Helms}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(1985). Their results show that increasing tax rates to raise education spending per pupil}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+causes no distortion on firm entry rates. A review was on the differences between discrete}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+choice models and Poisson models was done by Arauzo-Carod et al (2010). They show}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+that as time has gone on, the discrete choice model has lost favor in favor of count data}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+models. In their review they show that agglomeration and market size tend to have a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+significant positive effect, while wages and taxes act in the opposite direction.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Modern papers on firm entry paper have increasingly used border discontinuity methods. In these models individuals researchers test whether or not local discontinuities in}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+policy induce firms or individuals to change their start up or housing location. The first}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+1}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Sorting literature similarly gave birth to tax competition among states as over viewed by Wilson}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(1999). Our paper can be seen as an extension of this literature, where states compete to have preferential}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+tax differentials compared to neighboring states}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+paper to use a matched county-pair estimator is Holmes (1998). In Holmes\u8217\'92 paper, he}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+uses right to work status as a proxy for an unobserved cost of being on either side of}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+a state border imposed by \u8221\'94pro\u8221\'94 and \u8221\'94anti\u8221\'94 business policies. He then tested whether}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+or not right to work status affected manufacturing employment growth. His estimates}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+found that counties that have right to work status attract more manufacturing firms than}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+states without right to work status.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Since Holmes\u8217\'92 work, authors have utilized this technique to test a variety of expanding}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+topics in public economics. A recent paper by Rohlin, Ross, and Rosenthal (2014) mirrors}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+our paper very closely. They estimate a linear probability model of firm entry using a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+border difference estimator. They use GIS coded data to get a closer bandwidth to the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+border than our method, and show that increasing the personal income tax differential}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+actually increases the likelihood of firms entering on one side of the border. However,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+they show that increasing the corporate and sales tax differential can drastically reduce}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the relative firm entry probability.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Earlier work by Rohlin (2011) looked at the impact of minimum wages on firm start}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+up rates using less aggregated data. By utilizing the Dun and Bradstreet Marketplace}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+data files Rohlin constructed bands around state borders, and then derived estimates on}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the impact of minimum wage changes on firm start up rates. He showed that increasing}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the minimum wage decreased new establishment activity in industries that relied heavily}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+on minimum wage workers, but that changes in the minimum wage did not decrease}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+employment in existing establishments.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Chirinko and Wilson (2008) use a border discontinuity technique to estimate the impacts of state investment tax credits on firm start up rates. Rathelot and Sillard (2008)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+use the border discontinuity technique in a Probit model to show that increasing the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+6}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+total tax rate differential increases the probability of a firm picking a side between 1-5%.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Duranton and Overman (2011) took the difference in the firm entry rate in neighboring}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+areas to estimate the impacts of taxes on employment. They provide estimates both for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+traditional OLS estimates without the difference, which estimated a positive relationship between taxes and firm entry rates, but after applying the spatial difference, taxes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+negatively impacted firm start up rates.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+From the literature, we see that on average taxes negatively impact firm start up}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+rates, especially as researchers have gone from studying sorting over all available entry}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+choices, to local choices along policy discontinuities. However, how taxes are calculated}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+and used in studies differs wildly among authors. Various studies have used measures of}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+average tax revenue, added together top marginal tax rates, or included a single available}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+tax rate. As a result, we employ more recent spatial difference techniques to get a clear}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimate, while employing a larger array of top marginal tax rates than other authors.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+3}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Theory}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As entrepreneurs and firms look to start up a business in a new location they first choose}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+a market to enter. This choice is due to primary considerations such as labor market}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+characteristics, or location preferences of the owner. They then pick among possible}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+locations in that market. Our model looks at choice of firm entry across state borders,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+such that individuals have mobility across the border. As a result, firms treat location}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+specific determinants of profit as the same on both side of the border. This process leaves}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+policy drivers as remaining difference in expected profits. We formalize the conditions}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+for this process below.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Assume there exists a spatial equilibrium where wages and capital costs are adjusted}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+7}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+to local tax and location specific variables affecting firm level productivity. If markets}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+are competitive firms will make zero economic profit in the long run, but in the short run}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+demand or policy shocks can leave short run profits. We expect that if a regime changes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+its taxes over time, higher production costs and lower profits exist in that county, and that}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+market will deter a relative amount of firms from entering. Since firms will bid up or down}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+prices relative to taxes, those prices can be proxied by the tax rates directly. Firms make}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+decisions based on information from the previous year, as governments might concurrently}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+change policy along with market entry and there may exist costs to establishing a business.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Assumption 3.1. Assume that a firms\u8217\'92 profit can be expressed as a linear function, for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+a given location, state, and time pair denoted (i, j, t),}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (1)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (2)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Xi,t\u8722\'3f1 is a 1 \u215\'d7 K1 row vector of location specific terms, and Xj,t=1 is a 1 \u215\'d7 K2 row vector}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of state specific terms, and \u946\'3fi , \u946\'3fj are location and state specific fixed effects.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Location specific variables are any variable that is specific to a location, such as}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+local agglomeration figures, education attainment, and other variables driven by the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+distribution of labor and productive factors in each regime. Variables at the regime level}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+include taxes, regulatory policies, and government expenditures. Both sets of variables}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+are allowed to evolve over time. Therefore this assumption simply states that our policy}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+variables have to enter directly into the profit function, and that it is shared across all}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+firm types.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Now let us focus on a market that is defined by the interval [\u8722\'3f1, 1], such that for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+i \u8712\'3f [\u8722\'3f1, 0) a firm is in state A, and for i \u8712\'3f [0, 1], they are in state B. Therefore, if a firm}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+8}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+has two choices, y \u8712\'3f [\u8722\'3f1, 0) and y\u710\'88 \u8712\'3f [0, 1], then the firm chooses y over y\u710\'88 if}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+E[\u960\'3fy,A,t \u8722\'3f \u960\'3fy\u710\'88,B,t ] > 0\tab (3)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Assumption 3.2.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+This statates that as the locations firms choose between get asymptotically close to}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the border, the difference between unobserved location fixed effects and observed location}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+specific variables converge to zero. This is a technical illustration of labor and capital}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+mobility in close geographic areas. As the distance between the two locations increases}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+this may no longer be the case, as illustrated in Holmes (1998).}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Therefore, conditional on firms choosing locations (y, y\u710\'88) arbitrarily close to the border,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the profit function becomes,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+E[\u960\'3fy,A,t \u8722\'3f \u960\'3fy\u710\'88,B,t ] = \u946\'3fA \u8722\'3f \u946\'3fB + (XA,t\u8722\'3f1 \u8722\'3f XB,t\u8722\'3f1 )\u946\'3f2 (4)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As we move away from the border location characteristics might dominate the policy}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+effect, especially when we expect policy effects to be small. This theory favors the use}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of regression discontinuity techniques for estimating policy treatment effects, especially}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+when location specific drivers of firm entry might be unknown or unobserved.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+9}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Variables and Data}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4.1}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Matching Process}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our matching procedure is as follows. We first obtained Census county adjacency files.2 ,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+then used it to construct county-pairs by generating all pairs of counties that have adjacent counties in a neighboring state. From this matching we also tracked state FIPS}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+codes to create a list of state pairs. For each state-pair we assigned one side of a border}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+to be either a subject (sub) or neighbor (nbr) side of the border, which we use in our data}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+construction. This matching generates 1213 matched county-pairs with 107 state-pairs}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+in each year.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We then generated an extended border match. For this process we matched each}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+subject county to each of it\u8217\'92s neighbor\u8217\'92s neighbor, then excluded from any county in the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+original matching set. We provide a graphical representation of these matching processes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+in Figure 7. This extended match connects 1549 county-pairs across 107 state pairs each}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+year.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4.2}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Firm Start Up Data}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our primary variable of interest were county level firm start up rates for all firms in a year.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+This data set was procured at the Census Bureau\u8217\'92s Business Dynamic Statistics program.3}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+The data included the number of firm births, deaths, expansions, and contractions for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+each year from 1999 to 2013. It also provided these figures for broad NAICS coded}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+industries. As a result, our main variable of interest, births ratio is calculated as,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+2}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+https://www.census.gov/geo/reference/county-adjacency.html}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+3}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+http://www.census.gov/ces/dataproducts/bds/overview.html}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+10}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+births ratiot = ln(nsub,t ) \u8722\'3f ln(nnbr,t ) (5)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4.3}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Tax Data}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We included top marginal tax rates of seven taxes from 1977 to 2008. In all cases we}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+used a one period lagged difference in top marginal values. For each tax rate \u964\'3fi and state}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+pair (A, B), at time t the tax ratio was calculated}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+tax ratioA,B,t = \u964\'3fA,t \u8722\'3f \u964\'3fB,t}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+State marginal income tax and long term capital gains tax rates were obtained from}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+The National Bureau of Economic Research. For income tax rates we used the highest}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+marginal tax rates available, as this is the rate most applied to small business and S}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+corporations. When not available, we calculated the highest implied tax rate.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Corporate and sales tax rates were compiled from The Council of State Governments}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Book of States5 . We used the highest marginal state tax rates on business corporations.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Where rates differ between banks and non-banks, we use the non-bank rate, and we}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+restrict to sales tax rates levied on general merchandise, rather than food, clothing, or}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+medicine.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Property taxes were calculated from household level data provided by the Minnesota}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Population Center\u8217\'92s Integrated Public Use Micro-data Series (IPUMS).6 Workers compensation was calculated from Thomason et al (2001) between 1977 and 1995, with data}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+afterwards provided by the Oregon Department of Consumer and Business Services.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+http://users.nber.org/~taxsim/allyup/}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+http://users.nber.org/~taxsim/}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+marginal-tax-rates/ http://users.nber.org/~taxsim/state-marginal/}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+http://knowledgecenter.csg.org/kc/category/content-type/content-type/book-states}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+6}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+https://usa.ipums.org/usa/}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+11}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Finally, The top marginal unemployment insurance tax rates were provided by the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+max}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+US Department of Labor. To calculate, they multiplied the top marginal tax rate, \u964\'3fu,it}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+by the maximum wage level to which the rate is applied, Witmax . They normalized this}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+\u175\'af max . Then the unemployment}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+figure by the average wage in a state in a current year, W}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+it}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+insurance tax was calculated as;}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (6)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Government Expenditures}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We compiled log state governments expenditures on highways, education, and welfare}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+per capita using Census data on State Government Finances.7 We used expenditures on}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\lang1033
+\u8221\'94}{\rtlch \ltrch\loch\lang1033
+Education\u8221\'94 for our education value, welfare sums up expenditures on \u8221\'94Public Welfare\u8221\'94,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\lang1033
+\u8221\'94}{\rtlch \ltrch\loch\lang1033
+Hospitals,\u8221\'94 and \u8221\'94Health,\u8221\'94 while highways is calculated from \u8221\'94Highways\u8221\'94 expenditures}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+pulled from annual historical data accounts. To calculate per capita terms we divided}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+each figure by Census state population estimates,8 and then took logs. For each of our}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+expenditure figures, the state differenced variable for two states and time t was calculated}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+as,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+exp percap}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4.5}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+A,B,t}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+= log(expA /popA ) \u8722\'3f log(expB /popB )}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Additional Controls}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As a final series of controls, we included state level variables for percent of workforce}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+unionized, log real fuel prices, population density, percent of industry manufacturing,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+7}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+https://www.census.gov/govs/state/}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+8}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+http://www.census.gov/popest/}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+12}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+and percent of population with high school education. This data was collected from}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\lang1033
+\u8221\'94}{\rtlch \ltrch\loch\lang1033
+Union Membership and Coverage Database from the CPS.\u8221\'949}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Lastly, amenity data was acquired from the USDA.10 We used normalized values of}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+hours of sunlight in January, temperature in July, humidity in July, topology score, and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+percent of county that is water. After normalization each amenity variable is normal with}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+approximate mean zero and standard deviation 1. As a result, interpretation of these}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+terms should be done in terms of deviations from the mean. Again, we take difference}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+in county level Z-scores, and it is the only county level data we include in our empirical}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimates.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+4.6}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Preliminary Analysis}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Summary statistics are provided in Table (1).}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We first tested the hypothesis that states use taxes jointly to accomplish policy goals.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We plot simple cross correlations between our differenced tax variables in Table 7 as a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+heuristic test. Between 1998 and 2008, income tax and capital gains tax rates exhibit}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+highly positively correlation, the simple correlation between values is 0.64. We further see}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+that sales, payroll, workers compensation, and unemployment insurance tax rates have}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+low rates of correlation with other tax rates.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+The presence of simple correlations indicate policy makers might have shifted taxes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+jointly to accomplish policy goals and tried to advantageously shift tax incidence. Thus,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+modeling firm entry using a larger set of top marginal tax rates will improve estimates}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+of tax incidence on firm start up rates.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+9}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+10}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+http://www.unionstats.com/}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+http://www.ers.usda.gov/data-products/natural-amenities-scale.aspx}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+13}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Empirical Design}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As outlined in the previous section, the main parameters of interest are the impacts of top}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+marginal tax rates on firm start up rates. We estimate a pseudo-regression discontinuity}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+approach as a way of trying to remove local determinants of firm entry, as well as shared}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+responses to larger macroeconomic shocks.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.1}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Regression Discontinuity Approach}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our theory section showed that as the entry choice of firms centers around a border}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the location specific terms become insignificant in the difference in expected profits. We}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+estimate this bandwidth by using county level data on firm entry rates. The average}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+county in our data set is 1260 square miles, or about 35 miles per side if believed to be}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+approximately square. This distance is slightly longer than more refined approaches such}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+as Rohlin, Rosenthal, and Ross (2014). Then, our first each county-pair, the estimated}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+model is,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+?? ln(nsub,stA,t ) \u8722\'3f ln(nnbr,stB,t ) = (XstA,t\u8722\'3f1 \u8722\'3f XstB,t\u8722\'3f1 )\u946\'3f2 +}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+sub,stA,t}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\lang1033
+\u8722\'3f}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+nbr,stB,t}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(7)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Larger and shorter lags where also tested, but our variables are heavily inter-temporally}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+correlated, so there was no major difference occurs in sign or significance, such that only}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+fit deteriorates as we extended the lag structure. This model imposes \u946\'3fstA , \u946\'3fstB = 0}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+from Equation (4). We index each state-pairs (stA, stB) by g = 1, ..., G, and index each}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(sub, nbr) pairs by ig = 1, ..., Ng . Then we make the following definitions.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+\u168\'a8 i,g,t ) = ln(nsub,stA,t ) \u8722\'3f ln(nnbr,stB,t )}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+ln(n}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+14}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(8)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (9)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (10)...}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+\u168\'a8}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Assumption 5.1. }
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (11)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Assumption 5.2.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (12)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As a result of applying assumption 5.1 and 5.2 to Equation ??, our estimator takes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the form,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (13)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+EQ (14)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+There may be shocks to the state-pair border, so we use clustered standard errors on}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the state pair grouping. An example of border specific shocks would be if the Mississippi}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+river floods. This will affect states that are divided by the river, but not along borders}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+far away from the river.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+15}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.2}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.2.1}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Sensitivity Tests}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Added Controls}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+The first sensitivity test we implement is to run Equation (??) with a variety of controls.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We first report our benchmark model, which includes our seven top marginal tax rates,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+and our three sources of government expenditures. We then have two sets of controls,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+county level geographic amenities, and state level economic controls. We estimate models}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+that include and exclude one of each, and then include both. We want to check whether}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+or not our tax and regulatory variables become statistically insignificant once we account}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+for these additions, and in our second model check whether or not they properly become}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+indistinguishable from zero.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As a final round of controls, we estimate our model with state-pair fixed effects. This}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+allows \u946\'3fstA = 0, \u946\'3fstB = 0 for all state-pairs. This is equivalent to the difference in expected}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+profit when there exist state specific fixed effects as shown in Equation (4)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+\u168\'a8 i,g,t ) = \u946\'3fstA \u8722\'3f \u946\'3fstB + X}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+\u168\'a8 g,t\u8722\'3f1 \u946\'3f2 + \u168\'a8i,g,t}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+ln(n}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(15)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our theory indicated that the difference in county level fixed effects becomes negligible}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+when we take the difference, but state specific fixed effects may remain. This model allows}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+those effects to be non zero.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.2.2}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Extended Bandwidth}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We then extend the bandwidth of our estimator. This used the extended bandwidth}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+match from our Data section. We matched every subject county with every neighbor\u8217\'92s}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+neighbor that the subject county was not previously matched with. This estimate extends}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the distance between each of our observations so we expect state tax differentials to play}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+16}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+a less important role. See Figure (7) for a graphical example of both of regular bandwidth}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+and extended bandwidth matching procedure. Thus our model becomes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+ln(nsub,stA,t ) \u8722\'3f ln(nnbr nbr,stB,t ) = (XstA,t\u8722\'3f1 \u8722\'3f XstB,t\u8722\'3f1 )\u946\'3f2 +}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.2.3}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+sub,stA,t}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\lang1033
+\u8722\'3f}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+nbr nbr,stB,t}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(16)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Relaxing Coefficient Symmetry}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We then test a version of this model where we do not impose symmetry in the coefficients}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+across borders.Instead we let coefficients take on their own value in the difference, and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+do a set of F-tests on whether or not our assumption that \u946\'3fk,A = \u8722\'3f\u946\'3fk,B , \u8704\'3fk \u8712\'3f \{1, ..., K2 \}}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+holds in the difference as assumed.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+\u168\'a8 g,t ) = XstA,t\u8722\'3f1 \u946\'3f2,sub + XstB,t\u8722\'3f1 \u946\'3f2,nbr + e\u168\'a8igt}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+ln(n}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.2.4}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(17)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Period Specific Cross Section Analysis}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Forth, we test a set of regressions where we estimate cross-sectional models for each year}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+in our sample. We then compare these estimates to our pooled OLS estimates to gauge}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+if tax incidence on firm start up rates remains stable over time.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+\u168\'a8 g,t ) = XstA,t\u8722\'3f1 \u946\'3fstA + XstB,t\u8722\'3f1 \u946\'3fstB + ei,g,t :}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+ln(n}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.2.5}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+t = 1999, ..., 2008}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+(18)}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Industry Sub codes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As a final control, we estimated main model, Equation (??), on NAICS code level firm}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+entry. This is meant to test for the stability of our coefficients across Agriculture, Fishing,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Forestry, and Hunting; Retail Trade; Manufacturing; and Finance and Insurance.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+17}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.2.6}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Endogeneity along the Borders}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Finally, we do not test for endogeneity where states change taxes in response to the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+difference in firm entry rates. Due to the stability of our policy parameters, it seems}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+unlikely that governments are responding to firm start up rates in particular counties as}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+modeled by our estimator.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+5.3}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Results}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our main results are reported in Table (2). The first four columns respond to different}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+pooled OLS estimates where we include or exclude our set of control or amenity variables. The last two columns report our fixed effect estimates. Our pooled OLS estimates}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+show that the inclusion of the geographic amenities makes property taxes lose statistical}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+significance. However, the results still economic intuition that most likely the impacts}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+are small and negative across all of our model estimates. Averaging across models would}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+imply that a 1% increase in the relative property tax difference would decrease firm start}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+up rates by around 0.2%. The impacts of income and sales tax differentials remain relatively stable across our OLS estimate, such that a 1% increase in income tax differentials}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+correspond to a 0.8$ decrease in the relative firm start up rates, and similarly a 1% increase in sales tax differentials corresponds to a 0.1% decrease in the relative firm start up}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+rates. Even though capital gains, corporate tax, workers compensation, and unemployment insurance tax rates are individually insignificant, joint F-tests for all seven taxes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+show they are jointly significant.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We further see evidence that the difference in log welfare spending per capita is also}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+statistically significant, but the coefficient is economically very small, such that a 1%}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+increase in the difference corresponds to 0.001% higher firm entry rates. Finally, contrary}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+18}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+our assumptions, not all of our county level geographic amenities and state level controls}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+become zero at the border. The difference in log real fuel price remains positive and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+statistically significant, and both the difference in Temperature in January and Log Area}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+with Water remain significant among the geographic controls.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+When we run models with state-pair level fixed effects we fail to obtain any statistically}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+significant results. However, the value of these models are dubious. We first argue that}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+our pooled OLS estimates are most likely the properly specified model as firm start}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+up rates are an already differenced estimate. Thus the inclusion of state pair fixed effect}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+require year to year divergence in expected profit from entry, which shouldn\u8217\'92t occur under}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+perfect competition. Rather this still might imply that there are still relevant variables}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+we may be leaving out of our model.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Table 3 we estimate the extended bandwidth version of our model. We expect that}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the longer distance between two locations will make taxes have a smaller impact on}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+firm start up rates, while traditional measures of state or local agglomeration economies}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+will have a larger impact. Consistent with this, we see that our tax rates become less}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+individually statistically significant across model types. Further, our state level controls}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+remain largely insignificant, as do our geographic controls. Thus, the fit of the model at}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+large seems to decrease as the distance between counties increases.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+When we run pooled OLS estimates where we do not impose that coefficients we}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+see that for most of our variables remain equal but opposite across the border. Table 4}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+reports coefficients, while Table 5 provides F tests for the assumption of the coefficients}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+being the same across borders. We test for each variable that \u946\'3fi,sub = \u8722\'3f\u946\'3fi,nbr . The}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+results verify our belief that coefficients are the same and opposite in our design is a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+valid assumption. The exception is sales tax rates and workers compensation tax rates,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+19}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+for the subject county they are strongly and negatively significant, but for the neighbor}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+they not significant at all. However, given that the rest of them pass, this might be a}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+spurious result due to the number of regressors. We see an equivalent note in the workers}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+compensation figures in our F tests, where for the neighboring county it appears to be}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+significant, but not for the subject county.11}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Table 7 shows regression results for births ratio for the every year between 1999 and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+2009. We use the model that includes state controls but excludes geographic amenities.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We see that property taxes remain consistently negative and statistically significant. Sales}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+tax rates remain negative and statistically significant, and even appears to grow in its}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+deterrance of new entry. Income taxes start off insignifcant, but negative, and become}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+statistically significant from zero. Log highway and welfare expenditures per capita vary}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+in their significance across the sample, but remain positive drivers of firm entry when}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+they appear.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Finally, in Tables 8-11 we report the same results as we did in Table 2 but running on}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+NAICS subcodes for Agriculture, Fishing, Forestry, and Hunting, Retail Trade, Manufacturing, and Finance and Insurance. We find that our initial results in Table 2, including}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+magnitude and strength. This is somewhat surprising, as we would expect characteristics that drive firm entry to differ across firm types. Namely, property taxes may deter}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+agriculture more than financial firms, however it appears that the correlation between}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+different firm types superscedes this selection.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+As a final output of our paper, we compare two different rankings. First we calculate}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+11}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Also, the assignment process here might be driving results. We are not running each coefficient}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+as a fixed effect for each border, but rather across all counties defined as \u8221\'94neighbor\u8221\'94 in our sample.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+However, by using clustered standard errors we do not have the degrees of freedom to run this test for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+each state-pair.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+20}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the weighted tax differential by multiplying the tax coefficients from Table 2, column 4}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+times each states marginal tax values. These are plotted in Figure 7. We see that for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+most states the weighted tax differential is very small, thus the implied impact of taxes}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+on relative firm start up rates is ultimately small. However, for a few counties, this is not}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the case, and we see clear outliers where more than 1% of the differential is motivated by}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+the difference in tax rates.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+To calculate How important this effect is still aggregately we provide a table of the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+difference in the mean number of firm start ups along each state border, as well as the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+weighted tax differential. Since we calculate these terms in absolute value, we similarly}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+show which side of the border is preferred for the borders with the top 50 largest difference}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+in mean firm start ups. This ranking is provided in Table 12. We seen that 62% of the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+time the side with the preferred weighted tax differential also has the higher mean firm}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+start up differential.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+6}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Conclusion}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our paper tests the impact of taxes on firm start up rates. We present a model illustrating that when firm entry locations are close together and split across state borders,}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+location specific determinants of firm entry become insignificant. This allows researchers}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+to estimate policy effects. We estimate this model by taking the difference in county firm}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+start up rates on opposite sides of a state border. This allows us to examine firm entry}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+behavior around state borders by an approximate bandwidth.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+In our empirical results, we included property, income, corporate, capital gains, workers compensation, and unemployment insurance top marginal tax rates. We further}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+include log expenditures per capital on education, highways, and welfare. We control for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+21}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+state level agglomeration averages such as population density, fuel prices, union rate, and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+percent of population with a high school degree, as well as and county level geographic}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+amenities, such as January temperature, July humidity, and log area with water.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Our estimated model shows that property, income, and sales taxes have the strongest}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+determining factor on firm start up rates. On average, a 1% increase in the difference in}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+property taxes decreases firm start up rates by 0.3%, while a 1% increase in income and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+sales tax differentials decreases firm start up rates by 0.01%.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+The fact that corporate and capital gains taxes are not significant follows from characteristics of new firm entrant. Generally many new firms are small S corporations, meaning}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+that owners pay top marginal income taxes rather than corporate taxes, and that sales}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+and property taxes may play a significantly larger role on their profits than capital gains}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+and corporate tax rates. Also, the average new firm has a relatively short timeline, such}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+that investments in the company will probably not be recouped, and that capital gains}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+tax rates are not likely to impact the majority of small new firm entrants.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+In our sensitivity tests, we found that coefficients are the same across counties. We also}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+show that the sign, size, and significance of property and sales taxes remain consistent for}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+each time period in our sample, while income taxes gain significant over time. Finally, we}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+show that when we include an array of state-pair specific fixed effects all of our estimates}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+become insignificant, but our tax variables remain the largest, keeping their sign and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+relative importance.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Government expenditure variables do not seem to impact firm start up rates. This}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+might be due to the fact that individuals can live in one county that has a preferred}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+public expenditure bundle and still set up a businesses in a neighboring county that has}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+a preferred regulatory policy. Rohlin, Rosenthal, and Ross (2014) control for this by}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+22}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ltrsect\sbknone\pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+including reciprocal agreements in their specification, which require workers to pay their}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+income tax in the state of residence rather than the state of employment. This may}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+control for some of the sorting of entrepreneurs we observe.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+We finally provided a weighted tax differential, showing that the impacts of taxes on}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+firm entry rates remain small, only accounting for about 0.2% of the difference in firm}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+start up behavior across borders. Despite this, the side with the preferred taxation policy}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+had more firm start ups 62% of the time in our sample. Therefore while taxes might have}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+a marginally small impact, their adjustment may still be beneficial to communities and}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+states.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+Going forward obtaining firm specific characteristics will help establish better estimates of tax incidence on firm start up and life cycle behavior. Generating county level}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+agglomeration figures and testing their impacts might also be a way of estimating the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+interior impacts of tax differentials on firm start up rates. Finally, looking to test the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+welfare impacts of new firm entrants is important. Current theory is agnostic about the}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+impacts of firm entry on welfare, and ensuring that policy changes improve lives required}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+for program efficacy.}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch\lang1033
+
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033{\rtlch \ltrch\loch\lang1033
+23}
+\par \pard\plain \s0\ql\widctlpar\ltrpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\dbch\af10\cf0\kerning1\langfe2052\dbch\af11\afs24\alang1081\loch\f8\fs24\lang1033\rtlch \ltrch\loch
+
+\par \sect\sectd\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pgndec\sbknone}
