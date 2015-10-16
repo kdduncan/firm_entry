@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.11)  13 OCT 2015 18:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.11)  15 OCT 2015 10:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,33 +678,33 @@ Overfull \hbox (2.43571pt too wide) in paragraph at lines 13--14
  are heav-ily inter-temporally
  []
 
-[14] [15] [16]) (./analysis.tex [17] [18] [19] [20]) (./conclusion.tex [21]
-[22]) [23] [24] [25] [26]
-<../analysis/output/borders_temp.png, id=334, 642.4pt x 401.5pt>
+[14] [15] [16] [17]) (./analysis.tex [18] [19] [20]) (./conclusion.tex [21]
+[22]) [23] [24] [25] [26] [27]
+<../analysis/output/borders_temp.png, id=344, 642.4pt x 401.5pt>
 File: ../analysis/output/borders_temp.png Graphic file (type png)
 
 <use ../analysis/output/borders_temp.png>
 Package pdftex.def Info: ../analysis/output/borders_temp.png used on input line
- 146.
+ 176.
 (pdftex.def)             Requested size: 321.19922pt x 200.7495pt.
 
-<../analysis/output/rb_picture.png, id=336, 1687.30376pt x 917.4275pt>
+<../analysis/output/rb_picture.png, id=346, 1687.30376pt x 917.4275pt>
 File: ../analysis/output/rb_picture.png Graphic file (type png)
 
 <use ../analysis/output/rb_picture.png>
 Package pdftex.def Info: ../analysis/output/rb_picture.png used on input line 1
-53.
+83.
 (pdftex.def)             Requested size: 337.45477pt x 183.48225pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../analysis/output/eb_picture.png, id=337, 654.445pt x 394.47375pt>
+<../analysis/output/eb_picture.png, id=347, 654.445pt x 394.47375pt>
 File: ../analysis/output/eb_picture.png Graphic file (type png)
 
 <use ../analysis/output/eb_picture.png>
 Package pdftex.def Info: ../analysis/output/eb_picture.png used on input line 1
-60.
+90.
 (pdftex.def)             Requested size: 327.2217pt x 197.23639pt.
 
 
@@ -715,19 +715,19 @@ Overfull \hbox (6.7369pt too wide) in paragraph at lines 7--36
  [][] 
  []
 
-) <../analysis/output/_--_pairs.png, id=338, 481.8pt x 481.8pt>
+) <../analysis/output/_--_pairs.png, id=348, 481.8pt x 481.8pt>
 File: ../analysis/output/_--_pairs.png Graphic file (type png)
 
 <use ../analysis/output/_--_pairs.png>
-Package pdftex.def Info: ../analysis/output/_--_pairs.png used on input line 16
+Package pdftex.def Info: ../analysis/output/_--_pairs.png used on input line 19
 8.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27 <../analysis/output/borders_temp.png>] [28] [29 <../analysis/output/rb_pict
-ure.png> <../analysis/output/eb_picture.png>] [30 <../analysis/output/_--_pairs
+[28 <../analysis/output/borders_temp.png>] [29] [30 <../analysis/output/rb_pict
+ure.png> <../analysis/output/eb_picture.png>] [31 <../analysis/output/_--_pairs
 .png (PNG copy)>]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -761,7 +761,7 @@ ure.png> <../analysis/output/eb_picture.png>] [30 <../analysis/output/_--_pairs
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (../analysis/output/_--_rd_results.tex) [31
+ (../analysis/output/_--_rd_results.tex) [32
 
 
 ]
@@ -798,7 +798,7 @@ ure.png> <../analysis/output/eb_picture.png>] [30 <../analysis/output/_--_pairs
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-(../analysis/output/_--_eb_results.tex) [32
+(../analysis/output/_--_eb_results.tex) [33
 
 
 
@@ -816,7 +816,7 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 10.
-) [33] [34]
+) [34] [35]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -850,7 +850,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-(../analysis/output/_--_year_rd_results.tex) [35
+(../analysis/output/_--_year_rd_results.tex) [36
 
 
 
@@ -889,42 +889,42 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-(../analysis/output/naics_subcodes.tex) [36
+(../analysis/output/naics_subcodes.tex) [37
 
 
 
 
 ]
-<../analysis/output/_--_weightedtax.pdf, id=390, 480.79625pt x 433.62pt>
+<../analysis/output/_--_weightedtax.pdf, id=403, 480.79625pt x 433.62pt>
 File: ../analysis/output/_--_weightedtax.pdf Graphic file (type pdf)
 
 <use ../analysis/output/_--_weightedtax.pdf>
 Package pdftex.def Info: ../analysis/output/_--_weightedtax.pdf used on input l
-ine 200.
+ine 230.
 (pdftex.def)             Requested size: 240.39752pt x 216.80946pt.
 
 (../analysis/output/_--_meantable.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 205.
- [37
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
+ [38
 
 
  <../analysis/output/_--_weightedtax.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
  (./master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: 852146D383E34C9CA5C64DD83BAC6523;1451.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  ) 
 Here is how much of TeX's memory you used:
- 8119 strings out of 494985
- 120897 string characters out of 6180355
- 223167 words of memory out of 5000000
- 11007 multiletter control sequences out of 15000+600000
- 15934 words of font info for 62 fonts, out of 8000000 for 9000
+ 8138 strings out of 494985
+ 121207 string characters out of 6180355
+ 223534 words of memory out of 5000000
+ 11016 multiletter control sequences out of 15000+600000
+ 15765 words of font info for 61 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,13n,51p,1341b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,51p,1341b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -941,12 +941,11 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmtt12.pfb>
-Output written on master.pdf (37 pages, 2295902 bytes).
+ts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on master.pdf (38 pages, 2292590 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 423 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 505 PDF objects out of 1000 (max. 8388607)
+ 433 compressed objects within 5 object streams
+ 143 named destinations out of 1000 (max. 500000)
  202 words of extra memory for PDF output out of 10000 (max. 10000000)
 
