@@ -1,0 +1,55 @@
+
+Not Symmetric Effects for Unclassified Firm Births
+=================================================
+                             Dependent variable: 
+                             --------------------
+                                 births ratio    
+                                OLS        OLS   
+                                (1)        (2)   
+-------------------------------------------------
+Property Tax Sub               -0.050   -0.361** 
+                              (0.180)    (0.164) 
+Property Tax Nbr               0.214     0.351** 
+                              (0.162)    (0.147) 
+Income Tax Sub                -0.132**  -0.111** 
+                              (0.053)    (0.044) 
+Income Tax Nbr                 0.076*    0.056*  
+                              (0.039)    (0.031) 
+Capital Gains Tax Sub          0.025      0.015  
+                              (0.034)    (0.031) 
+Capital Gains Tax nbr         -0.069**   -0.048  
+                              (0.033)    (0.031) 
+Sales Tax Sub                -0.149***  -0.142***
+                              (0.043)    (0.040) 
+Sales Tax Nbr                  0.036      0.005  
+                              (0.045)    (0.044) 
+Corp Tax Sub                   0.027      0.031  
+                              (0.027)    (0.027) 
+Corp Tax Nbr                   0.011      0.003  
+                              (0.022)    (0.024) 
+Workers Comp Tax Sub           -0.165    -0.134  
+                              (0.130)    (0.118) 
+Workers Comp Tax Nbr           -0.135    -0.235  
+                              (0.145)    (0.148) 
+Unemp. Tax Sub                 -0.014    -0.058  
+                              (0.042)    (0.043) 
+Unemp. Tax Nbr                 -0.005    -0.019  
+                              (0.075)    (0.055) 
+Educ Spending Per Cap Sub     -0.0002    -0.001  
+                              (0.0004)  (0.0004) 
+Educ Spending Per Cap Nbr      0.0001    0.0001  
+                              (0.0004)  (0.0003) 
+Highway Spending Per Cap Sub   0.0004     0.001  
+                              (0.001)    (0.001) 
+Highway Spending Per Cap Nbr  -0.0005    -0.0004 
+                              (0.001)   (0.0005) 
+Welfare Spending Per Cap Sub  0.001**    0.001** 
+                              (0.0003)  (0.0003) 
+Welfare Spending Per Cap Sub  -0.0004    -0.0002 
+                              (0.0003)  (0.0003) 
+Constant                       1.064     1.668** 
+                              (0.840)    (0.742) 
+-------------------------------------------------
+amenities                       Yes        No    
+=================================================
+=================================================

@@ -14,9 +14,9 @@ Our primary variable of interest were county level firm start up rates for all f
 
 \subsection{Tax Data}
 
-We included top marginal tax rates of seven taxes from 1977 to 2008. In all cases we used a one period lagged difference in top marginal values. For each tax rate $\tau_{i}$ and state pair $g = (A,B)$, at time $t$ the tax ratio was calculated 
+We included top marginal tax rates of seven taxes from 1977 to 2008. In all cases we used a one period lagged difference in top marginal values. For each tax rate $\tau$ and state pair $g = (A,B)$, at time $t$ the tax ratio was calculated 
 
-\begin{equation} tax\_ratio_{g,t} = \tau_{A,t}-\tau_{B,t} \end{equation}
+\begin{equation} \tau\_ratio_{g,t} = \tau_{A,t}-\tau_{B,t} \end{equation}
 
 State marginal income tax and long term capital gains tax rates were obtained from The National Bureau of Economic Research. For income tax rates we used the highest marginal tax rates available, as this is the rate most applied to small business and S corporations. When not available, we calculated the highest implied tax rate. \footnote{\url{http://users.nber.org/~taxsim/allyup/} \url{http://users.nber.org/~taxsim/marginal-tax-rates/} \url{http://users.nber.org/~taxsim/state-marginal/}}
 
@@ -24,18 +24,18 @@ Corporate and sales tax rates were compiled from The Council of State Government
 
 Property taxes were calculated from household level data provided by the Minnesota Population Center's Integrated Public Use Micro-data Series (IPUMS).\footnote{\url{https://usa.ipums.org/usa/}} Workers compensation was calculated from Thomason et al (2001) between 1977 and 1995, with data afterwards provided by the Oregon Department of Consumer and Business Services. 
 
-Finally, The top marginal unemployment insurance tax rates were provided by the US Department of Labor. To calculate, they multiplied the top marginal tax rate, $\tau_{u,it}^{max}$, by the maximum wage level to which the rate is applied, $W_{it}^{max}$. They normalized this figure by the average wage in a state in a current year, $\bar W_{it}^{max}$. Then the unemployment insurance tax was calculated for each state as;
+Finally, the top marginal unemployment insurance tax rates were provided by the US Department of Labor. To calculate, they multiplied the top marginal tax rate, $\tau_{u,it}^{max}$, by the maximum wage level to which the rate is applied, $W_{it}^{max}$. They normalized this figure by the average wage in a state in a current year, $\bar W_{it}^{max}$. Then the unemployment insurance tax was calculated for each state as;
 \begin{equation} \tau_{A,t} = \frac{\tau_{A,t}^{max}W_{A,t}^{max}}{\bar W_{A,t}^{max}}\end{equation}
 
 \subsection{Government Expenditures}
 
-We compiled log state governments expenditures on highways, education, and welfare per capita using Census data on State Government Finances.\footnote{\url{https://www.census.gov/govs/state/}} We used expenditures on "Education" for our education value, welfare sums up expenditures on "Public Welfare", "Hospitals," and "Health," while highways is calculated from "Highways" expenditures pulled from annual historical data accounts. To calculate per capita terms we divided each figure by Census state population estimates,\footnote{\url{http://www.census.gov/popest/}} and then took logs. For each of our expenditure figures, the state differenced variable for two states and time t was calculated as,
+We compiled log state governments expenditures on highways, education, and welfare per capita using Census data on State Government Finances.\footnote{\url{https://www.census.gov/govs/state/}} We used expenditures on "Education" for our education value, welfare sums up expenditures on "Public Welfare", "Hospitals," and "Health," while highways is calculated from "Highways" expenditures pulled from annual historical data accounts. To calculate per capita terms we divided each figure by Census state population estimates\footnote{\url{http://www.census.gov/popest/}} and then took logs. For each of our expenditure figures ($exp\_percap$), the state differenced variable for two states and time t was calculated as,
 
-\begin{equation} exp\_percap\__{g,t} = \log(exp_{A,t}/pop_{A,t}) - \log(exp_{B,t}/pop_{B,t}) \end{equation}
+\begin{equation} exp\_percap\_{g,t} = \log(exp_{A,t}/pop_{A,t}) - \log(exp_{B,t}/pop_{B,t}) \end{equation}
 
 \subsection{Additional Controls}
 
-As a final series of controls, we included state level variables for percent of workforce unionized, log real fuel prices, population density, percent of industry manufacturing, and percent of population with high school education. This data was collected from "Union Membership and Coverage Database from the CPS."\footnote{\url{http://www.unionstats.com/}}
+As a final series of controls, we included state level variables for percent of workforce unionized, log real fuel prices, population density, percent of industry manufacturing, and percent of population with high school education. This data was collected from, "Union Membership and Coverage Database from the CPS."\footnote{\url{http://www.unionstats.com/}}
 
 Lastly, amenity data was acquired from the USDA.\footnote{\url{http://www.ers.usda.gov/data-products/natural-amenities-scale.aspx}} We used normalized values of hours of sunlight in January, temperature in July, humidity in July, topology score, and percent of county that is water. After normalization each amenity variable is normal with approximate mean zero and standard deviation 1. As a result, interpretation of these terms should be done in terms of deviations from the mean. Again, we take difference in county level Z-scores, and it is the only county level data we include in our empirical estimates.
 

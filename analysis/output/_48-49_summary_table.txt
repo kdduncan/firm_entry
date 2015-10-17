@@ -1,0 +1,28 @@
+
+Summary Table for Transportation and Warehousing Firm Births
+======================================================================
+Statistic                       N     Mean   St. Dev.   Min      Max  
+----------------------------------------------------------------------
+Births Ratio                  13,044 -0.058   1.532    -5.670   5.328 
+Property Tax Difference       13,044 -0.097   0.501    -1.672   1.241 
+Income Tax Difference         13,044  1.211   3.982    -9.280   9.860 
+Capital Gains Tax Difference  13,044  1.907   4.316    -9.280  13.420 
+Sales Tax Difference          13,044 -0.310   2.144    -7.000   7.250 
+Corp Tax Difference           13,044  1.268   3.679    -8.900  12.000 
+Workers Comp Tax Difference   13,044  0.030   0.665    -2.762   2.451 
+Unemp. Tax Difference         13,044  0.038   1.350    -4.564  16.070 
+Educ Spending Per Cap Diff    13,044  9.759  211.477    -807     692  
+Highway Spending Per Cap Diff 13,044 -39.194 145.174    -756     358  
+Welfare Spending Per Cap Diff 13,044 -38.477 269.466   -1,072    953  
+Pct Highschool                13,044  0.240   3.749   -10.100  12.000 
+Real Fuel Price               13,044  0.308   2.358    -7.500   8.200 
+Pct Union                     13,044  0.638   4.690   -14.900  16.100 
+Pop Density                   13,044 42.601  164.269  -746.200 901.000
+Pct Manuf                     13,044  0.011   0.067    -0.240   0.250 
+Jan Temp Z Diff               13,044  0.003   0.206    -1.291   1.291 
+Jan Sun Z Diff                13,044  0.039   0.583    -2.499   3.583 
+Jul Temp Z Diff               13,044  0.065   0.602    -4.475   4.115 
+Jul Hum Z Diff                13,044 -0.031   0.423    -3.697   3.081 
+Topog Z Diff                  13,044 -0.024   0.646    -2.578   2.123 
+Ln Water Z Diff               13,044 -0.052   0.870    -3.456   3.155 
+----------------------------------------------------------------------

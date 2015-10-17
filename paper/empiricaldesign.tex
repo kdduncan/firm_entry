@@ -4,24 +4,24 @@ As outlined in the previous section, the main parameters of interest are the imp
 
 \subsection{Regression Discontinuity Approach}
 
-Our theory section showed that as the entry choice of firms centers around a border the location specific terms become insignificant in the difference in expected profits. We estimate this bandwidth by using county level data on firm entry rates. The average county in our data set is 1260 square miles, or about 35 miles per side if believed to be approximately square. This distance is slightly longer than more refined approaches such as Rohlin, Rosenthal, and Ross (2014). Then, our first each county-pair, the estimated model is,
+Our theory section showed that as the entry choice of firms' centers around a border the location specific terms become insignificant in the difference in expected profits. We estimate this bandwidth by using county level data on firm entry rates. The average county in our data set is 1260 square miles, or about 35 miles per side if believed to be approximately square. This distance is slightly longer than more refined approaches such as Rohlin, Rosenthal, and Ross (2014). Then, our first each county-pair, the estimated model is,
 
 \begin{equation}\label{pref}
-\ln(n_{sub,stA,t})-\ln(n_{nbr,stB,t}) = (X_{stA,t-1}-X_{stB,t-1})\beta_{2} + \epsilon_{sub,stA,t}-\epsilon_{nbr,stB,t}
+\ln(n_{sub,A,t})-\ln(n_{nbr,B,t}) = (X_{A,t-1}-X_{B,t-1})\beta_{2} + \epsilon_{sub,A,t}-\epsilon_{nbr,B,t}
 \end{equation}
 
-Larger and shorter lags where also tested, but our variables are heavily inter-temporally correlated, so there was no major difference occurs in sign or significance, such that only fit deteriorates as we extended the lag structure. This model imposes $\beta_{stA},\beta_{stB} = 0$ from Equation (\ref{prof}). We index each state-pairs $(stA,stB)$ by $g = 1,...,G$, and index each $(sub, nbr)$ pairs by $ i_{g} = 1,...,N_{g}$. Then we make the following definitions.
+Larger and shorter lags where also tested, but our variables are heavily inter-temporally correlated, so there was no major difference occurs in sign or significance, such that only fit deteriorates as we extended the lag structure. This model imposes $\beta_{A},\beta_{B} = 0$ from Equation (\ref{prof}). We index each state-pairs $(A,B)$ by $g = 1,...,G$, and index each $(sub, nbr)$ pairs by $ i_{g} = 1,...,N_{g}$. Then we make the following definitions.
 
 \begin{equation}
-\ddot \ln(n_{i,g,t}) = \ln(n_{sub,stA,t})-\ln(n_{nbr,stB,t})
-\end{equation}
-
-\begin{equation}
-\ddot X_{g,t-1} = 1+(X_{stA,t-1}-X_{stB,t-1})
+\ddot \ln(n_{i,g,t}) = \ln(n_{sub,A,t})-\ln(n_{nbr,B,t})
 \end{equation}
 
 \begin{equation}
-\ddot \epsilon_{i,g,t} = \epsilon_{sub,stA,t}-\epsilon_{nbr,stB,t}
+\ddot X_{g,t-1} = 1+(X_{A,t-1}-X_{B,t-1})
+\end{equation}
+
+\begin{equation}
+\ddot \epsilon_{i,g,t} = \epsilon_{sub,A,t}-\epsilon_{nbr,B,t}
 \end{equation}
 
 Assume $\ddot \epsilon_{i,g,t}$ be an i.i.d white noise draw, $\ddot X_{g} = (\ddot X_{g,0}',...,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{2})$ matrix, and $\ddot \epsilon_{ig} = (\ddot \epsilon_{i,g,1},...,\ddot \epsilon_{i,g,T})'$ be a $T \times 1$ vector. Next we assume the traditional OLS moment conditions.
@@ -52,33 +52,33 @@ There may be shocks to the state-pair border, so we use clustered standard error
 
 The first sensitivity test we implement is to run Equation (\ref{pref}) with a variety of controls. We first report our benchmark model, which includes our seven top marginal tax rates, and our three sources of government expenditures. We then have two sets of controls, county level geographic amenities, and state level economic controls. We estimate models that include and exclude one of each, and then include both. We want to check whether or not our tax and regulatory variables become statistically insignificant once we account for these additions, and in our second model check whether or not they properly become indistinguishable from zero. 
 
-As a final round of controls, we estimate our model with state-pair fixed effects. This allows $\beta_{stA} \neq 0, \beta_{stB} \neq 0$ for all state-pairs. This is equivalent to the difference in expected profit when there exist state specific fixed effects as shown in Equation (\ref{prof})
+As a final round of controls, we estimate our model with state-pair fixed effects. This allows $\beta_{A},  \beta_{B} \neq 0$ for all state-pairs. This is equivalent to the difference in expected profit when there exist state specific fixed effects as shown in Equation (\ref{prof})
 
 \begin{equation}\label{fe}
-\ddot \ln(n_{i,g,t}) = \beta_{stA}-\beta_{stB}+\ddot X_{g,t-1}\beta_{2} + \ddot \epsilon_{i,g,t}
+\ddot \ln(n_{i,g,t}) = \beta_{A}-\beta_{B}+\ddot X_{g,t-1}\beta_{2} + \ddot \epsilon_{i,g,t}
 \end{equation}
 
-Our theory indicated that the difference in county level fixed effects becomes negligible when we take the difference, but state specific fixed effects may remain. This model allows those effects to be non zero.
+Our theory indicated that the difference in county level fixed effects becomes negligible when we take the difference, but state specific fixed effects may remain. This model allows those effects to be non-zero.
 
 \subsubsection{Extended Bandwidth}
 
 We then extend the bandwidth of our estimator. This used the extended bandwidth match from our Data section. We matched every subject county with every neighbor's neighbor that the subject county was not previously matched with. This estimate extends the distance between each of our observations so we expect state tax differentials to play a less important role. Our new match becomes the model,
 
 \begin{equation}
-\ln(n_{sub,stA,t})-\ln(n_{nbr\_nbr,stB,t}) = (X_{stA,t-1}-X_{stB,t-1})\beta_{2} + \epsilon_{sub,stA,t}-\epsilon_{nbr\_nbr,stB,t}
+\ln(n_{sub,A,t})-\ln(n_{nbr\_nbr,B,t}) = (X_{A,t-1}-X_{B,t-1})\beta_{2} + \epsilon_{sub,A,t}-\epsilon_{nbr\_nbr,B,t}
 \end{equation}
 
 \subsubsection{Relaxing Coefficient Symmetry}
-We then test a version of this model where we do not impose symmetry in the coefficients across borders.Instead we let coefficients take on their own value in the difference, and do a set of F-tests on whether or not our assumption that $\beta_{k,A} = -\beta_{k,B}$, $\forall k \in \{1,...,K_{2}\}$ holds in the difference as assumed.
+We then test a version of this model where we do not impose symmetry in the coefficients across borders. Instead we let coefficients take on their own value in the difference, and do a set of F-tests on whether or not our assumption that $\beta_{k,A} = -\beta_{k,B}$, $\forall k \in \{1,...,K_{2}\}$ holds in the difference as assumed.
 
 \begin{equation}\label{sense1}
-\ddot \ln(n_{g,t}) = X_{stA,t-1}\beta_{2,sub}+X_{stB,t-1}\beta_{2,nbr}+ \ddot e_{igt} 
+\ddot \ln(n_{g,t}) = X_{A,t-1}\beta_{2,sub}+X_{B,t-1}\beta_{2,nbr}+ \ddot e_{igt} 
 \end{equation}
 
 \subsubsection{Period Specific Cross Section Analysis}
 Forth, we test a set of regressions where we estimate cross-sectional models for each year in our sample. We then compare these estimates to our pooled OLS estimates to gauge if tax incidence on firm start up rates remains stable over time. 
 \begin{equation}\label{sense2}
-\ddot \ln(n_{g,t})  = X_{stA,t-1}\beta_{stA}+X_{stB,t-1}\beta_{stB}+ e_{i,g,t}: \quad t = 1999,...,2008
+\ddot \ln(n_{g,t})  = X_{A,t-1}\beta_{A}+X_{B,t-1}\beta_{B}+ e_{i,g,t}: \quad t = 1999,...,2008
 \end{equation}
 
 \subsubsection{Industry Sub codes}

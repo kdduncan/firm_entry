@@ -118,7 +118,7 @@ plot=qplot(abs(pols_namen_nc_r_coef[2]*ptax_diff + pols_namen_nc_r_coef[3]*incta
                + pols_namen_nc_r_coef[5]*salestax_diff  + pols_namen_nc_r_coef[6]*corptax_diff  + pols_namen_nc_r_coef[7]*wctax_diff
                + pols_namen_nc_r_coef[8]*uitax_diff), data=finaldat, 
            xlab = "absolute valued weighted tax differential", geom="histogram",  main = "Weighted Tax Differentials in 2008") 
-ggsave(plot,file="~/papers/firm_entry/analysis/output/_--_weightedtax.pdf")
+ggsave(plot,file="~/papers/firm_entry/analysis/output/_--_weightedtax.png")
 
 # want to see which areas have seen the biggest improvement.
 

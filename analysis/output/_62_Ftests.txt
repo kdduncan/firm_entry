@@ -1,0 +1,13 @@
+
+F-Tests for Symmetry of Coefficients for Health care and social assistance Firm Start Ups
+==============================================
+Test                             F-Stat P(> F)
+----------------------------------------------
+ptax_sub = -ptax_nbr             0.0164 0.8982
+inctax_sub = -inctax_nbr         1.4528 0.2281
+capgntax_sub = -capgntax_nbr     0.5105 0.475 
+salestax_sub = -salestax_nbr     5.029  0.0249
+corptax_sub = -corptax_nbr       0.8229 0.3643
+wctaxfixed_sub = -wctaxfixed_nbr 3.6177 0.0572
+uitaxrate_sub = -uitaxrate_nbr   1.4065 0.2357
+----------------------------------------------

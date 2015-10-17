@@ -1,0 +1,13 @@
+
+F-Tests for Symmetry of Coefficients for Real estate and rental and leasing Firm Start Ups
+==============================================
+Test                             F-Stat P(> F)
+----------------------------------------------
+ptax_sub = -ptax_nbr             7e-04  0.9792
+inctax_sub = -inctax_nbr         1.4276 0.2322
+capgntax_sub = -capgntax_nbr     0.5043 0.4776
+salestax_sub = -salestax_nbr     5.3081 0.0212
+corptax_sub = -corptax_nbr       0.7168 0.3972
+wctaxfixed_sub = -wctaxfixed_nbr 3.5696 0.0589
+uitaxrate_sub = -uitaxrate_nbr   1.595  0.2066
+----------------------------------------------

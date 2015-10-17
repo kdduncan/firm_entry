@@ -1,0 +1,13 @@
+
+F-Tests for Symmetry of Coefficients for Accommodation and foodservices Firm Start Ups
+==============================================
+Test                             F-Stat P(> F)
+----------------------------------------------
+ptax_sub = -ptax_nbr             0.0147 0.9036
+inctax_sub = -inctax_nbr         1.6309 0.2016
+capgntax_sub = -capgntax_nbr     0.3526 0.5527
+salestax_sub = -salestax_nbr     4.9584 0.026 
+corptax_sub = -corptax_nbr       0.6009 0.4382
+wctaxfixed_sub = -wctaxfixed_nbr 3.9864 0.0459
+uitaxrate_sub = -uitaxrate_nbr   1.9754 0.1599
+----------------------------------------------

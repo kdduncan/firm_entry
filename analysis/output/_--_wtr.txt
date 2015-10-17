@@ -1,0 +1,56 @@
+
+Top 50 Weighted Tax Differentials for Total Firm Births
+=================================================================
+sub state        nbr state    weighted tax 1999 weighted tax 2009
+-----------------------------------------------------------------
+delaware         new jersey         0.987             1.018      
+new hampshire     vermont           0.970             0.998      
+maine          new hampshire        0.868             0.719      
+colorado          nebraska          0.688             0.545      
+alabama         mississippi         0.658             0.487      
+louisiana       mississippi         0.622             0.463      
+massachusetts   rhode island        0.611             0.505      
+delaware        pennsylvania        0.602             0.637      
+connecticut     rhode island        0.558             0.315      
+colorado           kansas           0.544             0.555      
+nebraska          wyoming           0.524             0.655      
+delaware          maryland          0.516             0.608      
+louisiana          texas            0.507             0.489      
+massachusetts  new hampshire        0.497             0.552      
+mississippi      tennessee          0.474             0.252      
+massachusetts     vermont           0.473             0.446      
+missouri          nebraska          0.442             0.281      
+iowa             wisconsin          0.441             0.340      
+montana         north dakota        0.424             0.636      
+new jersey      pennsylvania        0.385             0.381      
+california         nevada           0.381             0.494      
+illinois         wisconsin          0.353             0.312      
+kansas            oklahoma          0.351             0.275      
+california         oregon           0.348             0.558      
+idaho              nevada           0.342             0.338      
+nebraska        south dakota        0.335             0.402      
+minnesota       south dakota        0.332             0.409      
+georgia        south carolina       0.332             0.267      
+alabama           georgia           0.329             0.294      
+iowa              nebraska          0.326             0.129      
+iowa             minnesota          0.323             0.136      
+arkansas        mississippi         0.320             0.062      
+kentucky         tennessee          0.316             0.214      
+colorado         new mexico         0.311             0.158      
+idaho              oregon           0.309             0.401      
+arkansas         louisiana          0.302             0.401      
+kansas            missouri          0.298             0.291      
+north carolina   tennessee          0.285             0.216      
+indiana           michigan          0.280             0.207      
+arizona          california         0.263             0.389      
+michigan         wisconsin          0.257             0.214      
+idaho             wyoming           0.246             0.565      
+north dakota    south dakota        0.246             0.452      
+new york          vermont           0.241             0.186      
+idaho             montana           0.235             0.496      
+massachusetts     new york          0.232             0.261      
+colorado            utah            0.226             0.199      
+alabama           florida           0.225             0.195      
+missouri         tennessee          0.219             0.144      
+new york        pennsylvania        0.208             0.197      
+-----------------------------------------------------------------

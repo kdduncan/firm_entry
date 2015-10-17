@@ -1,0 +1,13 @@
+
+F-Tests for Symmetry of Coefficients for Auxiliaries, exc corp, subsidiary, and regional managing offices Firm Start Ups
+==============================================
+Test                             F-Stat P(> F)
+----------------------------------------------
+ptax_sub = -ptax_nbr             0.001  0.9747
+inctax_sub = -inctax_nbr         1.6924 0.1933
+capgntax_sub = -capgntax_nbr     0.4775 0.4896
+salestax_sub = -salestax_nbr     5.1401 0.0234
+corptax_sub = -corptax_nbr       0.6886 0.4067
+wctaxfixed_sub = -wctaxfixed_nbr 3.5434 0.0598
+uitaxrate_sub = -uitaxrate_nbr   1.9767 0.1598
+----------------------------------------------
