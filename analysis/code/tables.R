@@ -197,6 +197,6 @@ sum(difbin(prefstart, preftax))/107
 # this is what is throwing the error
 mean <- data.frame(abs(mean_starts), prefstart, finaldat$finaldat.finish, preftax, dif(prefstart,preftax), finaldat$finaldat.state.x, finaldat$finaldat.state.y)[order(abs(mean_starts), decreasing = TRUE),]
 names(mean) <- c("mean firm entry", "preffered side", "abs weighted tax", "preferred side", "same?","sub state", "nbr state")
-stargazer(mean[1:50,], summary = FALSE, rownames = FALSE, font.size = "tiny",
+stargazer(mean[1:10,], summary = FALSE, rownames = FALSE, font.size = "tiny",
           title = "Result Comparison for Total Firm Births", 
           out = "~/papers/firm_entry/analysis/output/_--_meantable.tex")
