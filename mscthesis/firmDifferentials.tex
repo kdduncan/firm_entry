@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\section{A Firm-Side Tiebout Model}
+
+Let us focus on a single county, so all variables are assumed to be county specific. Let the county have a set aggregate capital stock, $K^{*}$, and labor supply $L^{*}$. Let us assume that we have a single consumption good industry characterized by a competitive industry with a strictly concave production technology $F(K,L)$, wages $w$, a pre-tax rent, $r$, and tax on capital, $\tau$. Finally, we normalize the price of the good to be 1. Now assume firms work with a given cost function;
+
+$$C(q,w,r,\tau) = \min wL+(r+\tau)K \text{ such that } F(K,L) \geq \bar q$$
+
+From the usual properties of a cost function, we get that $C_{q}(\cdot) \geq 0$, $C_{w}(\cdot) > 0$, $C_{r}(\cdot) = C_{\tau}(\cdot)> 0$; given that $F(\cdot)$ is concave; $C(\cdot)$ is convex in q, or $C_{qq}(\cdot) > 0$. Note that we can also show that $C(\cdot)$ is continuous and concave in prices, $(w,r, \tau)$. Assuming both goods are normal, we also get that $C_{q\omega}(\cdot) > 0, \quad \omega = w, \hat r$. From Shepard's lemma we get $K^{*} = \frac{\partial C}{\partial \tau}$, and by Young's theorem 
+$$\frac{\partial K^{*}}{\partial \tau} = \frac{\partial^{2} C}{\partial q \partial \tau} = \frac{\partial C_{q}(\cdot)}{\partial \tau} = C_{q\tau}(\cdot) > 0 $$
+
+Further, we can show that firm capital decreases with respect to increases in taxes. By concavity of the cost function with respect to prices, we know that
+
+\begin{equation}
+\frac{\partial K}{\partial \tau} = C_{\tau\tau}(\cdot) < 0
+\end{equation}
+
+Finally, we know that given a demand function, $D(p)$,
+
+$$ D(p) = nq $$
+
+where $q$ is firm output, and $n$ is the number of firms in the industry. Noting our normalization of $p = 1$, we get;
+$$p = \frac{C(\cdot)}{q} = A(q,\tau)$$
+
+Assume there are $j = 1,...,N$ counties, and that each county has a representative agent $i = 1,...,N$ with preferences $U^{i}(C,G)$ that inelastically supplies a unit of labor to a competitive firm. Each agent also own a capital endowment, $K_{i}$ that has capital mobility across all counties. Note that we don't require $U^{i}(\cdot) = U^{j}(\cdot)$ for all $j \neq i$, and that there can exist preference heterogeneity across the counties. Further, we assume that for all counties, utility functions are strictly concave.
+
+Local governments are exogenously forced to supply a public good that is funded through a single tax on capital. As a result the government's budget constraint is,
+\begin{equation} G \leq \tau K (r+\tau) \end{equation}
+
+Where $G$ is government spending, $\tau$ is that county's tax on capital, $K$ is that county's capital stock, and $r$ is the pre-tax rent on capital. Government's naturally can decide to give back less than they take in, but in practice with $G > 0$ required, and a socially benevolent government, this shouldn't be the case. For practical purposes, I claim that equation (3) holds with equality.\footnote{Political economy and public choice criteria are excluded from this analysis.}
+
+$$ \implies dG - K(r+2\tau)d\tau= 0$$
+\begin{equation} \frac{d\tau}{dG} = \frac{1}{K(r+2\tau)} > 0 \end{equation}
+This last term defines the tax change required to fund a change in government services. 
+
+Next counties try to maximize local consumer surplus. Let $s_{ij}$ be the share of consumers $i$ capital invested in county $j$, with $\sum_{j=1}^{N} s_{j} = 1, s_{j} \geq 0 \forall j$. Note that by profit maximization, firms will buy/agents will invest in a town if and only if
+
+$$F_{k}(k^{*},l^{*}) \leq r+\tau$$
+
+For $k^{*} = \frac{\sum_{i=1}^{N}s_{ij}K_{i}}{n}, l^{*} = \frac{1}{n}$, with n being the number of firms in the market. Thus, the social planners problem becomes, for $K^{*} = \sum_{k=1}^{N}s_{kj}K_{k}$;
+
+\begin{equation} \max \quad U(C,G) \text{ s.t. }  C \leq w + \sum_{j}^{N}s_{ij}(1-\tau_{j})(r+\tau_{j})K_{i}, G \leq \tau K^{*}(r+\tau)
+\end{equation}
+
+The FOCs, assuming a strictly concave utility function for an interior solution to both problems;
+\begin{equation} 
+C: U_{c}(C,G) = \lambda
+\end{equation}
+
+
+\begin{multline}
+G: U_{g}(C,G) +\lambda s_{i}\left(-\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K_{i}+(1-\tau_{i})(\frac{\partial \tau_{i}}{\partial G})K_{i}+(1-\tau_{i})(r+\tau_{i})\frac{\partial K_{i}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G})\right) \\
+ + \mu\left(\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K^{*}+\tau_{i}(r+\frac{\partial \tau_{i}}{\partial G})K^{*}+\tau_{i}(r+\tau_{i})\frac{\partial K^{*}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G}-1\right) = 0
+\end{multline}
+For the following term;
+$$-\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K_{i}+(1-\tau_{i})(\frac{\partial \tau_{i}}{\partial G})K_{i}+(1-\tau_{i})(r+\tau_{i})\frac{\partial K_{i}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G}$$
+The first part is the lost consumption to consumers in higher tax rates, the second term is the gain to consumers in returns from capital investment, and the third term is the loss to firms from lower capital investment. The first and third term are negative, and the second is positive.
+
+Similarly from the government's constraint, it faces the inverse gains.
+$$\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K^{*}+\tau_{i}(\frac{\partial \tau_{i}}{\partial G})K^{*}+\tau_{i}(r+\tau_{i})\frac{\partial K^{*}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G}-1$$
+The first term is total gain from raising taxes from all who invest in its county, the second term is gain those individuals as a whole get from higher rents on capital, and the third term is loss to the county from less investment. Here the first and second term are positive, and the third is negative.
+
+\begin{multline}
+U_{g}(C,G) =\lambda s_{i}\left(\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K_{i}-(1-\tau_{i})(\frac{\partial \tau_{i}}{\partial G})K_{i}-(1-\tau_{i})(r+\tau_{i})\frac{\partial K_{i}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G})\right) \\
+ - \mu\left(\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K^{*}+\tau_{i}(\frac{\partial \tau_{i}}{\partial G})K^{*}+\tau_{i}(r+\tau_{i})\frac{\partial K^{*}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G}-1\right)
+\end{multline}
+
+\begin{multline}
+\frac{U_{g}(C,G)}{U_{c}(C,G)} = s_{i}\left(\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K_{i}-(1-\tau_{i})(\frac{\partial \tau_{i}}{\partial G})K_{i}-(1-\tau_{i})(r+\tau_{i})\frac{\partial K_{i}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G})\right) \\
+ + \frac{\mu}{U_{c}(C,G)}\left(1-\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K^{*}-\tau_{i}(\frac{\partial \tau_{i}}{\partial G})K^{*}-\tau_{i}(r+\tau_{i})\frac{\partial K^{*}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G}\right)
+\end{multline}
+
+Then, 
+$$\frac{\partial K_{j}^{*}}{\partial \tau_{j}} = \sum_{i=1}^{N}s_{ij}\frac{\partial K_{i}}{\partial G_{j}}$$
+Then the above can be rearranged...
+
+\begin{multline}
+\frac{U_{g}(C,G)}{U_{c}(C,G)} = s_{i}(1-\frac{\mu}{\lambda})\left(\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K_{i}-(1-\tau_{i})(\frac{\partial \tau_{i}}{\partial G})K_{i}-(1-\tau_{i})(r+\tau_{i})\frac{\partial K_{i}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G})\right) \\
+ + \frac{\mu}{U_{c}(C,G)}\left(1-\left(\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})+\tau_{i}(\frac{\partial \tau_{i}}{\partial G})\right)\sum_{k \neq j} s_(j,k)K_{j}-\tau_{i}(r+\tau_{i})\sum_{k \neq i}s_{k,j}\frac{\partial K_{k}}{\partial G_{i}}\right)
+\end{multline}
+
+From this we note a few things. The first order conditions are only met if the right hand side is greater than zero, thus we get the following cases. Define
+$$\psi = \frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})K_{i}-(1-\tau_{i})(\frac{\partial \tau_{i}}{\partial G})K_{i}-(1-\tau_{i})(r+\tau_{i})\frac{\partial K_{i}}{\partial \tau_{i}}\frac{\partial \tau_{i}}{\partial G})$$
+$$ \theta = 1-\left(\frac{\partial \tau_{i}}{\partial G}(r+\tau_{i})+\tau_{i}(\frac{\partial \tau_{i}}{\partial G})\right)\sum_{k \neq j} s_(j,k)K_{j}-\tau_{i}(r+\tau_{i})\sum_{k \neq i}s_{k,j}\frac{\partial K_{k}}{\partial G_{i}}$$
+
+\begin{case}
+$ s_{i}(1-\frac{\mu}{\lambda}) \psi > 0, \frac{\mu}{U_{c}(C,G)}\theta > 0$, 
+
+This is the case where both individual gains from raising taxes, and the benefits of government services exceeds the cost of capital outflows.
+
+\end{document}

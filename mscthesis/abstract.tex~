@@ -1,0 +1,38 @@
+\documentclass[a4paper]{article} %
+\usepackage{graphicx,amssymb} %
+
+\textwidth=15cm \hoffset=-1.2cm %
+\textheight=25cm \voffset=-2cm %
+
+\pagestyle{empty} %
+
+\date{} %
+
+\def\keywords#1{\begin{center}{\bf Keywords}\\{#1}\end{center}} %
+
+\def\titulo#1{\title{#1}} %
+\def\autores#1{\author{#1}} %
+
+% Please, do not change any of the above lines
+
+\begin{document}
+\title{Do Taxes Impact Firm Location on the Margin? A Matched County-Pair Study}
+\author{Kevin D. Duncan \\ Iowa State University \\ kdduncan@iastate.edu \\ 978-390-3459}
+\maketitle
+
+Bringing in new economic opportunities to communities is constantly an appealing 
+
+This paper examines the impact of state policies on entry decisions of firms into markets that are split between policy regimes. I attempt to discern what policies give locations higher firm start ups over neighbors when inputs have high levels of mobility. Due to this mobility I believe that small differences in locations' taxes and government expenditures impact relative firm start up rates in accordance with Tiebout style models.
+
+The paper builds off of existing Tiebout-style public finance literature which claims that people sort into counties that have the optimal bundle of prices and public goods by extending it into firms decision process over taxes and private goods. Further, it extends existing public economics literature on impacts of policies on individuals' and firms location choice with respect to policy discontinuities. The results of this study might lead to better understanding in how structuring taxes and expenditure programs can attract new firms, and to discern what borders have the highest potential for such growth.
+
+The identification strategy used in this paper takes the difference in variables between two matched counties  on either side of a state borders. The data includes 105 state-pairs and 1213 matched county pairs. This generates a local regression discontinuity that is estimated with pooled OLS. My vector of policies includes an array of top marginal tax rates according to existing legal code, minimum wage,s and right to work laws on firm entry decisions along with a variety of public good expenditures at the state level. I provide estimates of the effects of policies on relative firm start up rates, and then discuss which borders have the highest opportunity cost of firm locations imposed by differences in relative tax rates.
+
+I provide several reduced form estimates for the differences in firm start up rates. First, I prove that the coefficients are identical for both counties. I then provide estimates of the coefficients imposing that the coefficients are the same. Finally, I provide random coefficient estimates allowing state-pair coefficients to be different, and again test if empirical estimates are largely stable across policy regimes.
+
+Preliminary results show that coefficients are the same across counties, and that those that vary significantly from zero provide reasonable negative elasticities predicted by theoretical models. Surprisingly, corporate tax rates and capital gains tax rates are indistinguishable from zero, a factor that 
+\\
+\\
+JEL Classifications: H71, C23
+
+\end{document}

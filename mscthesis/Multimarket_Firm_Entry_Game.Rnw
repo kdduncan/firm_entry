@@ -1,0 +1,46 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{Multi-Market Firm Entry Games}
+
+\section{Two Firm, Two Market Model}
+
+At the beginning of time $t$ two new entrepreneurs have the option to open into two new markets. If they get a market to themselves, they make monopoly profits $\Pi^{M}_{m}$, and if they both move to the same market they get the $\Pi^{D}_{m} < \Pi^{M}_{m}$. Finally, eaach entrepreneur can choose to not enter and instead stay in wage work earning $w$. What sort of equilibriums are there in this game?
+
+let at the beginning of each period individuals observe their own cost function $c_{i} ~ P(c)$, where a low $c_{i}$ reflects a high aptitude to bring together resources in order to build a company, and a high $c_{i}$ reflects a low aptitude to bring together resources.
+
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & Market 1 & Market 2 & Out \\ \hline
+Market 1 & $\Pi^{D}_{1}-c_{1},\Pi^{D}_{1}-c_{2}$  & $\Pi^{M}_{1}-c_{1},\Pi^{M}_{2}-c_{2}$ & $\Pi^{M}_{1}-c_{1},w$ \\ \hline
+Market 2 & $\Pi^{M}_{2}-c_{1},\Pi^{M}_{1}-c_{2}$ & $\Pi^{D}_{2}-c_{1},\Pi^{D}_{2}-c_{2}$  & $\Pi^{M}_{2}-c_{1},w$ \\ \hline
+Out      & $w,\Pi^{M}_{1}-c_{2}$      & $w,\Pi^{M}_{2}-c_{2}$      & $w,w$ \\ \hline
+\end{tabular}
+\end{table}
+
+
+Thus in this game, everyone has incentive to enter the market, but each wants to coordinate such that both get the monopolist good. It is further illustrative to renormalize all the payoffs by $-w$, if not to show that an entrepreneur enters if and only if his expected profits are greater than their wage.
+
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & Market 1 & Market 2 & Out \\ \hline
+Market 1 & $\Pi^{D}_{1}-c_{1}-w,\Pi^{D}_{1}-c_{2}-w$  & $\Pi^{M}_{1}-c_{1}-w,\Pi^{M}_{2}-c_{2}-w$  & $\Pi^{M}_{1}-c_{1}-w,0$ \\ \hline
+Market 2 & $\Pi^{M}_{2}-c_{1}-w,\Pi^{M}_{1}-c_{2}-w$  & $\Pi^{D}_{2}-c_{1}-w,\Pi^{D}_{2}-c_{2}-w$  & $\Pi^{M}_{2}-c_{1}-w,0$ \\ \hline
+Out      & $0,\Pi^{M}_{1}-c_{2}-w$      & $0,\Pi^{M}_{2}-c_{2}-w$      & $0,0$ \\ \hline
+\end{tabular}
+\end{table}
+
+Now there are the following cases;
+$$w > \Pi^{M}_{m}-c_{i}$$
+
+
+This game can be shown to have a mixed strategy equilibrium.
+
+
+
+\end{document}

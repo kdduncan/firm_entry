@@ -1,0 +1,414 @@
+\documentclass[11pt,a4paper]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\renewcommand{\baselinestretch}{1.5}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\title{Do Taxes Impact Firm Decisions on the Margin? A Panel Data Study of Matched County Pairs}
+\author{Kevin D. Duncan}
+\maketitle
+
+
+
+\begin{abstract}
+This paper examines the impact of state policies on entry decisions of firms into markets that are split between policy regimes. I attempt to discern what policies give locations higher numbers of firm start-ups over neighbors when inputs have high levels of mobility such that small differences in taxes and government expenditures can incentivize firm decisions. The paper builds off of the existing Tiebout-style public finance literature which claims that people sort into counties that have the optimal bundle of prices and public goods by extending it into firms' decision process over taxes and private goods. Further, it extends existing public economics literature on impacts of policies on individuals' and firms location choice with respect to policy discontinuities. The results of this study can lead to better understanding of how structuring taxes and expenditure programs can attract new firms, and to discern what borders have the highest potential for such policy alterations.
+\end{abstract}
+
+\section{Introduction}
+
+Each year states and counties often try to find ways to incentivize new business start-ups in their locale over alternative choices. The most visible cases include temporary reprieve from tax burdens, or deals to help build infrastructure to support new start-ups. There has been a growing literature addressing the efficiency of these exemptions both to state revenue and public welfare. However, states may also take a longer run approach to incentive new firm start-ups by altering their tax and regulatory codes for all market participants. There is comparably less literature examining both the causes and effects of these alterations.
+
+This paper examines the impact of state policies on entry decisions of firms into markets that are split between policy regimes. In this paper I provide a model of firm entry under different policy regimes, and then provide empirical reduced form estimates of impacts of an array of policy variables, including taxes, right to work, minimum wage, and various public goods expenditures. A variety of work has been done to explore how different policy regimes affects local migration between geographic entities (McKinnish (2005) (2007)), as well as how differences in policies impact outcomes across borders (Holmes (1998), Rohlin (2011), Dube et al (2010)). This paper extends these papers whie fitting it into the framework of a Tiebout style model (Zodrow Mieszkowski (1986), Banzhaf and Spencer (2008)).
+
+The aim of this paper is to help merge the empirical public economics literature including testing efficiency of right to work (Holmes (1998)), minimum wage (Dube et al (2008)), and tax policy effects (McPhail, Orazem, Singh (2010)) into a comprehensive model that looks at firm entry in a "Tiebout style" world. In these models governments select optimal bundles of public goods to maximize citizens utility as a social planner and attract new consumers when possible. This model extends the classic Tiebout model to look at its implications for firm entry, and then develops a reduced form estimate of the average impact of the difference in taxes on the differences in firm start up rates.
+
+Many of the theoretical studies within the industrial organization literature tend to shy away from differing policy regimes, as this usually just adds complications to the choice space of firms that might generate discontinuities and stop the existence of a Nash equilibrium. This is especially true among multidimensional work (Irem and Thisse (1998), Economides (1993)). Equivalently many of the empirical studies only incorporate a small segment of important policy variables, rather than looking at a full array of possible covariats that firms rely on that is implied under the canonical Tiebout model of public finance (Tiebout 1958). The benefit of my work is that it tactitly tests a discrete set of locations firms can choose from, which allow for a solutions to these style of location games as seen by random utility models (source). 
+
+I limit the firms choice from over all markets, to firms first deciding to enter into a particular market, and then choosing which sub-location to start up in based around different policy choices those areas make. This two-step process of firm entry is moderately established in public economics for use in local spatial identification problems (Henderson and McNamara (2000)). This generates a local restriction on the overall firm choice decision, stating that for any location in a particular market the entrant is better off than in any other market/location decision. This might not be too unreasonable an estimate if most new firms are small, such that finding the capital to start up in a whole new location carries with it higher fixed costs than in an entreprenuer's current location.
+
+The identification strategy used in this paper takes the difference in variables between two matched counties on either side of a state border, where the data includes 105 state-pairs and 1213 matched county pairs from 1998 to 2010. This method generates a local regression discontinuity that is estimated with pooled OLS. The vector of policies includes an array of top marginal tax rates for property, sales, capital gains, corporate, income, workers compensation, and unemployment insurance taxes, as well as minimum wages and right to work status. I also include state expenditures on highways, welfare, and education to test the impact on policy variation on firm entry decisions.
+
+The paper proceeds in the following manner. First, I go over the relevant literature in border discontinuity work, empirical Tiebout models, and firm behavior. Then I create a small model to show illustrative behavior oh how taxes impact the number of firm start ups when imbedded within the social planners problem for a Tiebout model. Findally, I provide reduced form estimates of the average impact of various policy choices by governments on firm start up rates. I conclude by describing my results and their applications.
+
+\section{Literature Review}
+
+
+The relevant literature is generally broken up into three camps. The first is theoretical and empirical Tiebout models. The second is related work that uses border discontinuities for policy analysis. And finally, the third consists of literature dealing with firm behavior, especially curtailed to start ups.
+
+The classic Tiebout model started with "A Pure Theory of Local expenditures (1956), when Tiebout... Tiebout's write up itself lacked mathematical rigor, and was open to interpretation, and as a result has spanned a variety of both economics and political science topics looking at sorting across different "regimes," whether location or ideology. The canonical economics model of the Tiebout world is Zodrow and Mieszkowski (1986), where they showed how a Tiebout model with constrainted head taxes led to underprovision of public goods compared to the social planners problem. In their model they showed how this constraint hindered optimal business and consumer public goods, and sketched an outline of a joint model. The model exhibited exogenously determined number of governments, and shared production technology that doesn't change over time, thus the model lacked serious dynamics.
+
+The push back from these style of models largely seems to consist of Henderson (1985).\\
+
+The empirical Tiebout model in economics has several older, and more recent applications. Banzhaf and Walsh (2008) develop a model where agents move over a variety of governments that choose optimal price and taxation lavels subject to a single crossing constraint....\\
+
+Next, there are a variety of border discontinuity papers that have started to appear within the last two decades. The first case was Holmes (1998), which used right to work status as a way of proxying for state business climate and testing whether or not it has any local impact along state borders in explaining relative growth. Dube et al (2010) use a similar approach to test a difference-in-differences estimator on the impact of minimum wages on... McKinnish (2005, 2007) look at one side of the traditional Tiebout model, and look to see how changes in welfare programs induce people to change to different sides of a state border in order to apply for those benefits.
+
+Most important to my paper is Rohlin (2011), which looks at the impact of minimum wages on firm start up rates in 5, 10, and 15 mile distances from a policy discontinuity. He uses only states that experienced minimum wage changes, but has firm specific data on start up location, allowing for disaggregation and nicer estimates along the border. Similarly, McPhail, Orazem, and Singh (2010) use top marginal tax variables to test for the impact of taxes on state total factor productivity.
+
+
+Firm behavior literature \\
+-Marius Brülhart, Mario Jametti and Kurt Schmidheiny, "Do Agglomeration Economics Reduce the Sensitivity of Firm Location to Tax Differencials?" The Economic Journal, Vol. 122, No. 563 (September 2012), pp. 1069-1093 \\
+- Agarwal, Rajshree; Gort, Michael. "Firm and Product Life Cycles and Firm Survival," The American Economic Review, Vol. 92, No. 2, (May, 2002), pp. 184-190. \\
+- Audretsch, David B.; Mahmood, Talat; "New Firm Survival: New Results Using a Hazard Function," The Review of Economics and Statistics (Feb, 1995), pp. 97-103 \\
+
+\section{Theory}
+
+
+\section{Variables and Data}
+
+A variety of dependent variables are used in my paper. The primary object of interest is first start up rates, as a result, three main variables are used. The first, measures the relative difference in firm start up rates, where $sub$ denotes the subject county, and $nbr$ the county it borders.
+
+$$ births\_ratio = log(births\_{sub}) - log(births\_{nbr})$$
+
+Secondly, I include an unadjusted difference between the firm start up rates,
+
+$$ births\_diff = base\_{sub} - base\_{nbr}$$
+
+My data set includes a robust set of possible variables to utilize, including firm closing figures, and whether or not a firm expanded employment, contracted employment, or stayed the same. Equivalent dependent variables to using the firm start up figures can easily be constructed. Further, the census data provides a robust set of results for a broad set of general industries.
+
+Following Orazem, McPhail, and Singh (2010) my primary tax variables are pulled from the National Bureau of Economic Research estimates of state marginal income tax and long-term capital gains tax rates. When applicable, I pull from the highest marginal tax rates available, as this is the rate most applied to small business and S corporations.\footnote{\url{http://users.nber.org/~taxsim/allyup/} \url{http://users.nber.org/~taxsim/marginal-tax-rates/} \url{http://users.nber.org/~taxsim/state-marginal/}}
+
+Corporate and sales tax rates were compiled from The Council of State Governments Book of States, where marginal rates again are the highest state tax rates on business corporations. Where rates differ between banks and non-banks, I use the non-bank rate. The sales tax rates used are those levied on general merchandise, and non on food, clothing, and medicine.
+
+Property taxes are calculated from household level data provided by the Minnesota Population Center's Integrated Public Use Microdata Series (IPUMS).
+
+
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$stpr\_id: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'stpr\_num' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$id: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'cofip\_num' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$ptax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$inctax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$capgntax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$stax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$corptax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$wctax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$uitax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$minwage\_L1\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$rtw\_L1\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$educ\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$hwy\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$welfare\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$hs\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$fuel\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$union\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$density\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$manuf\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in is.data.frame(x): object 'vars' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$ptax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$ptax\_ratio\_L1: object of type 'closure' is not subsettable}}\end{kframe}
+\end{knitrout}
+
+
+\section{Empirical Design}
+
+Let there be a country that is described by any open set in $R^{2}$, then states are also open sets in $R^{2}$, such that there exists a countable union such that the Lebesgue measure covers it from outermost edges. The states are disjoint, and their intersection of their complements is nonempty. As a result we can use the Euclidian distance metric between any two points $x, y \in R^{2}$. For each county in a market $m$ there is a vector of county specific policy variables $P_{m,c}$ that is determined by governments in those communities. 
+
+For simplicity of the design, assume that there are only two states, and that therefore there exists a set  .... that constitutes the border. Then for an $x \in S_{1}$ and $y \in S_{2}$ we have a distance metric $d(x,y)$ that describes the relative difference between it. Then, there exists a data generating process on $S_{i}$
+
+ Let the level of firms in county $i$ in state $s$ be defined by $AR(1)$ process $F_{i,t+1} = \mu_{i} + F_{i,t} + e_{i} + e_{s}+ e_{t+1}, \quad \mu > 0$. Thus we expect growth to be positive in the first difference.
+
+\section{Results}
+
+I first test a Pooled OLS estimate of my variables. This is tractible on several levels. First, because my data is effectively first-differenced any local fixed affect on the level should already be removed. Secondly, if there is a local fixed effect, the difference-in-difference should remove it. Finally, a fixed effect for the growth rate of new firms isn't particularly appeasing when it comes to the convergence literature among US states that largely claims that growth rates are converging (citations).
+
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in resid(pols1): object 'pols1' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'polsresid' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$ptax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in plot(df\$ptax\_ratio\_L1, polsresid): error in evaluating the argument 'x' in selecting a method for function 'plot': Error in df\$ptax\_ratio\_L1 : object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$stpr\_id: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in coeftest(pols1, vcov = pols1.vcovCL): object 'pols1' not found}}\end{kframe}
+\end{knitrout}
+
+In the next set of regressions I continue the Pooled OLS estimator but instead use the numerical difference rather than the log transform of the data. I first run a straight OLS estimate, even though the data is by construction count data.
+
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{pols2} \hlkwb{<-} \hlkwd{lm}\hlstd{(df}\hlopt{$}\hlstd{births_diff} \hlopt{~} \hlstd{df}\hlopt{$}\hlstd{ptax_ratio_L1} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{inctax_ratio_L1}  \hlopt{+}\hlstd{df}\hlopt{$}\hlstd{capgntax_ratio_L1} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{stax_ratio_L1}  \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{corptax_ratio_L1}  \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{wctax_ratio_L1}  \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{uitax_ratio_L1}  \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{minwage_L1_ratio}  \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{rtw_L1_ratio}  \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{educ_ratio_L1}  \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{hwy_ratio_L1} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{welfare_ratio_L1} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{hs_L1_diff} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{fuel_L1_diff} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{union_L1_diff} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{density_L1_diff} \hlopt{+} \hlstd{df}\hlopt{$}\hlstd{manuf_L1_diff )}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_diff: object of type 'closure' is not subsettable}}\begin{alltt}
+\hlstd{pols2.vcovCL}\hlkwb{<-}\hlkwd{cluster.vcov}\hlstd{(pols2, df}\hlopt{$}\hlstd{stpr_id)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$stpr\_id: object of type 'closure' is not subsettable}}\begin{alltt}
+\hlkwd{coeftest}\hlstd{(pols2,} \hlkwc{vcov} \hlstd{= pols2.vcovCL)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in coeftest(pols2, vcov = pols2.vcovCL): object 'pols2' not found}}\end{kframe}
+\end{knitrout}
+
+
+Now I provide specific estimates for count data models, using a poisson regression to work within the context of count data provided by the . This provides a better fit for the incentives for the difference in the number of firms that start up to be better fit into a comprehensive framework. 
+
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$ptax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$inctax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$capgntax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$stax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$corptax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$wctax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$uitax\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$minwage\_L1\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$rtw\_L1\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$educ\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$hwy\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$welfare\_ratio\_L1: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$hs\_L1\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$fuel\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$union\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$density\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$manuf\_L1\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_ratio: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$births\_diff: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in summary(pois1): error in evaluating the argument 'object' in selecting a method for function 'summary': Error: object 'pois1' not found}}\end{kframe}
+\end{knitrout}
+
+Finally I extend the model into a generalized panel data framework. In turn, this includes a replication of the pooled OLS, a random effects case, and a fixed effect case. In all three cases I cluster along the county pair id rather than the state pair id.
+
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'language'}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in x[, !na.check]: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'language'}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in x[, !na.check]: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'symbol'}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in is.na(x): is.na() applied to non-(list or vector) of type 'language'}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in x[, !na.check]: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$stpr\_id: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in df\$stpr\_id: object of type 'closure' is not subsettable}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'G' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'dfa' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'dfa' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'dfa' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in coeftest(reg2, vcov = stprid1\_c\_vcov): object 'reg2' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in coeftest(reg3, vcov = stprid2\_c\_vcov): object 'reg3' not found}}
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in coeftest(reg4, vcov = stprid3\_c\_vcov): object 'reg4' not found}}\end{kframe}
+\end{knitrout}
+
+\section{Results}
+
+\section{Conclusion}
+
+\begin{thebibliography}{99}
+
+\bibitem{Tiebout56}
+  Tiebout, CM, "A Pure Theory of Local Expenditures" Journal of Political Economy 1956
+
+\bibitem{Zodrowetal}
+  George R. Zodrow, Peter Mieszkowski, "Pigou, Tiebout, property taxation, and the underprovision of local public goods," Journal of Urban Economics 1986
+
+\bibitem{BanzhafWalsh}
+  Banzhaf, H. Spencer; Walsh, Randall P., "Do People Vote with Their Feet? An Empirical Test of Tiebout's Mechanism," American Economic Review (2008), Vol. 98 No. 3, pp 843-863
+
+\bibitem{Holmes98}
+  Holmes, Thomas J, "The Effect of State Policies on the Location of Manufacturing: Evidence from State Borders," Journal of Political Economy, Vol. 106, No. 4 (August 1998), pp. 667-705
+
+\bibitem{Dubeetal}
+  Dube, Arindagit; Lester, T. William; Reich, Michael, "Minimum Wage Effects Across State Borders: Estimates Using Contiguous Counties," The Review of Economics and Statistics, Vol. 92 No. 4, (November 2010) pp. 945-964
+
+\bibitem{McKinnish2005}
+McKinnish, Terra. "Importing the Poor Welfare Magnetism and Cross-Border Welfare Migration." Journal of Human Resources, Vol 40, No. 1 (2005): 57-76
+
+\bibitem{McKinnish2007}
+McKinnish, Terra. "Welfare-induced migration at state borders: New evidence from Micro Data." Journal of Public economics, Vol 91, N0. 3 (2007): 437-450
+
+\bibitem{Brulhartetal}
+  Marius Brülhart, Mario Jametti and Kurt Schmidheiny, "Do Agglomeration Economics Reduce the Sensitivity of Firm Location to Tax Differencials?" The Economic Journal, Vol. 122, No. 563 (September 2012), pp. 1069-1093
+
+\bibitem{Rohlin2011}
+  Rohlin, Shawn M. "State Minimum Wages and Business Location: Evidence from a Refined Border Approach," Journal of Urban Economics, Vol. 69 (2011), pp. 103-117
+
+\bibitem{AgarwalGort}
+  Agarwal, Rajshree; Gort, Michael. "Firm and Product Life Cycles and Firm Survival," The American Economic Review, Vol. 92, No. 2, (May, 2002), pp. 184-190.
+
+\bibitem{AudretschMahmood}
+  Audretsch, David B.; Mahmood, Talat; "New Firm Survival: New Results Using a Hazard Function," The Review of Economics and Statistics (Feb, 1995), pp. 97-103
+
+\bibitem{IrmenThisse}
+  Irmen, Andreas. Thisse, Jacques-Francois, "Competition in Multi-charactistics Spaces: Hotelling Was Almost Right," Journal of Economic Theory, Vol. 78 (1998) pp 76-102
+  
+\bibitem{Economides}
+  Economides, Nicholas, "Hotelling's 'Main Street' With More Than Two Competitors," Journal of Regional Science, Vol. 33 No. 3, (1993), pp. 303-319
+  
+\bibitem{LazearJLE}
+  Lazear, Edward P. “Entrepreneurship.”  Journal of Labor Economics (October 2005): 649-680.
+
+\bibitem{HamiltonJPE}
+Hamilton, Barton H. “Does entrepreneurship pay? An empirical analysis of the returns to self-employment.”  Journal of Political Economy 108 (June 2000): 604-631.
+
+\bibitem{HendersonMcNamara}
+Jason R. Henderson and Kevin T. McNamara "The Location of Food Manufacturing Plant Investments in Corn Belt Counties" Journal of Agricultural and Resource Economics
+Vol. 25, No. 2 (December 2000), pp. 680-697 
+
+\end{thebibliography}
+
+
+\end{document}

@@ -1,0 +1,59 @@
+stateFIPS_sub,stateFIPS_nbr,state_sub,state_nbr,year,recip
+17,19,illinois,iowa,1973,-1
+17,20,illinois,kentucky,1971,-1
+17,26,illinois,michigan,1971,-1
+17,55,illinois,wisconsin,1973,-1
+18,21,indiana,kentucky,1977,-1
+18,26,indiana,michigan,1968,-1
+18,39,indiana,ohio,1977,-1
+18,42,indiana,pennsylvania,1977,-1
+18,55,indiana,wisconsin,1977,-1
+21,26,kentucky,michigan,1968,-1
+21,39,kentucky,ohio,1972,-1
+21,54,kentucky,west virginia,1965,-1
+21,55,kentucky,wisconsin,1968,-1
+21,51,kentucky,virginia,1964,-1
+24,42,maryland,pennsylvania,1990,-1
+24,51,maryland,virginia,1992,-1
+24,54,maryland,west virginia,1988,-1
+26,27,michigan,minnesota,1984,-1
+26,39,michigan,ohio,1972,-1
+26,55,michigan,wisconsin,1967,-1
+27,38,minnesota,north dakota,1958,-1
+27,55,minnesota,wisconsin,1968,-1
+30,38,montana,north dakota,1982,-1
+34,42,new jersey,pennsylvania,1978,-1
+39,42,ohio,pennsylvania,1978,-1
+39,54,ohio,west virginia,1972,-1
+42,51,pennsylvania,virginia,1982,-1
+42,54,pennsylvania,west virginia,1972,-1
+51,54,virginia,west virginia,1988,-1
+19,17,iowa,illinois,1973,-1
+20,17,kentucky,illinois,1971,-1
+26,17,michigan,illinois,1971,-1
+55,17,wisconsin,illinois,1973,-1
+21,18,kentucky,indiana,1977,-1
+26,18,michigan,indiana,1968,-1
+39,18,ohio,indiana,1977,-1
+42,18,pennsylvania,indiana,1977,-1
+55,18,wisconsin,indiana,1977,-1
+26,21,michigan,kentucky,1968,-1
+39,21,ohio,kentucky,1972,-1
+54,21,west virginia,kentucky,1965,-1
+55,21,wisconsin,kentucky,1968,-1
+51,21,virginia,kentucky,1964,-1
+42,24,pennsylvania,maryland,1990,-1
+51,24,virginia,maryland,1992,-1
+54,24,west virginia,maryland,1988,-1
+27,26,minnesota,michigan,1984,-1
+39,26,ohio,michigan,1972,-1
+55,26,wisconsin,michigan,1967,-1
+38,27,north dakota,minnesota,1958,-1
+55,27,wisconsin,minnesota,1968,-1
+38,30,north dakota,montana,1982,-1
+42,34,pennsylvania,new jersey,1978,-1
+42,39,pennsylvania,ohio,1978,-1
+54,39,west virginia,ohio,1972,-1
+51,42,virginia,pennsylvania,1982,-1
+54,42,west virginia,pennsylvania,1972,-1
+54,51,west virginia,virginia,1988,-1

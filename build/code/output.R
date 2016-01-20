@@ -26,9 +26,20 @@ uidat$uitaxrate <- uidat$uitaxrate*100
 uidat$year_L1 <- uidat$Year+1
 uidat <- uidat[,-c(1:3)]
 
+michdat <- read.csv("~/papers/firm_entry/build/input/michigan_corp.csv")
+michdat$year_L1 <- michdat$year+1
+michdat <- michdat[,-c(1)]
+
 # now replace original uitax data
 taxdat <- merge(taxdat,uidat,by.x=c("year_L1","stfip"),by.y = c("year_L1","st_fips"))
+# rm(uidat)
+
+# length(michdat$ctax) = 32
+# length(taxdat$stfip == michdat$stfip_nbr & taxdat$year_L1 == michdat$year)
+taxdat$corptax <- replace(taxdat$corptax,taxdat$corptax[taxdat$stfip == michdat$stfip_nbr & taxdat$year_L1 == michdat$year], michdat$ctax)
+
 rm(uidat)
+rm(michdat)
 
 # government spending per capita, 1994-2010
 govdat <- read.xlsx("~/papers/firm_entry/build/input/govtexp_L1.xlsx", "Sheet1")

@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section{Variables}
+
+\subsection{Dependent Variables}
+
+A variety of dependent variables are used in my paper. The primary object of interest is first start up rates, as a result, three main variables are used.
+
+The first, measures the relative difference in firm start up rates, where $sub$ denotes the subject county, and $nbr$ the county it borders.
+
+$$log(births_{sub}) - log(births_{nbr})$$
+
+I also use a birth \textit{rate} by normalizing each county's firm start ups by the existing number of firms at the start of each time period, denoted $base$. Then,
+
+$$\frac{births_{sub}}{base_{sub}} - \frac{births_{nbr}}{births_{sub}}$$
+
+Finally, I include an unadjusted difference between the firm start up rates,
+
+$$base_{sub} - base_{nbr}$$
+
+My data set includes a robust set of possible variables to utilize, including firm closing figures, and whether or not a firm expanded employment, contracted employment, or stayed the same. Equivalent dependent variables to using the firm start up figures can easily be constructed.
+
+Further, the census data provides a robust set of results for a broad set of general industries.
+
+\subsection{Policy Variables}
+
+Following Orazem, McPhail, and Singh (2010), my primary tax variables are pulled from the National Bureau of Economic Research estimates of state marginal income tax and long-term capital gains tax rates. When applicable, I pull from the highest marginal tax rates available, as this is the rate most applied to small business and S corporations.\footnote{\url{http://users.nber.org/~taxsim/allyup/} \url{http://users.nber.org/~taxsim/marginal-tax-rates/} \url{http://users.nber.org/~taxsim/state-marginal/}}
+
+Corporate and sales tax rates were compiled from The Council of State Governments \textif{Book of States}, where marginal rates again are the highest state tax rates on business corporations. Where rates differ between banks and non-banks, I use the non-bank rate. The sales tax rates used are those levied on general merchandise, and non on food, clothing, and medicine.
+
+Property taxes are calculated from household level data provided by the Minnesota Population Center's INtegrated Public Use Microdata Series (IPUMS)
+\subsection{Government Expenditures}
+
+\subsection{Controls}
+
+\end{document}

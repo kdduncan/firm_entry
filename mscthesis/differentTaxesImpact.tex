@@ -1,0 +1,121 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+
+
+Before presenting our empirical strategy, data, and results, we find it useful to discuss simple models wheere we can look at the impacts of taxes on capital utilization, the number of firm start ups, or both. This section presents two models, the first is requires that the post tax marginal products of firms equalize across borders, while the second combines Holmes (1989) model with traditional count data models of firm entry. The later motivates most of our empirical design in later sections.
+
+Our first model utilizes a no-arbitrage condition between firms that are located in areas with different taxation policies. Formalizaton comes in the following fashion; let there be two counties, $A$ and $B$, which make up a local market. Firms are price takers in a perfectly competitive market. Firms are able to export from their own location, and people can move costlessly between the two counties in their own market besides for changing policy regimes. As a result, all prices as exogenously set at $p$. Further, we assume production requires only a single input of capital, $K$, and note that the pre-tax rent $r$ likewise has to be the same across all counties.
+
+For each county $A,B$, we know from general equilibrium theory that the marginal products must be the same. Thus, the profit function for a firm in county $j = A,B$ takes the form;
+$$\pi_{j} = \max_{K} pF(K)-(r+\tau_{j})K$$
+Then, the firms first order conditions are
+$$pF_{K}(K)-(r+\tau_{j}) = 0$$
+Now, imposing that the tax- adjusted marginal products have to be the same across counties, we get that the post-tax marginal products have to equalize across the border. Therefore;
+$$pF_{K^{A}}(K)-\tau_{i}^{A} = r = pF_{K}^{B}(K)-\tau_{i}^{B}$$
+$$\implies pF_{K}^{A}(K)- pF_{K}^{B}(K) = \tau_{A}-\tau_{B}$$
+If we let $t_{A}'-t_{B}' > t_{A}-t_{B}$, the efficient amount of capital per firm in county $A$ will get smaller. However, we can show explicitly the response of the number of firms to a change in tax in these cases is proportional to the change in quantity. Let $D(p)$ denote total market demand, with each county producing a fixed share of it. Thus $D(p) = n_{A}^{*}q_{A}^{*}+n_{B}^{*}q_{B}^{*}$, or $\lambda D(p) = n_{A}^{*}q_{A}^{*}, \lambda \in [0,1]$. Where $n_{j}^{*}$ denotes the optimal number of firms for county $j = A,B$, and $q_{j}^{*}$ denotes that counties optimal quantity of production. Taking the derivative of market demand with respect to $\tau_{A}$ we get (surpressing $*$'s);
+$$0 = \frac{\partial n_{A}}{\partial \tau_{A}}q_{A}+ n_{A}\frac{\partial q_{A}}{\partial \tau_{A}}$$
+$$\frac{\partial n_{A}}{\partial \tau_{A}} = -\frac{n_{A}}{q_{A}}\frac{\partial q_{A}}{\partial \tau_{A}}$$
+But we can show that $\frac{\partial q}{\partial \tau} = F_{K}(\cdot)\frac{\partial K}{\partial \tau} =  F_{K}(\cdot)\frac{1}{F_{KK}} < 0$. As a result, we get that
+$$\frac{\partial n}{\partial \tau} = -\frac{n}{q}\frac{F_{K}}{F_{KK}} > 0$$
+Then, the total change of a particular input in a market is determined to be
+$$\frac{\partial n}{\partial \tau}K+\frac{K}{\partial \tau}n$$
+$$= -\frac{n}{q}\frac{F_{K}}{F_{KK}}K+n\frac{1}{F_{KK}}$$
+$$=\frac{1}{F_{KK}}(n-\frac{n}{q}F_{K}(\cdot))$$
+Which cannot generally be signed, however, as the size of the firm gets large (i.e. $q > n$ and $K$ large enough such that $n > \frac{nF_{K}}{q}$) then we see that total capital utilization falls as a result of tax changes. Equivalently, when the size of firms is small, such tax changes might increase the amount or capital used in a county depending on the relative curvative of $F(\cdot)$. It is reasonable in most cases for the total amount of capital to drop as a response to a change in tax rates.
+
+\subsection{stuff}
+
+This is, to put it simply, somewhat disconcerning, as it implies that firms enter densely in any situation. Thus imposing taxes in this simple open economy does not impact individuals as firms trade off size for number. Further, if we impose a fixed cost, this event occurs up to the point where firm profit is equal to that cost, and then drops to zero afterwards. However, we can show explicitly the response of the number of firms to a change in tax in these cases is proportional to the change in quantity. 
+$$D(p) = n^{*}q^{*}$$
+Taing the derivative with respect to $\tau$ we get
+$$0 = \frac{\partial n}{\partial \tau}q+ n\frac{\partial q}{\partial \tau}$$
+$$\frac{\partial n}{\partial \tau} = -\frac{n}{q}\frac{\partial q}{\partial \tau}$$
+But we can show that $\frac{\partial q}{\partial \tau} = F_{K}(\cdot)\frac{\partial K}{\partial \tau} =  F_{K}(\cdot)\frac{1}{F_{KK}} < 0$
+Then
+$$\frac{\partial n}{\partial \tau} = -\frac{n}{q}\frac{F_{K}}{F_{KK}} > 0$$
+Then, the total change of a particular input in a market is determined to be
+$$\frac{\partial n}{\partial \tau}K+\frac{K}{\partial \tau}n$$
+$$= -\frac{n}{q}\frac{F_{K}}{F_{KK}}K+n\frac{1}{F_{KK}}$$
+$$=\frac{1}{F_{KK}}(n-\frac{n}{q}F_{K}(\cdot))$$
+Which cannot generally be signed, however, as the size of the firm gets large (i.e. $q > n$ and $K$ large enough such that $n > \frac{nF_{K}}{q}$) then we see that total capital utilization falls as a result of tax changes. Equivalently, when the size of firms is small, such tax changes might increase the amount or capital used in a county depending on the relative curvative of $F(\cdot)$.
+
+Lacking information on the type or firm or market, instead we use firm start up rates as a dependent variable as a proxy for capital utilization. Given a full array of firm characteristics, it might have been possible to separate out the two components, but we buy less into the idea that the required perfect substitution occurs as tax increases. As a result, such increases should force older firms out of the market, and any fixed cost might stop full replacement.
+
+A major contribution of this theory is to point out that as the size of firms gets large, government revenue falls as a result of raising taxes on inputs, and that as the size of firms falls, government revenue can increase as a result of raising taxes on inputs. However, even relying on these results implies buying into the continuous replacement and no-fixed cost assumptions.
+
+
+\subsection{Monopolistic Competition Theory}
+
+
+In our next model we let counties have a county specific perfecty competitive industry where there is no external trade, i.e. housing, a government provided public good, and consumption to be proxied by all available types between the two counties in the market. So again, we let there be two counties, A and B, that uniquely make up a market. We assume for simplicitly that each market is unique, and independent of each other. Firms first make a decision among markets, and then on the margin make a choice between the two counties. Each county has a locatioon specific representative consumer, with a strictly concave utility function $U_{i}(G,H,\left(\sum_{i=1}^{n_{A}+n_{B}}q_{i}^{\rho}\right)^{\frac{1}{\rho}})$, where for concavity $\rho < 1$, and all goods are assumed to be substitues. Let $G$ denote consumption of a government public good, and $H$ an amount of housing, and the didfferentiated goods $q_{i}$ are a consumers consumption, with $y = \left(\sum_{i=1}^{n_{A}+n_{B}}q_{i}^{\rho}\right)^{\frac{1}{\rho}}$. Individuals are each endowed with their own capital stock $K_{i}$, which is tradeable across counties and an external market at rate $r$, as a result individual face the budget constraint, $H+\sum_{i=1}^{n}p_{i}q_{i} \leq rK_{i}$, which we have normalized by the price of housing.
+
+There are two firm sectors. The first is a competitive housing market, where firms use a strictly concave production function $F(K)$. Then, governments can impose a tax on capital $\tau_{r}$, leading to the production function;
+$$\pi_{c} = \max_{K} pF(K)-(r+\tau_{r})K$$
+Of importance here is how firm size and number of firm entries respond to taxes. The solution to this subproblem is well understood in the Tiebout literature. First note from the firms first order conditions we get that the optimal level of $K^{*}$ is tacitly defined by,
+$$\frac{d\pi_{c}}{dK} = F_{K}(K^{*})-(r+\tau_{r})=0$$
+Then, taking a full differential and holding $dr = 0$, we get
+$$F_{KK}(K^{*})dK-d\tau_{r}=0$$
+$$\frac{dK}{d\tau_{r}} = \frac{1}{F_{KK}} < 0$$
+Further, since the production function is strictly concave, if we let there be a positive change in taxes the optimal firm size shrinks and more firms enter the market. Thus $\frac{dn_{c}^{*}}{d\tau_{k}} > 0$. Further, since price is equal to average cost, we can show that,
+$$p = \frac{c+\tau}{F(K)}$$
+$$\frac{\partial p}{\partial \tau} = \frac{1}{F_{K}}-\frac{(c+\tau)F_{K}F_{KK}}{F(K)^{2}} > 0$$
+Thus, increases taxes increases the price of a good, increases the number of firms, and decreases the quantity produced by each firm.
+
+The second industry is a monopolistic competition sector defined by a linear cost function. Then the firms problem becomes, subject to a tax on prices,
+$$\pi = \max_{p_{i}} (p_{i}-\tau_{p}-c)q_{i}-f$$
+Again, in this case we want to look at how prices, quantities, and how many product types enter the market subject to changes in tax rates. First we show that as taxes increase, $d\tau_{r} > 0$, that optimal prices for firms increaes to compensate. From Dixit and Stiglitz (1977) and Tirole (1988) we note that using a two-stage budgeting process for the government,
+$$\epsilon_{i} = \frac{\partial q_{i}}{\partial p_{i}}\frac{p_{i}}{q_{i}} = \frac{1}{1-\rho}$$
+Which, in our model implies that optimal price is
+$$p_{i}^{*} = \frac{c+\tau}{\rho}$$
+$$\frac{dp_{i}^{*}}{d\tau} = \frac{1}{\rho} > 0$$
+
+Then, the optimal production point occurs when firms are just breaking even due to entry of new types until demand falls sufficiently.
+$$(p_{i}^{*}-\tau_{p}-c)q_{i} = f$$
+$$(\frac{c+\tau_{p}}{\rho}-\tau_{p}-c)q_{i} = f$$
+$$q_{i}^{*} = \frac{f\rho}{(c+\tau_{p})(1-\rho)}$$
+Then, as a result, we further get that
+$$\frac{dq_{i}}{d\tau_{p}} < 0$$
+Here we get the usual monopolistic competition solution from Dixit and Stiglitz and Tirole
+$$U(G,rK_{i}-nqp,n^{\frac{1}{\rho}}q)$$
+Finally, the optimal number of firms, given government spending $G$ is defined by,
+$$U_{H}(G, rK_{i}-npq, n^{\frac{1}{\rho}}q)(c+\tau)=n^{\frac{1}{\rho}-1}\rho U_{y}(G, rK_{i}-npq, n^{\frac{1}{\rho}}q)$$
+
+Let the utility function now take the form $U = G^{\psi}H^{\sigma}Y^{1-\sigma}$, for $\psi, \sigma < 1 $. Then we get
+$$\sigma (rK_{i}-npq)^{\sigma-1}(n^{\frac{1}{\rho}}q)^{1-\sigma}(c+\tau) = (1-\sigma)\rho^{\frac{1}{\rho}-1}(rK_{i}-npq)^{\sigma}(n^{\frac{1}{\rho}}q)^{-\sigma}$$
+$$\frac{\sigma}{(1-\sigma)\rho} n^{\frac{1}{\rho}}q (c+\tau) = rK_{i}-npq $$
+$$\frac{\sigma(c+\tau)}{(1-\sigma)\rho} n^{\frac{1}{\rho}}  = \frac{rK_{i}}{q}-np $$
+Differentiating with respect to $\tau$ we get
+$$\frac{\sigma(c+\tau)}{(1-\sigma)\rho} \frac{1}{\rho}n^{\frac{1}{\rho}-1}\frac{\partial n}{\partial \tau} = \frac{rK_{i}}{\frac{\partial q}{\partial \tau}} - \frac{\partial n}{\partial \tau}p-n\frac{\partial p}{\partial \tau}$$
+$$(\frac{\sigma(c+\tau)}{(1-\sigma)\rho} \frac{1}{\rho}n^{\frac{1}{\rho}-1}+p)\frac{\partial n}{\partial \tau} = \frac{rK_{i}}{\frac{\partial q}{\partial \tau}}-n\frac{\partial p}{\partial \tau}$$
+Since the left hand side term is positive everywhere, and the left hand term is negative everywhere, we get that
+$$\frac{\partial n}{\partial \tau} < 0$$
+Thus, the number of varieties in the market decreases as taxes increase.
+
+\section{research design}
+
+\subsection{differenced poisson regression}
+
+In this model we view counties as tied together, but the process continues to follow a poisson process. First, I derive the usual log-likelihood estimator. This works as a differenced-in-difference poisson regression.
+
+From above, the poisson likelihood is,
+$$L(\theta|X,Y) = \Pi_{i=1}^{m}\frac{e^{y_{i}\theta'x_{i}}e^{e^{-\theta'x_{i}}}}{y_{i}!}$$
+
+Letting each observatoin be the difference between two Poisson processes, the differenced estimator becomes,
+$$L(\theta|X_{A},Y_{A},X_{B},Y_{B} = \Pi_{i=1}^{m}\left(\frac{e^{y_{A,i}\theta'x_{A,i}}e^{e^{-\theta'x_{A,i}}}}{y_{A,i}!}-\frac{e^{y_{B,i}\theta'x_{B,i}}e^{e^{-\theta'x_{B,i}}}}{y_{B,i}!}\right)$$
+
+$$logL(\theta|\cdot) = \sum_{i=1}^{m}(y_{A,i}\theta'x_{A,i}-y_{B,i}\theta'x_{B,i})-(e^{\theta'x_{A,i}}-e^{\theta'x_{B,i}})$$
+
+$$\frac{\partial logL}{\partial \theta'} = \sum_{i=1}^{m} (y_{A,i}x_{A,i} - y_{B,i}x_{B,i})-(x_{A,i}e^{\theta'x_{A,i}}-x_{B,i}e^{\theta'x_{B,i}})$$
+
+However, two issues remain. Compared to assuming a normal likelihood, there is no closed form estimator for $\theta$, and computational methods must be used for estimation. Further, this is complicated because the estimator is neither concave or convex by construction, and non-linear estimation methods must be utilized. We can show this explicitly by taking the second derivative and evaluating the sign. As a result, the usual gradient descent algorithms have to be exchanged.
+
+$$\frac{\partial^{2} logL}{\partial^{2} \theta'} = \sum_{i=1}^{m}-(x_{A,i}^{2}e^{\theta'x_{A,i}}-x_{B,i}^{2}e^{\theta'x_{B,i}})$$
+
+
+\end{document}

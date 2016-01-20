@@ -5,12 +5,14 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
+
 \usepackage{relsize}
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{hyperref}
 \usepackage{relsize}
-\usepackage{amsthm}
+
 
 \usepackage{pgffor}%
 \usepackage{geometry}
@@ -19,7 +21,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
@@ -42,7 +44,7 @@
 \maketitle
 
 \begin{abstract}
-This paper uses a regression discontinuity approach to estimate the impacts of taxes on firm entry rates between neighboring states. We utilize matched county pairs as an approximate bandwidth around the discontinuity in state policies imposed at their border. This controls for unobserved location specific determinants of firm entry, as well as policy responses to shocks shared across borders. We then estimate the impacts of property, income, sales, corporate, capital gains, workers compensation, and unemployment insurance top marginal tax rates on the differences in firm entry between counties. Our array of taxes controls for joint changes in tax policy that governments may implement to accomplish policy goals. We estimate this impact using a sample of 107 state-border pairs between 1999 and 2009. Our results indicate that property and sales taxes have the largest negative effect on firm start up rates, and in more recent year's income taxes as well.
+This paper uses a regression discontinuity approach to estimate the impacts of taxes on firm entry rates between neighboring states. We utilize matched county pairs as an approximate bandwidth around the discontinuity in state policies imposed at their border. This controls for unobserved location specific determinants of firm entry, as well as policy responses to shocks shared across borders. We then estimate the impacts of property, income, sales, corporate, capital gains, workers compensation, and unemployment insurance top marginal tax rates on the differences in firm entry between counties. Our array of taxes controls for joint changes in tax policy that governments may implement to accomplish policy goals. We estimate this impact using a sample of 107 state-border pairs between 1999 and 2009. Our results indicate that property and sales taxes have the largest negative effect on firm start up rates. In more recent years, income taxes deter firm entry as well
 \end{abstract}
 
 \newpage
@@ -170,25 +172,67 @@ Wasylenko, Michael; McGuire, Therese, "Jobs and Taxes: The Effect of Business Cl
 
 \section{Appendix: Figures \& Tables}
 
+\begin{table}[!htbp] \centering 
+  \caption{Generating Subject Neighbor Pairs} 
+  \label{gensubnbr} 
+\begin{tabular}{@{\extracolsep{5pt}}ll} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Step & Description\\ 
+\hline \\[-1.8ex] 
+1 & Download the County Adjacency Table (CAT) from the census \href{https://www.census.gov/geo/reference/county-adjacency.html}{here} \\
+2 & Load the CSV into a statistical software of choice \\
+3 & Assign joint state and county FIPS values to NA's in the loaded data set \\
+4 & Sort through the first column of the CAT for every adjacent county in another state \\
+5 & The first column is the "subject" counties, and the adjacents are the "neighbors" \\
+\hline \\[-1.8ex]
+\end{tabular} 
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+  \caption{Generating Subject Neighbor Pairs} 
+  \label{genextrd} 
+\begin{tabular}{@{\extracolsep{5pt}}ll} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Step & Description\\ 
+\hline \\[-1.8ex] 
+1 & Load the CAT into a statistical software of choice \\
+2 & Assign joint state and county FIPS values to NA's in the loaded data set \\
+3 & Load the original subject neighbor pairs (OSN) into statistical software of choice \\
+4 & For every neighbor in OSN, find every adjacent county in its own state \\
+5 & Exclude from this match any county that was in OSN alreads \\
+6 & match the subject from OSN to each of these new neighbors \\ 
+7 & The first column is the "subject" and the second as the "neighbor's neighbor" \\
+\hline \\[-1.8ex]
+\end{tabular} 
+\end{table} 
+
 \begin{figure}[h]\label{rb}
     \centering
-    \textbf{Example of Border Matching}
+    \caption{Example of Border Matching}
+    \begin{minipage}{0.70\textwidth}
     \includegraphics[scale = 0.5]{../analysis/output/borders_temp.png}
-    \caption{Red rectangles are subject counties, and blue are neighbor counties. In this example Subject 1 would be only matched to Neighbor 1, while "Subject 2" would be paired with Neighbor 1-3. Similarly, when we broaden the bandwidth, Subject 1 would be matched with Nbr's Nbr 1, whle Subject 2 would be paired with Nbr's Nbr 1 and 2}
+    {\footnotesize Red rectangles are subject counties, and blue are neighbor counties. In this example Subject 1 would be only matched to Neighbor 1, while "Subject 2" would be paired with Neighbor 1-3. Similarly, when we broaden the bandwidth, Subject 1 would be matched with Nbr's Nbr 1, whle Subject 2 would be paired with Nbr's Nbr 1 and 2 \par}
+    \end{minipage}
 \end{figure}
 
 \begin{figure}[h]\label{eb}
     \centering
-    \textbf{Original Bandwidth Borders}\par\medskip
+    \caption{Original Bandwidth Borders}\par\medskip
+        \begin{minipage}{0.70\textwidth}
     \includegraphics[scale = 0.20]{../analysis/output/rb_picture.png}
-    \caption{Red borders are subject counties, blue borders are neighbor counties}
+    {\footnotesize Red borders are subject counties, blue borders are neighbor counties.\par}
+    \end{minipage}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \textbf{Extended Bandwidth Borders}\par\medskip
+    \caption{Extended Bandwidth Borders}\par\medskip
+            \begin{minipage}{0.70\textwidth}
     \includegraphics[scale = 0.5]{../analysis/output/eb_picture.png}
-    \caption{Red borders are subject counties, blue borders are neighbor counties}
+    {\footnotesize Red borders are subject counties, blue borders are neighbor counties. \par}
+    \end{minipage}
 \end{figure}
 
 \input{../analysis/output/_--_summary_table.tex}
@@ -204,14 +248,23 @@ Wasylenko, Michael; McGuire, Therese, "Jobs and Taxes: The Effect of Business Cl
 \end{landscape}
 \restoregeometry
 
+\input{../analysis/output/_--_rd_Ftests.tex}
+
 \newgeometry{margin=1cm}
 \begin{landscape}
 \input{../analysis/output/_--_eb_results.tex}
 \end{landscape}
 \restoregeometry
 
+\input{../analysis/output/_--_eb_Ftests.tex}
+
 \input{../analysis/output/_--_no_equality_rd_results.tex}
 \input{../analysis/output/_--_Ftests.tex}
+
+\input{../analysis/output/_--_region_rd_results.tex}
+\input{../analysis/output/_--_metro_rd_results.tex}
+%\input{../analysis/output/_--_urban_rd_results.tex}
+
 
 \newgeometry{margin=1cm}
 \begin{landscape}
@@ -225,10 +278,26 @@ Wasylenko, Michael; McGuire, Therese, "Jobs and Taxes: The Effect of Business Cl
 \end{landscape}
 \restoregeometry
 
+\input{../analysis/output/_--_agreements_rd_results.tex}
+%\input{../analysis/output/_--_emp_rd_results.tex}
+
 \begin{figure}[h]\label{weightedtax}
     \centering
-    \includegraphics[scale = 0.5]{../analysis/output/_--_weightedtax.pdf}
+    \includegraphics[scale = 0.5]{../analysis/output/_--_weightedtax.png}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.5]{../analysis/output/_--_birthsdiff.png}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.5]{../analysis/output/_--_taxdiff.png}
+\end{figure}
+
+\input{../analysis/output/entryCorrelations.tex}
+
 
 \input{../analysis/output/_--_meantable.tex}
 

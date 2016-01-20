@@ -4,6 +4,52 @@ library(stargazer) #stargazer
 library(car) #linearhypothesis
 library(lmtest) #coeftest
 
+
+naics <- c("--", "11","21","22","23","31-33","42","44-45","48-49", 
+           "51","52","53","54","55","56","61","62","71","72","81","95","99")
+naicsf <- c("00", "11","21","22","23","31_33","42","44_45","48_49", 
+            "51","52","53","54","55","56","61","62","71","72","81","95","99")
+
+naics_names <- c("Total", "Agriculture", "Mining", "Utilities",
+                 "Construction", "Manufacturing", "Wholesale trade", "Retail Trade", "Transportation and Warehousing",
+                 "Information", "Finance and insurance", "Real estate and rental and leasing",
+                 "Professional, scientific, and technical services", "Management of companies and enterprises",
+                 "Administrative and support and waste management and remediation serv", "Educational services",
+                 "Health care and social assistance", "Arts, entertainment, and recreation", "Accommodation and foodservices",
+                 "Other services (except public administration)", "Auxiliaries, exc corp, subsidiary, and regional managing offices",
+                 "Unclassified")
+
+stor <- matrix(,nrow = 13761,ncol = length(naics))
+
+for (m in 1:length(naics)){  
+  master <- read.csv(paste("~/papers/firm_entry/build/output/",naics[m],"border_master.csv", sep = "_"))
+
+  # log dep. var's
+  master$lnbirths_sub <- log(master$births_sub)
+  master$lnbirths_nbr <- log(master$births_nbr)
+
+  master$births_ratio <- master$lnbirths_sub - master$lnbirths_nbr
+ I
+  assign(paste("master",naics[m],sep="_"), master)
+  stor[,m] <- master$births_ratio 
+}
+
+stor <- as.data.frame(stor[,c(1,2,6,8,11)])
+
+dim <- dim(stor)
+y <- unlist(stor)
+y[ is.infinite(y)] <- NaN
+stor <- matrix(y, dim)
+stor <- as.data.frame(stor)
+names(stor) <- naics_names[c(1,2,6,8,11)]
+
+tmp <- cor(stor,use="pairwise.complete.obs")
+
+stargazer(tmp, font.size = "tiny",
+          title = "Correlation Between Industry Firm Entry", 
+          out = "~/papers/firm_entry/analysis/output/entryCorrelations.tex" )
+
+
 master <- read.csv("~/papers/firm_entry/build/output/_--_border_master.csv")
 
 # log dep. var's
@@ -33,6 +79,8 @@ master$expansions_ratio <- master$lnexpan_sub - master$lnexpan_nbr
 master$contractions_diff <- master$lncontr_sub - master$lncontr_nbr
 master$contractions_ratio <- master$contractions_sub - master$contractions_nbr
 master$net_diff <- master$births_sub - master$deaths_sub - (master$births_nbr- master$deaths_nbr)
+
+
 
 # diff tax rates and exp
 master$educ_pc_L1_diff <- master$educ_pc_L1_sub - master$educ_pc_L1_nbr
@@ -67,6 +115,58 @@ master$stpr_id <- paste(master$statefips.x,master$statefips.y, by = "")
 # eclude data we only see once
 master <- master[master$births_sub > 0 & master$births_nbr > 0,] # 13115
 master <- master[table(master$stpr_id) != 11,] # 13249 for the 'all firm' case
+master$fips <- master$cofip_sub*100000+master$cofip_nbr
+
+
+
+library(data.table)
+
+master$ptax_diff <- master$ptax_sub - master$ptax_nbr
+master$inctax_diff <- master$inctax_sub - master$inctax_nbr
+master$capgntax_diff <- master$capgntax_sub - master$capgntax_nbr
+master$salestax_diff <- master$salestax_sub - master$salestax_nbr
+master$corptax_diff <- master$corptax_sub - master$corptax_nbr
+master$wctax_diff <- master$wctaxfixed_sub - master$wctaxfixed_nbr
+master$uitax_diff <- master$uitaxrate_sub - master$uitaxrate_nbr
+
+dt <- data.table(master)
+dt[, c("ptaxL1_diff","inctaxL1_diff","capgntaxL1_diff","salestaxL1_diff","corptaxL1_diff","wctaxL1_diff","uitaxL1_diff")
+   := list(c(NA, diff(ptax_diff)),c(NA, diff(inctax_diff)),c(NA,diff(capgntax_diff)),
+           c(NA, diff(salestax_diff)),c(NA,diff(corptax_diff)),
+           c(NA, diff(wctax_diff)),c(NA,diff(uitax_diff))),by = fips]
+
+for (i in 1:length(unique(dt$stpr_id))){
+  tmp <- dt[dt$stpr_id == unique(dt$stpr_id)[i],]
+  plot(tmp$ptaxL1_diff + tmp$capgntaxL1_diff + tmp$salestaxL1_diff
+       + tmp$corptaxL1_diff + tmp$wctaxL1_diff + tmp$uitaxL1_diff)
+}
+
+test <- lm(births_ratio ~ ptax_diff + capgntax_diff + salestax_diff + corptax_diff + wctax_diff + uitax_diff + 
+             ptaxL1_diff + capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff, data = dt)
+# set up mean border areas to use
+mean_births_sub <- c()
+mean_births_nbr <- c()
+dep_var <- c();
+# array to use target should be 107*11 = 1177
+k = 1
+for (i in 1:length(unique(master$stpr_id))){
+  for (j in 1:length(unique(master$year))){
+    # first pull out just state-pair information
+    tmp <- master[master$stpr_id == unique(master$stpr_id)[i] & master$year == unique(master$year)[j],]
+    # restrict each side to only have unique county observations on each side
+    tmp_sub <- tmp[!duplicated(tmp$cofip_sub),]
+    tmp_nbr <- tmp[!duplicated(tmp$cofip_nbr),]
+    
+    # calculate means
+    dep_var <- rbind(dep_var,tmp_sub[1,c(2,110)])
+    mean_births_sub[k] <- mean(tmp_sub$births_sub)
+    mean_births_nbr[k] <- mean(tmp_nbr$births_nbr)
+    k <- k +1
+  }
+}
+dl_master <- as.data.frame(dep_var)
+dl_master$births_ratio <- log(mean_births_sub) - log(mean_births_nbr)
+dl_master <- dl_master[is.finite(dl_master$births_ratio),]
 
 # preliminary cross-correlations
 var <- data.frame(master$ptax_diff, master$inctax_diff, master$capgntax_diff, 
@@ -112,13 +212,28 @@ finaldat$finish <- abs(pols_namen_nc_r_coef[2]*finaldat$ptax_diff + pols_namen_n
                        + pols_namen_nc_r_coef[5]*finaldat$salestax_diff  + pols_namen_nc_r_coef[6]*finaldat$corptax_diff  + pols_namen_nc_r_coef[7]*finaldat$wctax_diff
                        + pols_namen_nc_r_coef[8]*finaldat$uitax_diff)
 
+finaldat <- merge(finaldat,dl_master[dl_master$year == 2009,], by.x = "finaldat.stpr_id", by.y = "stpr_id")
 
 par(mfrow=c(1,1))
-plot=qplot(abs(pols_namen_nc_r_coef[2]*ptax_diff + pols_namen_nc_r_coef[3]*inctax_diff  + pols_namen_nc_r_coef[4]*capgntax_diff
+png(filename="~/papers/firm_entry/analysis/output/_--_weightedtax.png")
+qplot(abs(pols_namen_nc_r_coef[2]*ptax_diff + pols_namen_nc_r_coef[3]*inctax_diff  + pols_namen_nc_r_coef[4]*capgntax_diff
                + pols_namen_nc_r_coef[5]*salestax_diff  + pols_namen_nc_r_coef[6]*corptax_diff  + pols_namen_nc_r_coef[7]*wctax_diff
                + pols_namen_nc_r_coef[8]*uitax_diff), data=finaldat, 
-           xlab = "absolute valued weighted tax differential", geom="histogram",  main = "Weighted Tax Differentials in 2008") 
-ggsave(plot,file="~/papers/firm_entry/analysis/output/_--_weightedtax.png")
+           xlab = "absolute valued weighted tax differential", geom="histogram",  main = "Weighted Tax Differentials in 2009")
+dev.off()
+
+png(filename="~/papers/firm_entry/analysis/output/_--_taxdiff.png")
+qplot(finish/abs(births_ratio), data=finaldat, binwidth = 0.10,
+      xlab = "pct firm births ratio explained", geom="histogram",  main = "Percent Firm Births Ratio explained 2009")
+dev.off()
+
+png(filename="~/papers/firm_entry/analysis/output/_--_birthsdiff.png")
+qplot(abs(births_ratio), data=finaldat,
+              xlab = "Mean Firm Births Ratio", geom="histogram",  main = "Mean Firm Births Ratio in 2009")
+dev.off()
+
+tmp <- finaldat$finish/abs(finaldat$births_ratio)
+hist(tmp)
 
 # want to see which areas have seen the biggest improvement.
 
