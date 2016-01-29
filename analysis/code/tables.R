@@ -315,3 +315,10 @@ names(mean) <- c("mean firm entry", "preffered side", "abs weighted tax", "prefe
 stargazer(mean[1:10,], summary = FALSE, rownames = FALSE, font.size = "tiny",
           title = "Result Comparison for Total Firm Births", 
           out = "~/papers/firm_entry/analysis/output/_--_meantable.tex")
+names(mean) <- c("V1","V2","V3","V4","V5","V6","V7")
+mean <- setorder(mean, -V3)
+names(mean) <- c("mean firm entry", "preffered side", "abs weighted tax", "preferred side", "same?","sub state", "nbr state")
+stargazer(mean[1:10,], summary = FALSE, rownames = FALSE, font.size = "tiny",
+          title = "Result Comparison for Estimated Firm Enry", 
+          out = "~/papers/firm_entry/analysis/output/_--_taxtable.tex")
+

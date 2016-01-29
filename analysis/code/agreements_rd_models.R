@@ -20,11 +20,6 @@ naics_names <- c("Total", "Agriculture, forestry, fishing, and hunting", "Mining
 for (m in 1:length(naics)){
   master <- read.csv(paste("~/papers/firm_entry/build/output/",naics[m],"border_master.csv", sep = "_"))
   
-  recip <- read.csv("~/papers/firm_entry/build/input/recipricol.csv")
-  recip <- recip[,-c(3:5)]
-
-  master <- merge(master, recip, by.x = c("statefips.x", "statefips.y"),by.y = c("stateFIPS_sub","stateFIPS_nbr"))
-  
 
   # log dep. var's
   master$lnbase_sub <- log(master$base_sub)
@@ -89,6 +84,15 @@ for (m in 1:length(naics)){
   master <- master[table(master$stpr_id) != 11,] # 13249 for the 'all firm' case
   
 
+  recip <- read.csv("~/papers/firm_entry/build/input/recipricol.csv")
+  recip <- recip[,-c(3:5)]
+  recip$stpr_id <- paste(recip$stateFIPS_sub,recip$stateFIPS_nbr, by = "")
+  
+  recip_master <- merge(master, recip, by.x = c("statefips.x", "statefips.y"),by.y = c("stateFIPS_sub","stateFIPS_nbr"))
+  recip_master$stpr_id <- paste(recip_master$statefips.x,recip_master$statefips.y, by = "")
+  
+  norecip_master <- master[!(master$stpr_id %in% recip$stpr_id),]
+  
   #######################
   # BIRTHS RATIO MODELS #
   #######################
@@ -97,35 +101,11 @@ for (m in 1:length(naics)){
   pols_namen_nc_real <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                            + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                            + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff,
-                           data = master)
-  stprid_c_vcov <- cluster.vcov(pols_namen_nc_real, master$stpr_id)
+                           data = recip_master)
+  stprid_c_vcov <- cluster.vcov(pols_namen_nc_real, recip_master$stpr_id)
   pols_namen_nc_r_coef <- coeftest(pols_namen_nc_real, vcov = stprid_c_vcov) # results
   
   assign(paste("pols_na_nc",naicsf[m], sep = "_"), coeftest(pols_namen_nc_real, vcov = stprid_c_vcov))
-  
-  pols_amen_nc_real <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
-                          + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
-                          + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
-                          + JAN.TEMP.Z_diff + JAN.SUN.Z_diff + JUL.TEMP.Z_diff + JUL.HUM.Z_diff
-                          + TOPOG.Z_diff + WATER.AR.Z_diff, 
-                          data = master)
-  stprid_c_vcov <- cluster.vcov(pols_amen_nc_real , master$stpr_id)
-  pols_amen_nc_r_coef <- coeftest(pols_amen_nc_real , vcov = stprid_c_vcov) # results
-  
-  pols_namen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
-                       + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
-                       + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
-                       + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
-                       + popdensity.cont_diff + pctmanuf.cont_diff, 
-                       data = master)
-  stprid_c_vcov <- cluster.vcov(pols_namen_c_r,  master$stpr_id)
-  pols_namen_c_r_coef <- coeftest(pols_namen_c_r, vcov = stprid_c_vcov)
-  assign(paste("pols_na_c",naicsf[m], sep = "_"), coeftest(pols_namen_c_r, vcov = stprid_c_vcov))
-  
-  linearHypothesis(pols_namen_c_r, c("ptax_diff + inctax_diff + capgntax_diff
-                    + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
-  linearHypothesis(pols_namen_c_r, c("capgntax_diff + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
-  
   
   pols_amen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                       + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
@@ -134,52 +114,39 @@ for (m in 1:length(naics)){
                       + popdensity.cont_diff + pctmanuf.cont_diff + JAN.TEMP.Z_diff
                       + JAN.SUN.Z_diff + JUL.TEMP.Z_diff + JUL.HUM.Z_diff
                       + TOPOG.Z_diff + WATER.AR.Z_diff, 
-                      data = master)
-  stprid_c_vcov <- cluster.vcov(pols_amen_c_r, master$stpr_id)
+                      data = recip_master)
+  stprid_c_vcov <- cluster.vcov(pols_amen_c_r, recip_master$stpr_id)
   pols_amen_c_r_coef <- coeftest(pols_amen_c_r, vcov = stprid_c_vcov)
   
-  # iv estimation
-  simple.pop.1s<- lm(pop_diff ~ WATER.AR.Z_diff, data = master)
-  # very significant, but R^2 only about 0.04, so probably a weak instrument?
+  norecip_namen_nc_real <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
+                           + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
+                           + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff,
+                           data = norecip_master)
+  stprid_c_vcov <- cluster.vcov(norecip_namen_nc_real, norecip_master$stpr_id)
+  norecip_namen_nc_r_coef <- coeftest(pols_namen_nc_real, vcov = stprid_c_vcov) # results
+
+  norecip_amen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
+                      + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
+                      + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
+                      + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
+                      + popdensity.cont_diff + pctmanuf.cont_diff + JAN.TEMP.Z_diff
+                      + JAN.SUN.Z_diff + JUL.TEMP.Z_diff + JUL.HUM.Z_diff
+                      + TOPOG.Z_diff + WATER.AR.Z_diff, 
+                      data = norecip_master)
+  stprid_c_vcov <- cluster.vcov(norecip_amen_c_r, norecip_master$stpr_id)
+  norecip_amen_c_r_coef <- coeftest(pols_amen_c_r, vcov = stprid_c_vcov)
   
-  master$pop.pred<- predict(simple.pop.1s, newdata = master)
-  simple.pop.2s<- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
-                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
-                     + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
-                     + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
-                     + popdensity.cont_diff + pctmanuf.cont_diff + pop.pred, 
-                     data = master)
-  stprid_c_vcov <- cluster.vcov(simple.pop.2s,  master$stpr_id)
-  simple.pop.2s_coef <- coeftest(simple.pop.2s, vcov = stprid_c_vcov)
-  
-  # fixed effect model
-  master$stpr_fe <- factor(master$stpr_id)
-  master <- master[is.finite(master$births_ratio),]
-  
-  pols_amen_fe  <- felm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
-                        + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
-                        + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
-                        + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
-                        + popdensity.cont_diff + pctmanuf.cont_diff  + JAN.TEMP.Z_diff
-                        + JAN.SUN.Z_diff + JUL.TEMP.Z_diff + JUL.HUM.Z_diff
-                        + TOPOG.Z_diff + WATER.AR.Z_diff  | stpr_fe | 0 |0, data = master)
-  
-  pols_fe <- felm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
-                  + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
-                  + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
-                  + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
-                  + popdensity.cont_diff + pctmanuf.cont_diff | stpr_fe | 0 | 0, data = master)
   
   # write tables
-  write(stargazer(pols_amen_c_r, pols_namen_nc_real,pols_amen_fe, pols_fe,
-    se = list(pols_amen_c_r_coef[,2], pols_namen_nc_r_coef[,2], NULL, NULL),
+  write(stargazer(pols_amen_c_r, pols_namen_nc_real,norecip_amen_c_r, norecip_namen_nc_real,
+    se = list(pols_amen_c_r_coef[,2], pols_namen_nc_r_coef[,2], norecip_amen_c_r_coef[,2], norecip_namen_nc_r_coef[,2]),
                   label = paste(naics[m], "rd", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
                   covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
                                        "Welfare Spending Per Cap Diff"),
                   omit = c("cont","Z"), omit.labels = c('controls', 'amenities'), omit.yes.no = c("Yes", "No"), omit.stat = c("f","adj.rsq","ser"),
-                  column.labels = c("OLS","OLS","OLS","OLS","FE", "FE"),
+                  column.labels = c("Recipricol","Recipricol","No Recipricol","No Recipricol"),
                   no.space = TRUE, title = paste("Counties with Income Tax Agreements for ", naics_names[m], "Firm Births", sep = " ")),
         paste("~/papers/firm_entry/analysis/output/", naics[m], "agreements_rd_results.tex", sep = "_"))
 }

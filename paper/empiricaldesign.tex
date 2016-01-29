@@ -67,9 +67,11 @@ We test a version of this model where we do not impose symmetry in the coefficie
 \ddot \ln(n_{g,t}) = X_{A,t-1}\beta_{2,sub}+X_{B,t-1}\beta_{2,nbr}+ \ddot e_{igt} 
 \end{equation}
 
-\subsection{Regional, Urban, and Rural Estimates}
+\subsection{Subsample Estimates}
 
-We estimate our model for each of the four major regions in the US. We estimate our model such that the subject state is in a specific US region.\footnote{The Census splits the US into four areas,  the Northeast, South, Midwest, and West, which we use for this analysis.} We further partition our data into four different urbanization categories. First, is for counties that are in Metrpolitan Statistical Areas in general, and where both subject and neighbor counties are in the same MSA. We then partition counties into areas where both are  either urban or rural. We use the ERS classification system to determine if a county is urban or rural, where a county is defined as urban if its classification is below a 7, and rural if its classification is higher than 6.\footnote{\url{http://www.ers.usda.gov/data-products/rural-urban-continuum-codes/documentation.aspx}}
+We estimate our model for four different urbanization categories. First, is for counties that are in Metrpolitan Statistical Areas in general, and where both subject and neighbor counties are in the same MSA. We then partition counties into areas where both are  either urban or rural. We use the ERS classification system to determine if a county is urban or rural, where a county is defined as urban if its classification is below a 7, and rural if its classification is higher than 6.\footnote{\url{http://www.ers.usda.gov/data-products/rural-urban-continuum-codes/documentation.aspx}}
+
+We further follow Rohlin, Rosenthal, and Ross (2015) by including comparisons between states that have recipricol agreements, and those without recipricol agreements. Our original samples might be biased, as a few states have recipricol agreements, where individuals pay the income tax rate of the state they work in rather than where they live. We split our sample into states with and without recipricol agreements, and estimate our model on each section.
 
 \subsubsection{Period Specific Cross Section Analysis}
 Fifth, we estimate cross-sectional models for each year in our sample. We then compare these estimates to our pooled OLS estimates to gauge if tax incidence on firm start up rates remains stable over time.
