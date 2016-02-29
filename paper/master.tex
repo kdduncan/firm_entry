@@ -3,6 +3,10 @@
 \renewcommand{\baselinestretch}{2} 
 \usepackage[margin=1.0in]{geometry}
 
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -44,7 +48,7 @@
 \maketitle
 
 \begin{abstract}
-This paper uses a regression discontinuity approach to estimate the impacts of taxes on firm entry rates between neighboring states. We utilize matched county pairs as an approximate bandwidth around the discontinuity in state policies imposed at their border. This controls for unobserved location specific determinants of firm entry, as well as policy responses to shocks shared across borders. We then estimate the impacts of property, income, sales, corporate, capital gains, workers compensation, and unemployment insurance top marginal tax rates on the differences in firm entry between counties. Our array of taxes controls for joint changes in tax policy that governments may implement to accomplish policy goals. We estimate this impact using a sample of 107 state-border pairs between 1999 and 2009. Our results indicate that property and sales taxes have the largest negative effect on firm start up rates. In more recent years, income taxes deter firm entry as well
+This paper uses a regression discontinuity approach to estimate the impacts of taxes on firm entry rates between neighboring states. We utilize matched county pairs as an approximate bandwidth around the discontinuity in state policies imposed at their border. This estimation strategy controls for unobserved location specific determinants of firm entry, as well as policy responses to shocks shared across borders. We estimate this impact using a sample of 107 state-border pairs between 1999 and 2009. We add to the literature by using the large array of top marginal tax rates, including property, income, sales, corporate, capital gains, workers compensation, and unemployment insurance tax rates. This controls for joint changes in tax rates that governments may implement to accomplish policy goals. Our results indicate that property, sales, and income taxes have the largest negative effect on firm start up rates. 
 \end{abstract}
 
 \newpage
@@ -60,6 +64,12 @@ This paper uses a regression discontinuity approach to estimate the impacts of t
 
 \newpage
 \begin{thebibliography}{99}
+
+\bibitem{Agrawal1}
+Agarwal, David (2015), "The Tax Gradient: Spatial Aspects of Fiscal Competition," The American Economic Journal: Economic Policy, Vol 7 no 2, pp 1-29.
+
+\bibitem{Agrawal2}
+Agarwal, David (2016), "Local Fiscal Competition: An Application to Sales Taxation with Multiple Federations," Journal of Urban Economics, Vol 91, pp 122-138
 
 \bibitem{ArauzoCarodetal}
 Arauzo-Carod, JM, Liviano-Solis, D, Manjon-Antolin, M, "Empirical Studies in Industrial Location: An Assessment of Their Methods and Results," Journal of Regional Science 2010, 50 (3), 685-711
@@ -242,6 +252,11 @@ Step & Description\\
     \includegraphics[scale = 0.5]{../analysis/output/_--_pairs.png}
 \end{figure}
 
+\begin{figure}[h]\label{pairsL1}
+\centering
+\includegraphics[scale=0.5]{../analysis/output/_--_pairsL1.png}
+\end{figure}
+
 \newgeometry{margin=1cm}
 \begin{landscape}
 \input{../analysis/output/_--_rd_results.tex}
@@ -259,10 +274,12 @@ Step & Description\\
 %\input{../analysis/output/_--_eb_Ftests.tex}
 
 \input{../analysis/output/_--_no_equality_rd_results.tex}
+
 \input{../analysis/output/_--_Ftests.tex}
 
 %\input{../analysis/output/_--_region_rd_results.tex}
 \input{../analysis/output/_--_metro_rd_results.tex}
+\input{../analysis/output/_--_metrord_Ftests.tex}
 %\input{../analysis/output/_--_urban_rd_results.tex}
 
 
@@ -281,24 +298,17 @@ Step & Description\\
 \input{../analysis/output/_--_agreements_rd_results.tex}
 %\input{../analysis/output/_--_emp_rd_results.tex}
 
+\input{../analysis/output/_--_agreerd_Ftests.tex}
+
 \begin{figure}[h]\label{weightedtax}
     \centering
     \includegraphics[scale = 0.5]{../analysis/output/_--_weightedtax.png}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale = 0.5]{../analysis/output/_--_birthsdiff.png}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale = 0.5]{../analysis/output/_--_taxdiff.png}
 \end{figure}
 
 \input{../analysis/output/entryCorrelations.tex}
 
 \input{../analysis/output/_--_meantable.tex}
 \input{../analysis/output/_--_taxtable.tex}
+
 
 \end{document}

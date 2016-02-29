@@ -135,14 +135,35 @@ dt[, c("ptaxL1_diff","inctaxL1_diff","capgntaxL1_diff","salestaxL1_diff","corpta
            c(NA, diff(salestax_diff)),c(NA,diff(corptax_diff)),
            c(NA, diff(wctax_diff)),c(NA,diff(uitax_diff))),by = fips]
 
+mean_births_sub <- c()
+mean_births_nbr <- c()
+dep_var <- c();
+# array to use target should be 107*11 = 1177
+k = 1
 for (i in 1:length(unique(dt$stpr_id))){
-  tmp <- dt[dt$stpr_id == unique(dt$stpr_id)[i],]
-  plot(tmp$ptaxL1_diff + tmp$capgntaxL1_diff + tmp$salestaxL1_diff
-       + tmp$corptaxL1_diff + tmp$wctaxL1_diff + tmp$uitaxL1_diff)
+  for (j in 1:length(unique(dt$year))){
+    # first pull out just state-pair information
+    tmp <- dt[dt$stpr_id == unique(dt$stpr_id)[i] & dt$year == unique(dt$year)[j],]
+    # restrict each side to only have unique county observations on each side
+    tmp_sub <- tmp[!duplicated(tmp$cofip_sub),]
+    tmp_nbr <- tmp[!duplicated(tmp$cofip_nbr),]
+    
+    # calculate means
+    dep_var <- rbind(dep_var,tmp_sub[1,])
+    mean_births_sub[k] <- mean(tmp_sub$births_sub)
+    mean_births_nbr[k] <- mean(tmp_nbr$births_nbr)
+    k <- k +1
+  }
 }
+diff <- as.data.frame(dep_var)
+diff$births_ratio <- log(mean_births_sub) - log(mean_births_nbr)
+diff <- diff[is.finite(diff$births_ratio),]
 
-test <- lm(births_ratio ~ ptax_diff + capgntax_diff + salestax_diff + corptax_diff + wctax_diff + uitax_diff + 
-             ptaxL1_diff + capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff, data = dt)
+png(filename="~/papers/firm_entry/analysis/output/_--_pairsL1.png")
+scatterplotMatrix( ~ ptaxL1_diff + capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff, data = diff)
+dev.off()
+
+
 # set up mean border areas to use
 mean_births_sub <- c()
 mean_births_nbr <- c()
@@ -158,7 +179,7 @@ for (i in 1:length(unique(master$stpr_id))){
     tmp_nbr <- tmp[!duplicated(tmp$cofip_nbr),]
     
     # calculate means
-    dep_var <- rbind(dep_var,tmp_sub[1,c(2,110)])
+    dep_var <- rbind(dep_var,tmp_sub[1,])
     mean_births_sub[k] <- mean(tmp_sub$births_sub)
     mean_births_nbr[k] <- mean(tmp_nbr$births_nbr)
     k <- k +1
@@ -169,14 +190,9 @@ dl_master$births_ratio <- log(mean_births_sub) - log(mean_births_nbr)
 dl_master <- dl_master[is.finite(dl_master$births_ratio),]
 
 # preliminary cross-correlations
-var <- data.frame(master$ptax_diff, master$inctax_diff, master$capgntax_diff, 
-                  master$salestax_diff, master$corptax_diff, master$wctax_diff, master$uitax_diff)
-names(var) <- c("ptax diff", "inctax diff", "capgtax diff", "salestax diff", "corptax diff",
-                "wctax diff", "uitax diff")
 png(filename="~/papers/firm_entry/analysis/output/_--_pairs.png")
 scatterplotMatrix( ~ ptax_diff + inctax_diff + capgntax_diff + 
-                  salestax_diff + corptax_diff + wctax_diff + uitax_diff, data = master,
-                  main = "Tax Variable Cross Correlation")
+                  salestax_diff + corptax_diff + wctax_diff + uitax_diff, data = dl_master)
 dev.off()
 
 # imposing equality across borders
@@ -313,12 +329,12 @@ sum(difbin(prefstart, preftax))/107
 mean <- data.frame(abs(mean_starts), prefstart, finaldat$finaldat.finish, preftax, dif(prefstart,preftax), finaldat$finaldat.state.x, finaldat$finaldat.state.y)[order(abs(mean_starts), decreasing = TRUE),]
 names(mean) <- c("mean firm entry", "preffered side", "abs weighted tax", "preferred side", "same?","sub state", "nbr state")
 stargazer(mean[1:10,], summary = FALSE, rownames = FALSE, font.size = "tiny",
-          title = "Result Comparison for Total Firm Births", 
+          title = "Result Comparison for Total Firm Births", label = "meantable",
           out = "~/papers/firm_entry/analysis/output/_--_meantable.tex")
 names(mean) <- c("V1","V2","V3","V4","V5","V6","V7")
 mean <- setorder(mean, -V3)
 names(mean) <- c("mean firm entry", "preffered side", "abs weighted tax", "preferred side", "same?","sub state", "nbr state")
 stargazer(mean[1:10,], summary = FALSE, rownames = FALSE, font.size = "tiny",
-          title = "Result Comparison for Estimated Firm Enry", 
+          title = "Result Comparison for Estimated Firm Enry", label = "taxtable",
           out = "~/papers/firm_entry/analysis/output/_--_taxtable.tex")
 

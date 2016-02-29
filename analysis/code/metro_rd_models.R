@@ -114,12 +114,22 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(pols_namen_nc_real_1, master$stpr_id)
   pols_na_nc_1 <- coeftest(pols_namen_nc_real_1, vcov = stprid_c_vcov)
   
+  nanctax1 <- linearHypothesis(pols_namen_nc_real, c("ptax_diff + inctax_diff + capgntax_diff
+                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  nancexp1 <- linearHypothesis(pols_namen_nc_real, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
+  
   pols_namen_nc_real_2 <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                              + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                              + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff,
                              data = same)
   stprid_c_vcov <- cluster.vcov(pols_namen_nc_real_2, same$stpr_id)
   pols_na_nc_2 <- coeftest(pols_namen_nc_real_2, vcov = stprid_c_vcov)
+  
+  nanctax2 <- linearHypothesis(pols_namen_nc_real_2, c("ptax_diff + inctax_diff + capgntax_diff
+                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  nancexp2 <- linearHypothesis(pols_namen_nc_real_2, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
 
   master <- read.csv(paste("~/papers/firm_entry/build/output/",naics[m],"border_master.csv", sep = "_"))
   
@@ -226,6 +236,12 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(pols_namen_nc_dens_1, master_urban$stpr_id)
   pols_na_nc_dens1 <- coeftest(pols_namen_nc_dens_1, vcov = stprid_c_vcov)
   
+  nanctax3 <- linearHypothesis(pols_namen_nc_dens_1, c("ptax_diff + inctax_diff + capgntax_diff
+                                   + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  nancexp3 <- linearHypothesis(pols_namen_nc_dens_1, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
+  
+  
   pols_namen_nc_dens_2 <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                              + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                              + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff,
@@ -233,8 +249,31 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(pols_namen_nc_dens_2, master_rural$stpr_id)
   pols_na_nc_dens2 <- coeftest(pols_namen_nc_dens_2, vcov = stprid_c_vcov)
   
+  nanctax4 <- linearHypothesis(pols_namen_nc_dens_2, c("ptax_diff + inctax_diff + capgntax_diff
+                                   + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  nancexp4 <- linearHypothesis(pols_namen_nc_dens_2, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
+  
+  Ftest <- matrix(c("In MSA Taxes","In MSA Exp","Same MSA Taxes","Same MSA Exp",
+                    "Jointly Urban Taxes","Jointly Urban Exp", "Jointly Rural Taxes","Jointly Rural Exp",round(c(nanctax1[2,3],nancexp1[2,3],
+                                                                                            + nanctax2[2,3], nancexp2[2,3],
+                                                                                            + nanctax3[2,3], nancexp3[2,3],
+                                                                                            + nanctax4[2,3], nancexp4[2,3],
+                                                                                            +nanctax1[2,4],nancexp1[2,4],
+                                                                                            + nanctax2[2,4], nancexp2[2,4],
+                                                                                            + nanctax3[2,4], nancexp3[2,4],
+                                                                                            + nanctax4[2,4], nancexp[2,4]), digits =4)), 
+                  nrow = 8, byrow = FALSE, dimnames =  list(c(),c("Test","F-Stat", "P(>F)")))
+  
+  stargazer(Ftest, title = paste("F-Tests for Density Joint Tax and Expenditure Effects for", naics_names[m], "Firm Start Ups", sep = " ")
+            , label = paste(naics[m],"Ftests", sep = ""), colnames = TRUE, digits = 3,
+            out = paste("~/papers/firm_entry/analysis/output/",naics[m],"metrord_Ftests.tex", sep = "_"))
+  
   stargazer(pols_namen_nc_real_1,pols_namen_nc_real_2,pols_namen_nc_dens_1,pols_namen_nc_dens_2, 
     se = list(pols_na_nc_1[,2], pols_na_nc_2[,2], pols_na_nc_dens1[,2], pols_na_nc_dens2[,2]),
+    label = paste(naics[m], "metro", sep = ""),
+    notes = c("All models are estimated with Ordinary Least Squares",
+              "and clustered standard errors at the state-pair level."),
             dep.var.labels = c("births ratio"), model.names = FALSE,
             covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                  "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",

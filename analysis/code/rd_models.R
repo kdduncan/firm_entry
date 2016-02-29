@@ -91,7 +91,8 @@ for (m in 1:length(naics)){
                                    "JAN.SUN.Z_diff","JUL.TEMP.Z_diff","JUL.HUM.Z_diff",
                                    "TOPOG.Z_diff","WATER.AR.Z_diff"))
   stargazer(sum, out = paste("~/papers/firm_entry/analysis/output/", naics[m], "summary_table.tex", sep = "_"),
-            label = paste(naics[m],"summary", sep = ""),
+            label = paste(naics[m],"summary", sep = ""), omit.stat = c("n"),
+            notes  = "All variables are for the difference between our subject and neighbor counties. At the state level, this is 1177 observations. Further, all tax variables are scaled to be between 0 and 100 rather than 0 and 1. For each variable we observe them 13,115 times when not accounting for positive or negative infinify values in firm start up rates.",
             covariate.labels = c("Births Ratio","Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                  "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                  "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
@@ -154,7 +155,7 @@ for (m in 1:length(naics)){
   
   write(stargazer(pols1_amen_real, pols1_real,
                   se = list(pols1_amen_r_coef[,2], pols1_r_coef[,2]),
-                  label = paste(naics[m],"noequality", sep =""),
+                  label = paste(naics[m],"noequality", sep =""), font.size = "footnotesize",
                   dep.var.labels = c("births ratio"), model.names = FALSE,
                   covariate.labels = c("Property Tax Sub", "Property Tax Nbr", "Income Tax Sub", "Income Tax Nbr", 
                                        "Capital Gains Tax Sub", "Capital Gains Tax nbr", "Sales Tax Sub", "Sales Tax Nbr",
@@ -162,6 +163,9 @@ for (m in 1:length(naics)){
                                        "Unemp. Tax Sub","Unemp. Tax Nbr","Educ Spending Per Cap Sub", "Educ Spending Per Cap Nbr",
                                        "Highway Spending Per Cap Sub", "Highway Spending Per Cap Nbr",
                                        "Welfare Spending Per Cap Sub","Welfare Spending Per Cap Sub"),
+                  notes = c("Each model is estimated with Ordinary Least Squares",
+                  "with clustered standard errors at the state-pair level.",
+                  "coefficient values and standard errors are reported."),
                   omit = c("Z"), omit.labels = c("amenities"), omit.yes.no = c("Yes", "No"), omit.stat = c("f","adj.rsq","ser"),
                   column.labels = c("OLS","OLS","OLS","OLS","FE", "FE","IV"),
                   no.space = TRUE, title = paste("Not Symmetric Effects for ", naics_names[m], "Firm Births", sep = " ")),
@@ -173,7 +177,7 @@ for (m in 1:length(naics)){
   
   # imposing equality across borders
   
-
+  
   pols_namen_nc_real <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                            + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                            + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff,
@@ -182,7 +186,7 @@ for (m in 1:length(naics)){
   pols_namen_nc_r_coef <- coeftest(pols_namen_nc_real, vcov = stprid_c_vcov) # results
   
   nanctax <- linearHypothesis(pols_namen_nc_real, c("ptax_diff + inctax_diff + capgntax_diff
-                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+                                                    + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
   nancexp <- linearHypothesis(pols_namen_nc_real, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
   
   
@@ -199,7 +203,7 @@ for (m in 1:length(naics)){
   pols_amen_nc_r_coef <- coeftest(pols_amen_nc_real , vcov = stprid_c_vcov) # results
   
   anctax <- linearHypothesis(pols_amen_nc_real, c("ptax_diff + inctax_diff + capgntax_diff
-                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+                                                  + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
   ancexp <- linearHypothesis(pols_amen_nc_real, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
   
   
@@ -213,12 +217,12 @@ for (m in 1:length(naics)){
   pols_namen_c_r_coef <- coeftest(pols_namen_c_r, vcov = stprid_c_vcov)
   
   nactax <- linearHypothesis(pols_namen_c_r, c("ptax_diff + inctax_diff + capgntax_diff
-                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+                                               + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
   nacexp <- linearHypothesis(pols_namen_c_r, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
   
   assign(paste("pols_na_c",naicsf[m],"reg",sep = "_"), pols_namen_c_r)
   assign(paste("pols_na_c",naicsf[m], sep = "_"), coeftest(pols_namen_c_r, vcov = stprid_c_vcov))
-
+  
   pols_amen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                       + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                       + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
@@ -231,39 +235,10 @@ for (m in 1:length(naics)){
   pols_amen_c_r_coef <- coeftest(pols_amen_c_r, vcov = stprid_c_vcov)
   
   actax <- linearHypothesis(pols_amen_c_r, c("ptax_diff + inctax_diff + capgntax_diff
-                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+                                             + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
   acexp <- linearHypothesis(pols_amen_c_r, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
   
-  Ftest <- matrix(c("No Amenities, No Controls Taxes","No Amenities, No Controls Expenditures",
-                    "No Amenities, Controls Taxes", "No Amenities, Controls Expenditures",
-                    "Amenities, No Controls Taxes", "Amenities, No Controls Expenditures",
-                    "Amenities, Controls Taxes", "Amenities, Controls Expenditures",round(c(nanctax[2,3],nancexp[2,3],
-                                                                                           + anctax[2,3], ancexp[2,3],
-                                                                                           + nactax[2,3], nacexp[2,3],
-                                                                                           + actax[2,3], acexp[2,3],
-                                                                                           +nanctax[2,4],nancexp[2,4],
-                                                                                           + anctax[2,4], ancexp[2,4],
-                                                                                           + nactax[2,4], nacexp[2,4],
-                                                                                           + actax[2,4], acexp[2,4]), digits =4)), 
-                  nrow = 8, byrow = FALSE, dimnames =  list(c(),c("Test","F-Stat", "P(>F)")))
-  
-  stargazer(Ftest, title = paste("F-Tests for Joint Tax and Expenditure Effects for", naics_names[m], "Firm Start Ups", sep = " ")
-            , label = paste(naics[m],"Ftests", sep = ""), colnames = TRUE, digits = 3,
-            out = paste("~/papers/firm_entry/analysis/output/",naics[m],"rd_Ftests.tex", sep = "_"))
-  
-  # iv estimation
-  simple.pop.1s<- lm(pop_diff ~ WATER.AR.Z_diff, data = master)
-  # very significant, but R^2 only about 0.04, so probably a weak instrument?
-  
-  master$pop.pred<- predict(simple.pop.1s, newdata = master)
-  simple.pop.2s<- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
-                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
-                     + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
-                     + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
-                     + popdensity.cont_diff + pctmanuf.cont_diff + pop.pred, 
-                     data = master)
-  stprid_c_vcov <- cluster.vcov(simple.pop.2s,  master$stpr_id)
-  simple.pop.2s_coef <- coeftest(simple.pop.2s, vcov = stprid_c_vcov)
+
   
   # fixed effect model
   master$stpr_fe <- factor(master$stpr_id)
@@ -277,13 +252,38 @@ for (m in 1:length(naics)){
                         + JAN.SUN.Z_diff + JUL.TEMP.Z_diff + JUL.HUM.Z_diff
                         + TOPOG.Z_diff + WATER.AR.Z_diff  | stpr_fe | 0 |0, data = master)
   
+  fe1tax <- linearHypothesis(pols_amen_fe, c("ptax_diff + inctax_diff + capgntax_diff
+                                             + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"))
+  fe1exp <- linearHypothesis(pols_amen_fe, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"))
+  
   pols_fe <- felm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                   + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                   + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
                   + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
                   + popdensity.cont_diff + pctmanuf.cont_diff | stpr_fe | 0 | 0, data = master)
   
+  fe2tax <- linearHypothesis(pols_fe, c("ptax_diff + inctax_diff + capgntax_diff
+                                             + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"))
+  fe2exp <- linearHypothesis(pols_fe, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"))
+  
   # write tables
+  
+  Ftest <- matrix(c("No Amenities, No Controls Taxes","No Amenities, No Controls Expenditures",
+                    "No Amenities, Controls Taxes", "No Amenities, Controls Expenditures",
+                    "Amenities, No Controls Taxes", "Amenities, No Controls Expenditures",
+                    "Amenities, Controls Taxes", "Amenities, Controls Expenditures",
+                    "FE No Amenities, Controls Taxes", "FE No Amenities, Controls Expenditures",
+                    "FE Amenities, Controls Taxes", "FE Amenities, Controls Expenditures",
+                    round(c(nanctax[2,3],nancexp[2,3],anctax[2,3], ancexp[2,3],nactax[2,3], nacexp[2,3],
+                            actax[2,3], acexp[2,3],fe2tax[2,3],fe2exp[2,3],fe1tax[2,3],fe1exp[2,3],
+                            nanctax[2,4],nancexp[2,4],anctax[2,4], ancexp[2,4],nactax[2,4], nacexp[2,4],
+                            actax[2,4], acexp[2,4], fe2tax[2,4], fe2exp[2,4],fe1tax[2,4],fe1exp[2,4]), digits =4)), 
+                  nrow = 12, byrow = FALSE, dimnames =  list(c(),c("Test","F-Stat", "P(>F)")))
+  
+  stargazer(Ftest, title = paste("F-Tests for Joint Tax and Expenditure Effects for", naics_names[m], "Firm Start Ups", sep = " ")
+            , label = paste(naics[m],"Ftests", sep = ""), colnames = TRUE, digits = 3,
+            out = paste("~/papers/firm_entry/analysis/output/",naics[m],"rd_Ftests.tex", sep = "_"))
+  
   write(stargazer(pols_amen_c_r, pols_namen_c_r, pols_amen_nc_real, pols_namen_nc_real, pols_amen_fe, pols_fe,
                   se = list(pols_amen_c_r_coef[,2],pols_namen_c_r_coef[,2],pols_amen_nc_r_coef[,2],pols_namen_nc_r_coef[,2],NULL, NULL),
                   label = paste(naics[m], "rd", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
@@ -291,11 +291,14 @@ for (m in 1:length(naics)){
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
                                        "Welfare Spending Per Cap Diff"),
+                  notes = c("The first four columns are estimated with OLS and clustered standard errors",
+                  "at the state-pair level. Columns 5 and 6 are estimated with a fixed effect estimator",
+                  "at the state-pair level with homoskedastic standard errors."),
                   omit = c("cont","Z"), omit.labels = c('controls', 'amenities'), omit.yes.no = c("Yes", "No"), omit.stat = c("f","adj.rsq","ser"),
                   column.labels = c("OLS","OLS","OLS","OLS","FE", "FE"),
                   no.space = TRUE, title = paste("Regression Discontinuity Models for ", naics_names[m], "Firm Births", sep = " ")),
         paste("~/papers/firm_entry/analysis/output/", naics[m], "rd_results.tex", sep = "_"))
-
+  
   # Run regressions for each year
   for (i in 1999:2009)  {
     sub <- master[master$year == i,]
@@ -313,6 +316,7 @@ for (m in 1:length(naics)){
   write(stargazer(pols_1999,pols_2000,pols_2001,pols_2002,pols_2003,pols_2004,pols_2005,pols_2006,pols_2007,pols_2008,pols_2009,
                   se = list(pols_1999_vcv,pols_2001_vcv,pols_2002_vcv,pols_2003_vcv,pols_2004_vcv,pols_2005_vcv,pols_2006_vcv,
                             pols_2007_vcv,pols_2008_vcv,pols_2009_vcv),
+                  notes = "All models are estimated with Ordinary Least Squares and clustered standard errors at the state-pair level.",
                   dep.var.labels = c("births ratio"), label = paste(naics[m],"year",sep=""), font.size = "small",
                   covariate.labels = c("Prop Tax Diff", "Inc Tax Diff", "Cap Tax Diff",
                                        "Sal Tax Diff", "Corp Tax Diff", "Work Comp Diff",
@@ -321,7 +325,7 @@ for (m in 1:length(naics)){
                   omit = c("cont","Z"), omit.labels = c("controls", "amenities"), omit.stat = c("f","adj.rsq","ser"),
                   column.labels = c("1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"),
                   no.space = TRUE, title = paste("Psuedo-RD for Stability over Time for ", naics_names[m], "Firm Births", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "year_rd_results.tex", sep = "_"))
-
+  
   
   ##### EXTEND THE BANDWIDTH
   
@@ -447,37 +451,6 @@ for (m in 1:length(naics)){
                                              + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
   acexp <- linearHypothesis(pols_amen_c_r, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
   
-  Ftest <- matrix(c("No Amenities, No Controls Taxes","No Amenities, No Controls Expenditures",
-                    "No Amenities, Controls Taxes", "No Amenities, Controls Expenditures",
-                    "Amenities, No Controls Taxes", "Amenities, No Controls Expenditures",
-                    "Amenities, Controls Taxes", "Amenities, Controls Expenditures",round(c(nanctax[2,3],nancexp[2,3],
-                                                                                            + anctax[2,3], ancexp[2,3],
-                                                                                            + nactax[2,3], nacexp[2,3],
-                                                                                            + actax[2,3], acexp[2,3],
-                                                                                            +nanctax[2,4],nancexp[2,4],
-                                                                                            + anctax[2,4], ancexp[2,4],
-                                                                                            + nactax[2,4], nacexp[2,4],
-                                                                                            + actax[2,4], acexp[2,4]), digits =4)), 
-                  nrow = 8, byrow = FALSE, dimnames =  list(c(),c("Test","F-Stat", "P(>F)")))
-  
-  stargazer(Ftest, title = paste("F-Tests for Joint Tax and Expenditure Effects for Extended Bandwith", naics_names[m], "Firm Start Ups", sep = " ")
-            , label = paste(naics[m],"Ftests", sep = ""), colnames = TRUE, digits = 3,
-            out = paste("~/papers/firm_entry/analysis/output/",naics[m],"eb_Ftests.tex", sep = "_"))
-  
-  # iv estimation
-  simple.pop.1s<- lm(pop_diff ~ WATER.AR.Z_diff, data = master)
-  # very significant, but R^2 only about 0.04, so probably a weak instrument?
-  
-  master$pop.pred<- predict(simple.pop.1s, newdata = master)
-  simple.pop.2s<- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
-                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
-                     + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
-                     + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
-                     + popdensity.cont_diff + pctmanuf.cont_diff + pop.pred, 
-                     data = master)
-  stprid_c_vcov <- cluster.vcov(simple.pop.2s,  master$stpr_id)
-  simple.pop.2s_coef <- coeftest(simple.pop.2s, vcov = stprid_c_vcov)
-  
   # fixed effect model
   master$stpr_fe <- factor(master$stpr_id)
   
@@ -491,20 +464,48 @@ for (m in 1:length(naics)){
                         + JAN.SUN.Z_diff + JUL.TEMP.Z_diff + JUL.HUM.Z_diff
                         + TOPOG.Z_diff + WATER.AR.Z_diff  | stpr_fe | 0 |0, data = master)
   
+  fe1tax <- linearHypothesis(pols_amen_fe, c("ptax_diff + inctax_diff + capgntax_diff
+                                             + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"))
+  fe1exp <- linearHypothesis(pols_amen_fe, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"))
+  
   pols_fe <- felm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                   + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                   + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
                   + hsplus.cont_diff + realfuelpr.cont_diff + unionmem.cont_diff
                   + popdensity.cont_diff + pctmanuf.cont_diff | stpr_fe | 0 | 0, data = master)
   
+  fe2tax <- linearHypothesis(pols_fe, c("ptax_diff + inctax_diff + capgntax_diff
+                                             + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"))
+  fe2exp <- linearHypothesis(pols_fe, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"))
+  
+  
   # write tables
+  Ftest <- matrix(c("No Amenities, No Controls Taxes","No Amenities, No Controls Expenditures",
+                    "No Amenities, Controls Taxes", "No Amenities, Controls Expenditures",
+                    "Amenities, No Controls Taxes", "Amenities, No Controls Expenditures",
+                    "Amenities, Controls Taxes", "Amenities, Controls Expenditures",
+                    "FE No Amenities, Controls Taxes", "FE No Amenities, Controls Expenditures",
+                    "FE Amenities, Controls Taxes", "FE Amenities, Controls Expenditures",
+                    round(c(nanctax[2,3],nancexp[2,3],anctax[2,3], ancexp[2,3],nactax[2,3], nacexp[2,3],
+                            actax[2,3], acexp[2,3],fe2tax[2,3],fe2exp[2,3],fe1tax[2,3],fe1exp[2,3],
+                            nanctax[2,4],nancexp[2,4],anctax[2,4], ancexp[2,4],nactax[2,4], nacexp[2,4],
+                            actax[2,4], acexp[2,4], fe2tax[2,4], fe2exp[2,4],fe1tax[2,4],fe1exp[2,4]), digits =4)), 
+                  nrow = 12, byrow = FALSE, dimnames =  list(c(),c("Test","F-Stat", "P(>F)")))
+  
+  stargazer(Ftest, title = paste("F-Tests for Joint Tax and Expenditure Effects for Extended Bandwith", naics_names[m], "Firm Start Ups", sep = " ")
+            , label = paste(naics[m],"Ftests", sep = ""), colnames = TRUE, digits = 3,
+            out = paste("~/papers/firm_entry/analysis/output/",naics[m],"eb_Ftests.tex", sep = "_"))
+  
   write(stargazer(pols_amen_c_r, pols_namen_c_r, pols_amen_nc_real, pols_namen_nc_real, pols_amen_fe, pols_fe,
                   se = list(pols_amen_c_r_coef[,2],pols_namen_c_r_coef[,2],pols_amen_nc_r_coef[,2],pols_namen_nc_r_coef[,2],NULL, NULL),
-                  label = paste(naics[m], "rd", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
+                  label = paste(naics[m], "eb", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
                   covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
                                        "Welfare Spending Per Cap Diff"),
+                  notes = c("The first four columns are estimated with OLS and clustered standard errors",
+                            "at the state-pair level. Columns 5 and 6 are estimated with a fixed effect estimator",
+                            "at the state-pair level with homoskedastic standard errors."),
                   omit = c("cont","Z"), omit.labels = c('controls', 'amenities'), omit.yes.no = c("Yes", "No"), omit.stat = c("f","adj.rsq","ser"),
                   column.labels = c("OLS","OLS","OLS","OLS","FE", "FE"),
                   no.space = TRUE, title = paste("Extended Bandwidth Discontinuity Models for ", naics_names[m], "Firm Births", sep = " ")),
@@ -527,7 +528,8 @@ for (m in 1:length(naics)){
   write(stargazer(pols_1999,pols_2000,pols_2001,pols_2002,pols_2003,pols_2004,pols_2005,pols_2006,pols_2007,pols_2008,pols_2009,
                   se = list(pols_1999_vcv,pols_2001_vcv,pols_2002_vcv,pols_2003_vcv,pols_2004_vcv,pols_2005_vcv,pols_2006_vcv,
                             pols_2007_vcv,pols_2008_vcv,pols_2009_vcv),
-                  dep.var.labels = c("births ratio"), label = paste(naics[m],"year",sep=""), font.size = "small",
+                  notes = "All models are estimated with Ordinary Least Squares and clustered standard errors at the state-pair level.",
+                  dep.var.labels = c("births ratio"), label = paste(naics[m],"year_eb",sep=""), font.size = "small",
                   covariate.labels = c("Prop Tax Diff", "Inc Tax Diff", "Cap Tax Diff",
                                        "Sal Tax Diff", "Corp Tax Diff", "Work Comp Diff",
                                        "Unemp. Tax Diff", "Ln Educ Diff", "Ln Hwy Diff",
@@ -540,7 +542,8 @@ for (m in 1:length(naics)){
 
 stargazer(pols_na_c_11_reg, pols_na_nc_11_reg,pols_na_c_31_33_reg, pols_na_nc_31_33_reg,pols_na_c_44_45_reg,
           pols_na_nc_44_45_reg,pols_na_c_52_reg,pols_na_nc_52_reg,
-se = list(pols_na_c_11, pols_na_nc_11,pols_na_c_31_33, pols_na_nc_31_33,pols_na_c_44_45, pols_na_nc_44_45,pols_na_c_52,pols_na_nc_52),
+          se = list(pols_na_c_11, pols_na_nc_11,pols_na_c_31_33, pols_na_nc_31_33,pols_na_c_44_45, pols_na_nc_44_45,pols_na_c_52,pols_na_nc_52),
+          notes = "All models are estimated with Ordinary Least Squares and clustered standard errors at the state-pair level.",
           dep.var.labels = c("births ratio"), font.size = "small", label = "naics",
           covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
@@ -550,4 +553,3 @@ se = list(pols_na_c_11, pols_na_nc_11,pols_na_c_31_33, pols_na_nc_31_33,pols_na_
           column.labels = c("Farming","Farming","Manuf","Manuf","Retail","Retail","Finance","Finance"),
           no.space = TRUE, title = "Results for Firm Entry across NAICS Subcodes for ",
           out = "~/papers/firm_entry/analysis/output/naics_subcodes.tex")
-

@@ -105,6 +105,10 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(pols_namen_nc_real, recip_master$stpr_id)
   pols_namen_nc_r_coef <- coeftest(pols_namen_nc_real, vcov = stprid_c_vcov) # results
   
+  nanctax <- linearHypothesis(pols_namen_nc_real, c("ptax_diff + inctax_diff + capgntax_diff
+                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  nancexp <- linearHypothesis(pols_namen_nc_real, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
   assign(paste("pols_na_nc",naicsf[m], sep = "_"), coeftest(pols_namen_nc_real, vcov = stprid_c_vcov))
   
   pols_amen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
@@ -118,6 +122,11 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(pols_amen_c_r, recip_master$stpr_id)
   pols_amen_c_r_coef <- coeftest(pols_amen_c_r, vcov = stprid_c_vcov)
   
+  actax <- linearHypothesis(pols_amen_c_r, c("ptax_diff + inctax_diff + capgntax_diff
+                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  acexp <- linearHypothesis(pols_amen_c_r, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
+  
   norecip_namen_nc_real <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                            + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                            + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff,
@@ -125,6 +134,10 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(norecip_namen_nc_real, norecip_master$stpr_id)
   norecip_namen_nc_r_coef <- coeftest(pols_namen_nc_real, vcov = stprid_c_vcov) # results
 
+  nonanctax <- linearHypothesis(norecip_namen_nc_real, c("ptax_diff + inctax_diff + capgntax_diff
+                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  nonancexp <- linearHypothesis(norecip_namen_nc_real, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
   norecip_amen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                       + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                       + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
@@ -136,11 +149,33 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(norecip_amen_c_r, norecip_master$stpr_id)
   norecip_amen_c_r_coef <- coeftest(pols_amen_c_r, vcov = stprid_c_vcov)
   
+  noactax <- linearHypothesis(norecip_amen_c_r, c("ptax_diff + inctax_diff + capgntax_diff
+                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
+  noacexp <- linearHypothesis(norecip_amen_c_r, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
+  
+  Ftest <- matrix(c("Recipricol, No Amenities, No Controls Taxes","Recipricol, No Amenities, No Controls Expenditures",
+                    "Recipricol, Amenities, Controls Taxes", "Recipricol, Amenities, Controls Expenditures",
+                    "Non-Recip, No Amenities, No Controls Taxes", "Non-Recip, No Amenities, No Controls Expenditures",
+                    "Non-Recip, Amenities, Controls Taxes", "Non-recip, Amenities, Controls Expenditures",round(c(nanctax[2,3],nancexp[2,3],
+                                                                                            + actax[2,3], acexp[2,3],
+                                                                                            + nonanctax[2,3], nonancexp[2,3],
+                                                                                            + noactax[2,3], noacexp[2,3],
+                                                                                            +nanctax[2,4],nancexp[2,4],
+                                                                                            + nanctax[2,4], nancexp[2,4],
+                                                                                            + nonanctax[2,4], nonancexp[2,4],
+                                                                                            + noactax[2,4], noacexp[2,4]), digits =4)), 
+                  nrow = 8, byrow = FALSE, dimnames =  list(c(),c("Test","F-Stat", "P(>F)")))
+  
+  stargazer(Ftest, title = paste("F-Tests for Recipricol Agreement Joint Tax and Expenditure Effects for", naics_names[m], "Firm Start Ups", sep = " ")
+            , label = paste(naics[m],"Ftests", sep = ""), colnames = TRUE, digits = 3,
+            out = paste("~/papers/firm_entry/analysis/output/",naics[m],"agreerd_Ftests.tex", sep = "_"))
   
   # write tables
   write(stargazer(pols_amen_c_r, pols_namen_nc_real,norecip_amen_c_r, norecip_namen_nc_real,
     se = list(pols_amen_c_r_coef[,2], pols_namen_nc_r_coef[,2], norecip_amen_c_r_coef[,2], norecip_namen_nc_r_coef[,2]),
-                  label = paste(naics[m], "rd", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
+    notes = c("All models are estimated with Ordinary Least Squares",
+              "and clustered standard errors at the state-pair level."),
+                  label = paste(naics[m], "agreement", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
                   covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",

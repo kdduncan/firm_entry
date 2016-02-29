@@ -1,0 +1,1041 @@
+\documentclass[12pt,a4paper]{article}
+
+\renewcommand{\baselinestretch}{2} 
+\usepackage[margin=1.0in]{geometry}
+
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{relsize}
+
+
+\usepackage{pgffor}%
+\usepackage{geometry}
+\usepackage{pdflscape}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{assumption}[theorem]{Assumption}
+
+
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\begin{document}
+
+
+\title{Impacts of Taxes on Firm Entry Rates along State Borders}
+\author{Kevin D. Duncan}
+\date{}
+\maketitle
+
+\begin{abstract}
+This paper uses a regression discontinuity approach to estimate the impacts of taxes on firm entry rates between neighboring states. We utilize matched county pairs as an approximate bandwidth around the discontinuity in state policies imposed at their border. This estimation strategy controls for unobserved location specific determinants of firm entry, as well as policy responses to shocks shared across borders. We estimate this impact using a sample of 107 state-border pairs between 1999 and 2009. We add to the literature by using the large array of top marginal tax rates, including property, income, sales, corporate, capital gains, workers compensation, and unemployment insurance tax rates. This controls for joint changes in tax rates that governments may implement to accomplish policy goals. Our results indicate that property, sales, and income taxes have the largest negative effect on firm start up rates. While 
+\end{abstract}
+
+\newpage
+
+\section{Introduction} 
+
+PLACEHOLDER, TO BE WRITTEN
+
+This paper tests whether or not taxes impact firm entry rates. This topic has been constantly examined by economists over the years. One of the major unanswered questions is accounting for joint changes in tax policy when estimating these impacts. Traditionally researchers have only estimated a few taxes at once, while the levers of policy actions extend across a large array of tax rates. Comparably we include property, income, corporate, capital gains, sales, workers compensation, and unemployment insurance top marginal tax rates.
+
+The paper proceeds in the following manner. First, we review literature relating to estimating the determinants of firm entry. We then provide a model to show how utilizing discontinuities along state borders allow researchers to control for location specific determinants of firm entry. Next, we explain our empirical design, which uses matched county pairs on either side of state borders to identify the effects on taxes on firm start up rates. We then provide estimates of these impacts. We conclude by showing which borders have the largest firm start up discrepancy, and talk about applications of our work.
+
+\section{Literature Review}
+
+Location choice of firms and individuals has a rich history in economics. At its core, the question is what drives households and firms to choose to locate in particular communities. Tiebout (1956) argued that individuals sorted into locations based on their preferences for prices and public amenities. He posited that, because households can “vote with their feet,” counties have incentives to adjust their provision of services in order to attract residents.\footnote{Sorting literature similarly gave birth to tax competition among states as over viewed by Wilson (1999). Our paper can be seen as an extension of this literature, where states compete to have preferential tax differentials compared to neighboring states}
+
+Guided by Tiebout’s model, the early firm entry literature focused on sorting over all available possible markets.  McFadden (1974) provided a general framework for using the conditional Logit function to estimate firm entry choices over all available possible markets. Early papers such as Carlton (1979, 1983) and Schmenner (1975, 1982) failed to find incidence of taxes on firm entry rates, instead finding that higher taxes could attract more firms. Starting in the 80's methods and data allowed for cleaner identification, such that authors started to more definitively show that taxes had an impact on business activity, including Wasylenko \& McGuire (1985), Bartick (1985), Papke (1991), and Hines (1996).
+
+Researchers have continued to estimate models of firms sorting over a large number of counties. Gabe and Bell (2004) used Poisson and Negative Binomial regressions show how taxes and government spending on education impact firm location in Maine. Their results show that increasing tax rates to raise education spending per pupil causes no distortion on firm entry rates. A review of these sort of sorting estimates was done by Arauzo-Carod et al (2010). In their review they show that agglomeration and market size tend to have a significant positive effect, while wages and taxes act in the opposite direction. Further, the findings on the effect of property values as is implied in the traditional Tiebout models is even weaker (see Dowding, John, and Biggs (1994) for a comprehensive review of Tiebout model estimates).
+
+Increasingly researchers have utilized border-difference technique to establish local estimates of the impacts of taxes on firm entry rates. This method controls for endogeneity of government policy in response to local economic outcomes. For example, high economic activity states may raise their taxes knowing that local agglomeration factors will continue to attract an asymmetrically high amount of new firm start ups, while low economic activity states may lower taxes to attract new businesses.\footnote{Further, tax and other policy parameters tend to feature prolonged periods of stability, and changes may be endogenous to many common dependent variables, such that changes in GDP, wages, and employment will entice government officials to try and improve economic performance. This has led to time series applications to use narrative approaches to try and identify the impacts of exogenous shocks to tax rates on macroeconomic variables. This is why narrative approaches are currently common in the macoreconometrics literature as a way of estimating the impacts of taxes see Romer and Romer (2007), and Mertens and Ravn (2013).} This response would upwards-bias the estimate of the impacts of taxes. Using the differences in firm entry rates along state borders controls for local agglomeration factors, and treat differences in policy variables as exogenous.
+
+This technique relies on the assumption that new firms pick entry locations within a local choice set. Recent studies on agglomeration economies seem to support this view.  Rosenthal and Strange (2003, 2005), and Arzaghi and Henderson (2008)) show that entrepreneurs weight potential locations within a mile of their current location significantly higher than distances further away. Use of border discontinuity designs started with Holmes’ (1998) analysis of right to work laws on manufacturing employment growth. In Holmes' paper, he uses right to work status as a proxy for an unobserved cost of being on either side of a state border imposed by "pro" and "anti" business policies. He then tested whether or not right to work status affected manufacturing employment growth. His estimates found that counties that have right to work status attract more manufacturing firms than states without right to work status.
+
+Since Holms's study, this technique has been adopted by researchers looking to identify effects of additional state policies, including minimum wages (Dube et al, 2008; Rohlin, 2011), welfare (McKinnish, 2005; 2007), and school quality (Dhar and Ross, 2012). Recent papers looking at the impacts of taxes on firm start up rates, including Rathelot and Sillard (2008), Duranton et al (2011), and Rohlin, Rosenthal, and Ross (2014). 
+
+Rohlin (2011) looked at the impact of minimum wages on firm start up rates using aggregated data. By utilizing the Dun and Bradstreet Marketplace data files Rohlin constructed bands around state borders, and then derived estimates on the impact of minimum wage changes on firm start up rates. He showed that increasing the minimum wage decreased new establishment activity in industries that relied heavily on minimum wage workers, but that changes in the minimum wage did not decrease employment in existing establishments. 
+
+Chirinko and Wilson (2008) use a border discontinuity technique to estimate the impact of state investment tax credits on firm start up rates. Rathelot and Sillard (2008) use the border discontinuity technique in a Probit model to show that increasing the total tax rate differential increases the probability of a firm picking a side between 1-5\%. Duranton, et al (2011)  difference firm entry rates in neighboring areas to estimate the impact of taxes on employment. While their  traditional OLS estimates (without the spatial difference)  show a positive relationship between taxes and firm entry rates, after applying the spatial difference, taxes negatively impact firm start up rates. 
+
+A recent paper by Rohlin, Ross, and Rosenthal (2014) mirrors our paper very closely. They estimate a linear probability model of firm entry using a border difference estimator. They use GIS coded data to get a closer bandwidth to the border than our method, and show that increasing the personal income tax differential actually increases the likelihood of firms entering on one side of the border. However, they show that increasing the corporate and sales tax differential can drastically reduce the relative firm entry probability.
+
+Rohlin et al utilize a measure of state-level government expenditures per capita, and utilize Tax Foundation data on top marginal sales, corporate, and personal income tax rates from 2000 to 2003. They estimate a linear probability model of the chance that a firm enters onto one side of the border. They then use reciprocal agreements on where individuals pay income taxes based on location of work rather than location of residence to try to control for proper allocation of tax burdens on each side of the state, and to provide additional strength in identification. Finally, they then use zip code level data to estimate average entry along each side of the border. Both with and without the reciprocal agreements in place, they show that there is a negative impact of increasing the tax differential between states on the probability of firm entry.
+
+Our paper differs by having a considerably larger number of tax policy variables, thus better controlling for other tax policies that may be impact business activity. Moreover, we also include a longer time series than Rohlin et al, providing additional variation in state level tax policies over our window. We differ in only having county level data, rather than the finer zip code level data that Rohlin et al use. This provides a much finer bandwidth to identify the impacts of changes on.
+
+A major issue with the existing literature is the failure to settle on the best variables to use for identifying the effects of taxes on firm start up rates. Carlton (1983) used top marginal tax rates for corporate and income tax, but weighted them together, as well as property tax rates. Schmenner (1987) uses state and local property tax revenues per dollar of personal income. Helms (1985) used a budget constraint to estimate the impacts of rising tax revenue on explanatory variables. All three versions have modern equivalents and the literature has not settled on a single best practice to recover the proper marginal effects.
+
+Theory indicates that marginal tax rates are what matter to individuals, and measures of average tax burden change due to both fluctuations in wages or profits, as well as to changes in tax rates. Using average tax rates may add endogeneity into models. Also, politicians may alter multiple taxes at once in order to accomplish policy goals, such that excluding taxes may imply omitted variable bias. Therefore, we argue that using top marginal tax rates is the preferred method of estimating marginal effects of taxes. 
+
+From the literature, we see that on average taxes negatively impact firm start up rates, especially as researchers have gone from studying sorting over all available entry choices, to local choices along policy discontinuities. However, how taxes are calculated and used in studies differs wildly among authors. Various studies have used measures of average tax revenue, added together top marginal tax rates, or included a single available tax rate. As a result, we employ more recent spatial difference techniques to get a clear estimate, while employing a larger array of top marginal tax rates than other authors.
+\section{Theory}
+
+As entrepreneurs and firms look to start up a business in a new location they first choose a market to enter. This choice is due to primary considerations such as labor market characteristics, or location preferences of the owner. They then pick among possible locations within that market. Our model looks at choice of firm entry across state borders, such that individuals have mobility across the border. As a result, firms treat location specific determinants of profit as the same on both sides of the border. This process leaves policy drivers as the only remaining difference in expected profits. We formalize the conditions for this process below. 
+
+Assume there exists a spatial equilibrium where wages and capital costs adjust to equalize profits across space, conditional on local tax and location specific variables affecting firm level productivity. If markets are competitive, firms will earn zero economic profits in the long run, but in the short run, demand or policy shocks can result in short run profits (or losses). We expect that if a state raises its taxes relative to its neighbors, higher relative production costs and lower  relative profits will exist for counties in that state.  Firms looking to locate in that market will, all else equal, choose the lower cost side of the border.  The higher relative taxes rates will  deter firms from entering. Over time,  entry on the lower tax side of the border will bid up prices until after-tax prices, and profits, equalize on either side of the state border. Prices can be proxied by the tax rates directly. Firms make decisions based on information from the previous year, as governments might concurrently change policy along with market entry and there may exist costs to establishing a business.
+
+\begin{assumption}
+Assume that a firms' profit can be expressed as a linear function, for a given location, state, and time pair denoted $(i,j,t)$,
+\begin{equation}
+\pi_{i,j,t} =  \gamma_{i}+\beta_{j}+Z_{t-1}\gamma+X_{t-1}\beta+\epsilon_{i,j,t}
+\end{equation}
+\begin{equation}
+E[\epsilon_{ijt}] = 0
+\end{equation}
+$Z_{t-1}$ is a $1 \times K_{1}$ row vector of location specific terms, and $X_{t-1}$ is a $1 \times K_{2}$ row vector of state specific terms, and $\gamma, \beta$ are location and state specific coefficients.
+\end{assumption}
+
+Location specific variables include local agglomeration measures, labor market characteristics such as educational attainment, and other local factors that may affect firm productivity. State-level variables include taxes, regulatory policies, and government expenditures. Both sets of variables may evolve over time. Therefore this assumption simply states that the policy variables enter directly into the profit function, and that it is shared across all firm types. 
+
+Now let us focus on a market that is defined by the interval $[-1,1]$, such that for firms at location $i \in [-1,0)$ are in state A, and firms at location $i \in [0,1]$ are in state B. If a firm has two choices,  $y \in [-1,0)$ and $\hat y \in [0,1]$, the firm chooses $y$ over $\hat y$ if and only if 
+
+\begin{equation}\label{diff}
+E[\pi_{y,A,t}-\pi_{\hat y,B,t}] > 0
+\end{equation}
+
+\begin{assumption}\label{cont}
+$\beta_{j}, \gamma_{i}$ and $Z_{t-1}$ are continuous locally for at least some distance $\epsilon > 0$ around all border points between two states.
+\end{assumption}
+
+This states that as location $y$ and location $\hat y$  get asymptotically close to the border, the difference between unobserved location specific fixed effects and observed location specific variables converge to zero. This is a technical illustration of labor and capital mobility in close geographic areas. As the distance between the two locations increases this may no longer be the case, as illustrated in Holmes (1998). 
+
+Therefore, conditional on firms choosing locations $(y,\hat y)$ arbitrarily close to the border, the profit function becomes,
+\begin{equation}\label{prof}
+E[\pi_{y,A,t}-\pi_{\hat y, B, t}] =  \beta_{A}-\beta_{B}+(X_{A,t-1}-X_{B,t-1})\beta_{2}
+\end{equation}
+
+As we move away from the border location characteristics might dominate the policy effect, especially when we expect policy effects to be small. This theory favors the use of regression discontinuity techniques for estimating policy treatment effects, especially when location specific drivers of firm entry might be unknown or unobserved. Holms (1998) show that firm level productivity also features similar discontinuities at the border, such that looking at firm location choice over areas outside of the border.
+\section{Variables and Data}
+
+\subsection{Matching Process}
+
+Our theory section showed that as the location choice of firm entrants approaches a state border the  difference in location-specific attributes on either side of the border approaches zero.  Thus, an advantage of the border design is that these location-specific factors are differenced away in a specification that considers the difference in expected profits on either side of the border.  We estimate a “closeness to the border” bandwidth at the county level. The average county in our data set is 1,260 square miles, or about 35 miles per side if it is approximately square. This distance is slightly longer than more refined approaches such as Rohlin, Rosenthal, and Ross (2014). 
+
+Our matching procedure is as follows. We first obtained the Census' County Adjacency File\footnote{\url{https://www.census.gov/geo/reference/county-adjacency.html}} to construct county-pairs by generating all pairs of counties that have adjacent counties in a neighboring state. This process is outlined in Table \ref{gensubnbr}. We use the file to track match each county with every adjacent county in a different state. The assignment of subject and neighbor status is derived from their ordering in the County Adjacency File. From this matching we track state FIPS codes to create a list of matched state pairs. This matching generates 1,213 matched county-pairs with 107 state-pairs in each year. Throughout we will index each state-pair by $g = 1,...,107$, and the set of matched county pairs for each state-pair by $i = 1,...,N_{g}$, where $N_g$ is the number of pairs for each border.
+
+
+\subsection{Firm Entry Data}
+
+Our primary variable of interest is county-level firm start up rates for all firms in a year. These data were procured from the Census Bureau’s Business Dynamic Statistics program.\footnote{\url{http://www.census.gov/ces/dataproducts/bds/overview.html}} The data include the number of firm births, deaths, expansions, and contractions for each year from 1999 to 2009. Data are reported in total number of firm births, and for broad NAICS coded industries. Our main variable of interest, $births\_ratio$, is calculated for each matched county-pair for each state pairs $(A, B)$ in time $t$ as, 
+
+\begin{equation} births\_ratio_{i,g,t} = \ln(n_{sub,A,t})-\ln(n_{nbr,B,t})\end{equation}
+
+where $n_{sub,A,t}$ is the number of new firm entrants in the state A's current subject county at time t and  $n_{nbr,B,t}$ is the corresponding number of firm births in the state B's neighboring county.
+
+\subsection{Tax Data}
+
+We include the top state marginal tax rates of seven taxes from 1998 to 2008 in our analysis.\footnote{We omit local tax rates because there is no existing database with county level tax rates. This leads to mild omitted variable bias that exists in the previous literature as well. This downwards biases our estimates as shown by Argawal (2015).} We use a one period lagged difference in the top marginal values due to time costs to opening, procuring permits, zoning, and building infrastructure. For each tax rate $\tau$ and state pair $g = (A,B)$, at time $t$ the tax ratio was calculated 
+
+\begin{equation} \tau\_ratio_{g,t} = \tau_{A,t}-\tau_{B,t} \end{equation}
+
+State marginal income tax and long term capital gains tax rates were obtained from The National Bureau of Economic Research. For income tax rates we use the highest marginal tax rates available, as this is the rate most applied to small business and S corporations. When not available, we calculate the highest implied tax rate.\footnote{\url{http://users.nber.org/~taxsim/state-marginal/}}
+
+Corporate and sales tax rates were compiled from \textit{The Council of State Governments Book of States}.\footnote{\url{http://knowledgecenter.csg.org/kc/category/content-type/content-type/book-states}} We use the highest marginal state tax rates on business corporations. Where rates differ between banks and non-banks, we use the non-bank rate, and we restrict sales tax rates to those levied on general merchandise, rather than food, clothing, or medicine.
+
+Property taxes are calculated from household level data provided by the Minnesota Population Center’s Integrated Public Use Micro-data Series (IPUMS).\footnote{\url{https://usa.ipums.org/usa/}} Workers compensation are calculated from Thomason et al (2001) between 1977 and 1995, with data afterwards provided by the Oregon Department of Consumer and Business Services. 
+
+Finally, the top marginal unemployment insurance tax rates are provided by the US Department of Labor. To calculate these rates, they multiply the top marginal tax rate, $\tau_{g,t}^{max}$, by the maximum wage level to which the rate is applied, $W_{it}^{max}$. They normalize this figure by the average wage in a state in a current year, $\bar W_{it}$. Then the unemployment insurance tax is calculated for each state as: 
+
+\begin{equation} \tau_{A,t} = \frac{\tau_{A,t}^{max}W_{A,t}^{max}}{\bar W_{A,t}}\end{equation}
+
+\subsection{Government Expenditures}
+
+We compiled log state governments’ expenditures on highways, education, and welfare per capita using annual historical Census data on State Government Finances.\footnote{\url{https://www.census.gov/govs/state/}} We use expenditures on Education” for our education value, the sums of expenditures on ”Public Welfare”, ”Hospitals,” and ”Health,” for the welfare measure, and ”Highways” expenditures for highway spending.  We divide each figure by Census state population estimates and then take logs.\footnote{\url{http://www.census.gov/popest/}} The difference between state A and state B, for each of our expenditure figures is calculated:
+
+\begin{equation} exp\_percap\_{g,t} = \log(exp_{A,t}/pop_{A,t}) - \log(exp_{B,t}/pop_{B,t}) \end{equation}
+
+\subsection{Additional Controls}
+
+We include state level variables for percent of workforce unionized, log real fuel prices, population density, percent of employment in manufacturing, and percent of population with high school education. This data is compiled a mix of the Bureau of Economic Analysis, the Current Population Survey, the EIA, and the Census.
+
+Finally, county level geographic amenity data were acquired from the USDA.\footnote{\href{http://www.ers.usda.gov/data-products/natural-amenities-scale.aspx}{USDA Natural Amenities Rankings}} These measures are the only county level data we include in our empirical estimates. We use the normalized values of hours of sunlight in January, temperature in July, humidity in July, topology score, and percent of county that is water. After normalization each amenity variable is normally distributed with approximate mean zero and standard deviation 1. These terms should be interpreted  as deviations from the mean. Again, we difference these county level Z-scores.
+
+\subsection{Preliminary Analysis}
+
+Summary statistics are provided in Table (\ref{--summary}). Of note is the fact that for all the taxes, the standard deviations are quite large relative to their means. Thus, there should be plenty of variation to provide identification of the impacts of taxes on firm entry rates.
+
+We further plot simple cross correlations between our differenced tax variables in Figure \ref{pairs} as a heuristic test that states use taxes jointly to accomplish policy goals. Between 1998 and 2008, income tax and capital gains tax rates exhibit strong positive correlation; the simple correlation between values is 0.64. Sales, payroll, workers compensation, and unemployment insurance tax rates are only weakly correlated with other tax rates. The presence of simple correlations indicate studies that do not include a larger array of taxes, may suffer from omitted variable bias. Thus modeling firm entry using a larger set of top marginal tax rates will improve estimates of tax incidence on firm start up rates.
+
+We also plot cross correlations between the differenced tax variables for each state in table \ref{pairsL1}. Due to the differenced nature of the data we are looking for co-movement between tax variables, which we see in a non-zero number of cases between all of our different tax variables. Of note is that the workers compensation tax seems to have more variation in the difference then some of our more traditional tax rates.
+\section{Empirical Design}
+
+As outlined in the previous section, the main parameters of interest are the impacts of top marginal tax rates on firm startup rates. We employ a pseudo-regression discontinuity approach as a way of controlling for local determinants of firm entry, as well as shared responses to larger macroeconomic shocks.
+
+\subsection{Regression Discontinuity Approach}
+
+Our empirical estimation is based on equation \ref{prof}. Were we take two states that share a border denoted $A$ and $B$, and denote each adjacent county in neighboring states by either a subject ($sub$) or neighbor ($nbr$) classification. Then, we get the equation,
+
+\begin{equation}\label{pref}
+\ln(n_{sub,A,t})-\ln(n_{nbr,B,t}) = \gamma+ (X_{A,t-1}-X_{B,t-1})\beta_{2} + \epsilon_{sub,A,t}-\epsilon_{nbr,B,t}
+\end{equation}
+
+Here, from Equation (\ref{prof}), we have $\gamma = \beta_{A} - \beta_{B}$. Since we assume that long run profits are zero there cannot be any systemic long run differences in expected profit, therefore $\gamma = 0$ and most likely $\beta_{A},\ \beta_{B} = 0$. We later relax our zero profit condition, and test a state-pair fixed effect model where $\gamma = \gamma_{A,B} = \beta_{A} - \beta_{B}$ is allowed to vary in order to pick up unobserved heterogeneity that is unaccounted for in our baseline model. We finally believe that there are frictions to startup costs, and utilize a one year lagged set of independent variables.\footnote{We both used contemporaneous dependent variables, and tried larger lags, but our variables are heavily inter-temporally correlated, so there was no major difference occurs in sign or significance, such that only fit deteriorates as we extended the lag structure.}
+
+Our set of dependent variables includes a variety of different controls. We divide the added  controls into two sets: county level geographic amenities and state level economic controls. We estimate models that include each separately, and then include both. The purpose is check whether the estimated coefficients on the tax and expenditure variables become statistically insignificant once we account for these additions.
+
+Agrawal (2015) argues that there is endogeneity between local taxes and state level tax rates and border tax differentials. In his model, low tax states set higher taxes on the border than interior towns, and high tax states will set lower taxes on the border than the interior. The logic here is to mitigate, or not exacerbate, the border differential as much as possible from both sides of the border, but that this reduction occurs only gradually as you approach the border. Since most state laws do not enable towns to raise taxes sufficiently high to completely offset the discontinuity with local option taxes, this should downwards bias our estimates, as the actual discontinuity is less than the observed rate in our state-level figures, and shown empirically in Agrawal (2016).
+
+\begin{equation}
+\ddot \ln(n_{i,g,t}) = \ln(n_{sub,A,t})-\ln(n_{nbr,B,t})
+\end{equation}
+
+\begin{equation}
+\ddot X_{g,t-1} = 1+(X_{A,t-1}-X_{B,t-1})
+\end{equation}
+
+\begin{equation}
+\ddot \epsilon_{i,g,t} = \epsilon_{sub,A,t}-\epsilon_{nbr,B,t}
+\end{equation}
+
+Next we assume the traditional OLS moment conditions.
+
+\begin{assumption}\label{noend}
+Let  $\ddot X_{g} = (\ddot X_{g,0}', ... ,\ddot X_{g,T-1}')'$ be a $T \times (1+K_{2})$ that includes an intercept, and $\ddot \epsilon_{i,g} = (\ddot\epsilon_{i,j,1},...,\ddot\epsilon_{i,j,T})'$ a $T \times 1$ vector of error terms. Then 
+\begin{equation}E[\ddot X_{g}'\ddot \epsilon_{ig}] = 0, \quad \forall i,g\end{equation}
+\end{assumption}
+
+\begin{assumption}\label{fullrank}
+$E[\ddot X_{g}'\ddot X_{g}]$ is full rank for all $g$
+\end{assumption}
+
+As a result of applying assumption \ref{noend} and \ref{fullrank} to Equation \ref{pref}, our estimator takes the form,
+\begin{equation}\label{pols_2s}
+\hat \beta_{2} = \left(\frac{1}{TG} \sum_{t=1}^{T}\sum_{g=1}^{G}\frac{N_{g}}{\bar G}\ddot X_{g,t-1}'\ddot X_{g,t-1}\right)^{-1}\left(\frac{1}{TG}\sum_{t=1}^{T}\sum_{g=1}^{G}X_{g,t-1}'\frac{\sum_{i=1}^{N_{G}}\ddot \ln(n_{igt})}{\bar G}\right)
+\end{equation}
+
+\begin{equation}
+\bar G = \frac{\sum_{g=1}^{G}N_{g}}{G}
+\end{equation}
+
+Such that
+
+$$\sqrt{G}(\hat \beta_{2} - \beta_{2}) \to N(0,V)$$
+
+With the variance covariance matrix is equal to,
+\begin{equation} V = Q_{XX}^{-1}\left(\frac{1}{TG}\sum_{t=1}^{T}\sum_{g=1}^{G}X_{g,t-1}'\frac{\ddot{\hat{e_{gt}}}}{\bar G}\frac{\ddot{\hat{e_{gt}'}}}{\bar G}X_{g,t-1}\right)Q_{XX}^{-1} \end{equation}
+$$ Q_{XX}^{-1} = \left(\frac{1}{TG} \sum_{t=1}^{T}\sum_{g=1}^{G}\frac{N_{g}}{\bar G}\ddot X_{g,t-1}'\ddot X_{g,t-1}\right) $$
+
+Where $\hat{\ddot{e_{gt}}}$ is the $N_{g} \times 1$ vector of pooled OLS residuals for group $g$. We use clustered standard errors as there may be unobserved shocks to the state-pair border that affect all counties along the border.  For example, if the Mississippi river floods, counties that are divided by the river will be affected, while counties on borders away from the river will not be. To address this concern, we use clustered standard errors on the state pair grouping.  This method will not affect the estimated coefficients, but will adjust the standard errors of the estimates. States that are divided by the river, but not along borders far away from the river.
+
+A possible concern with our specification is that states may change taxes in response to the difference in firm entry rates.  This would introduce endogeneity in the model.  However, due to the stability of our policy parameters, it seems unlikely that governments are responding to firm startup rates.  Furthermore, it is unlikely that states set statewide policy based on the subset of border  counties that we include in our model.
+
+\subsection{Sensitivity Tests}
+
+\subsubsection{Extended Bandwidth}
+
+We then extend the bandwidth of our estimator. For this process we match each subject county to each of its neighbor’s neighbor, while excluding any county in the original neighbor set. The process of generating these matched pairs is analogous to our initial match, where we now match the original neighbors, and each of their neighbors in the same state, then remove every county from our original match.\footnote{A full table with the steps is provided in Table \ref{genextrd}} We provide a graphical representation of these matching processes in Figure 8. This extended match connects 1,549 county-pairs across 107 state pairs each year. 
+
+We matched every subject county with every neighbor's neighbor that the subject county was not previously matched with. This estimate extends the distance between each of our observations so we expect state tax differentials to play a less important role. Our new match becomes the model,
+
+\begin{equation}
+\ln(n_{sub,A,t})-\ln(n_{nbr\_nbr,B,t}) = (X_{A,t-1}-X_{B,t-1})\beta_{2} + \epsilon_{sub,A,t}-\epsilon_{nbr\_nbr,B,t}
+\end{equation}
+
+\subsubsection{Relaxing Coefficient Symmetry}
+We test a version of this model where we do not impose symmetry in the coefficients across borders. Instead we let coefficients take on their own value in the difference, and use a set of F-tests to test whether our assumption that $\beta_{k,A} = - \beta_{k,B}, \forall k \in \{1,...,K_{2}\}$ holds. 
+
+\begin{equation}\label{sense1}
+\ddot \ln(n_{g,t}) = X_{A,t-1}\beta_{2,sub}+X_{B,t-1}\beta_{2,nbr}+ \ddot e_{igt} 
+\end{equation}
+
+\subsubsection{Period Specific Cross Section Analysis}
+Fifth, we estimate cross-sectional models for each year in our sample. We then compare these estimates to our pooled OLS estimates to gauge if tax incidence on firm startup rates remains stable over time.
+\begin{equation}\label{sense2}
+\ddot \ln(n_{g,t})  = X_{A,t-1}\beta_{A}+X_{B,t-1}\beta_{B}+ e_{i,g,t}: \quad t = 1999,...,2008
+\end{equation}
+
+
+\subsubsection{Industry Sub codes}
+
+We estimate the model for industry sub-sets of the data (by 2 – digit NAICS code) to investigate if the estimated effects of tax rates are stable across industries.  We have sufficient data on firm entry for the following industries: Agriculture, Fishing, Forestry, and Hunting; Retail Trade; Manufacturing; and Finance and Insurance.
+
+\subsection{Sub-sample Estimates}
+
+Lastly, we estimate our model for four different urbanization categories. First, is for counties that are in Metropolitan Statistical Areas in general, and where both subject and neighbor counties are in the same MSA. We then partition counties into areas where both are  either urban or rural. We use the ERS classification system to determine if a county is urban or rural, where a county is defined as urban if its classification is below a 7, and rural if its classification is higher than 6.\footnote{\url{http://www.ers.usda.gov/data-products/rural-urban-continuum-codes/documentation.aspx}}
+
+We further follow Rohlin, Rosenthal, and Ross (2015) by including comparisons between states that have reciprocal agreements, and those without reciprocal agreements. Our original samples might be biased, as a few states have reciprocal agreements, where individuals pay the income tax rate of the state they work in rather than where they live. We split our sample into states with and without reciprocal agreements, and estimate our model on each section.
+\section{Results}
+
+Our main results are reported in Table (\ref{--rd}). The first four columns report the pooled OLS estimates with and without our sets of additional control variables. The last two columns report our fixed effect estimates. Higher relative income taxes and sales taxes deter firm entry.  This result is robust to the addition of controls, and in fact, the estimated effects become slightly stronger (more negative) with the added measures.  
+
+While statistically significant the effects are economically small.  A 1 percent increase in income tax differentials correspond to a 0.8 percent decrease in the relative firm start up rates, and similarly a 1 percent increase in sales tax differentials corresponds to a 0.1 percent decrease in the relative firm start up rates.  Higher relative property tax rates also exert a negative influence on firm births, although this effect becomes statistically insignificant when amenity measures are included in the model. While capital gains, corporate tax, workers compensation, and unemployment insurance tax rates are individually insignificant, the set of seven tax rates are jointly  significant. 
+
+Of the three expenditure measures included in the model, only the difference in log welfare spending per capita is statistically significant. The coefficient is economically very small, such that a 1\% increase in the difference corresponds to 0.001\% higher firm entry rates.
+
+When we run models with state-pair level fixed effects we fail to obtain any statistically significant results. However, the value of these models are dubious. We first argue that our pooled OLS estimates are most likely the properly specified model as firm start up rates are an already differenced estimate. Thus the inclusion of state pair fixed effect require year to year divergence in expected profit from entry, which shouldn’t occur under perfect competition. Rather this still might imply that there are still relevant variables we may be leaving out of our model.
+
+Table \ref{--eb} reports the estimates for the extended bandwidth version of our model. We expect that the increased distance between the two locations, and the increased distance from the border, will diminish the impact taxes have on firm start up rates.  Meanwhile we would expect the  measures of state and local factors to have a larger impact.  Our results are consistent with these expectations. The income and sales tax rates lose statistical significance across model types. Further, our state level controls remain largely insignificant, as do our geographic controls. Thus, the fit of the model at large seems to decrease as the distance between counties increases. 
+
+When we relax the assumption that  that coefficients are equal on either side of the border, we find that for most of our variables, the effects remain equal but opposite across the border. Table \ref{--noequality} reports coefficients, while Table \ref{--Ftests} provides F-tests of the hypothesis that the coefficients are equal, that for each variable, $\beta_{i,sub} = - \beta_{i,nbr}$. We test for each variable that $\beta_{i,sub} = - \beta_{i,nbr}$. The results verify our belief that the coefficients are of equal magnitude and opposite sign. The exceptions are sales tax rates and workers compensation tax rates. For the subject county sales taxes are strongly and negatively significant, but for the neighbor they are insignificant. However, given that the rest of them pass, this might be a spurious result due to the number of regressors. We see an equivalent note in the workers compensation figures in our F tests, where for the neighboring county it appears to be significant, but not for the subject county.\footnote{Also, the assignment process here might be driving results. We are not running each coefficient as a fixed effect for each border, but rather across all counties defined as "neighbor" in our sample. However, by using clustered standard errors we do not have the degrees of freedom to run this test for each state-pair.} Hover, given the rest of taxes pass this test, this finding might be a spurious result due to the number of regressors.
+
+Table \ref{--year} shows regression results for each  year between 1999 and 2009. We include state controls but exclude geographic amenities. Property taxes remain consistently negative and statistically significant over the time period. Likewise, sales tax rates remain negative and statistically significant, with the effect becoming somewhat larger over time.  Income taxes are insignificant, but negative, at the beginning of the time period, but  become statistically significant and larger in the later years. Log highway and welfare expenditures per capita are positive drivers of firm entry, but the effects are inconsistently significant across the time periods and the magnitudes are very small.
+
+Finally, Table \ref{naics} reports the estimates by NAICS sub codes,  Agriculture, Fishing, Forestry, and Hunting; Retail Trade; Manufacturing; and Finance and Insurance. These results are very consistent with the results for all firms in Table \ref{--rd}. Property, income and sales taxes are significantly negative in all specifications, and furthermore, the magnitudes are very similar across the industries. Driving this effect is probably due to the relatively large size of counties, giving space for many different types of firms to open up. Further, services may make up the bulk of this cross-industry firm opening. However, our hypothesis would be to expect higher property taxes to have a larger detrimental effect on agriculture services, and capital gains taxes to have a higher impact on financial firm entry.
+
+ Table \ref{--metro} provides an alternative look at this effect. We see that as we widen and narrow our definition of urban, that capital gains remains positive and significant, while income and sales taxes remain negative and significant. Comparably, in rural areas, property taxes remain negative and significant, and seem to solely drive the firm entry differential, to the point where the joint F-tests are rejected across all model specifications. This property tax differential is explained in the literature by firms moving to rural areas to take advantage of low property values and lower wages for work.
+ 
+As a final output of our paper, we compare two different rankings to identify which borders are most (or least) disadvantaged with regard to tax differentials. First we calculate the weighted tax differential by multiplying the tax coefficients from Table \ref{--rd}, column 4 by each states marginal tax values. This generates an expected value is in the ratio of firm start up rates driven by the tax differentials.  These are plotted in Figure \ref{weightedtax}. For most states the weighted tax differential is very small, thus the implied impact of taxes on relative firm start up rates is ultimately small. However, for a few counties, this is not the case, and we see clear outliers where more than a 1\% difference in firm start up rates is motivated by the difference in tax rates. 
+
+To illustrate how important this effect is for firm entry we rank the county-pairs by the absolute difference in the mean number of firm startups, and compare this to the weighted tax differential. Table \ref{meantable} reports the top 50 largest mean differences in firm start-ups.  Since we calculate these terms in absolute value, we report which side of the border has  the advantage for firm startups in column 2 and which has the advantage in terms for tax rate differences in column 4.  Sixty-two percent of the time, the side with the more advantageous weighted tax differential also has the higher mean firm start up differential. We similarly rank the top 10 states by Weighted Tax Differential in \ref{taxtable}. Compared to weighting by mean firm start up rate, there is a higher correlation between having a higher weighted tax differential and mean firm startups.
+
+\section{Conclusion}
+
+This paper estimates the average impact of taxes on firm start up rates. Using a model that relies on the similarity of locations on either side of a state border, we are able to effectively control for location-specific determinants of firm entry in our empirical design, and more precisely isolate the effects of policy  that do vary on opposite sides of a state border. 
+
+We find that counties with higher property, income, and sales taxes relative to a neighboring county in another state, have lower firm start-up rates. On average, a 1\% increase in the property tax differential decreases firm start up rates by 0.3\%, while a 1\% increase in income and sales tax differentials decreases firm start up rates by 0.01\%.   These results are generally consistent across industry groups, and time periods in our sample.  They are also largely robust to the addition of added controls.
+
+Our estimated model's inability to find significant corporate and capital gains taxes follows from characteristics of new firm entrants. Lacking firm-level characteristics, our model approximates an average firm from the joint distribution of firm characteristics. However, most new firms are small S corporations, meaning that owners pay top marginal income taxes rather than corporate taxes, and firm employment and output is relatively low. Sales, income, and property taxes may play a significantly larger role on their profits than capital gains and corporate tax rates. Moreover, most new firms have a relatively short life span, such that investments in the company will probably not be recouped, and that capital gains tax rates are not likely to impact the majority of small new firm entrants.
+
+Government expenditure variables do not seem to impact firm start up rates. This might be due to the fact that individuals can live in one county that has a preferred public expenditure bundle and set up a businesses in a neighboring county that has a preferred regulatory policy. Our robustness tests using Rohlin, Rosenthal, and Ross (2014) reciprocal agreements mirror our main model and estimates, indicating that this impact is largely not large.
+
+Based on our estimates, we calculate a weighted tax differential, showing that the impact of taxes on firm entry rates remain small, only accounting for about 0.2\% of the difference in firm start up behavior across borders. Despite this, the side with the preferred taxation policy had more firm startups 62\% of the time in our sample. Therefore while taxes might have a small impact at the margin, their adjustment may still be beneficial to communities and states. 
+
+Future work on this issue could benefit from more dis-aggregated, firm-level data with firm specific characteristics. This would help establish better estimates of tax incidence on firm startup and life cycle behavior. Our current estimates are limited by our set of covariates. Lacking firm specific data, our estimates rely on a proxy "average firm", which is most likely small and not paying corporate taxes, nor have venture capital backing. Thus taxes that may have impacts based on firm characteristics may be omitted from our model.
+
+\renewcommand{\baselinestretch}{1.0} 
+
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem{Agrawal1}
+Agarwal, David (2015), "The Tax Gradient: Spatial Aspects of Fiscal Competition," The American Economic Journal: Economic Policy, Vol 7 no 2, pp 1-29.
+
+\bibitem{Agrawal2}
+Agarwal, David (2016), "Local Fiscal Competition: An Application to Sales Taxation with Multiple Federations," Journal of Urban Economics, Vol 91, pp 122-138
+
+\bibitem{ArauzoCarodetal}
+Arauzo-Carod, JM, Liviano-Solis, D, Manjon-Antolin, M, "Empirical Studies in Industrial Location: An Assessment of Their Methods and Results," Journal of Regional Science 2010, 50 (3), 685-711
+
+\bibitem{Bartik85}
+Bartik, Timothy, "Business location Decisions in the United States: estimates of the Effects of Unionization, Taxes, and other characteristics of States," Journal of Business and Economic Statistics (1985), Vol. 3, pp 14-22
+
+\bibitem{Brulhartetal}
+Brülhart, Marius, Jametti, Mario, and Schmidheiny, Kurt, "Do Agglomeration Economics Reduce the Sensitivity of Firm Location to Tax Differentials?" The Economic Journal, Vol. 122, No. 563 (September 2012), pp. 1069-1093
+
+\bibitem{Carlton79}
+Carlton, Dennis, "Births of Single establishment Firms and Regional Variation in Economic Costs," Report 7729, Center for Mathematical Studies in Business and economics (1979), University of Chicago
+
+\bibitem{Carlton83}
+Carlton, Dennis, "The Location and Employment Choices of New Firms: An econometric model with discrete and continuous endogenous variables," The Review of Economics and Statistics (1983), Vol. 65(3), pp 440-449
+
+\bibitem{ChirinkoWilson08}
+Chirinko, Robert; Wilson, Daniel, "State Investment Tax Incentives: A Zero-Sum Games?" Journal of Public Economics, vol. 92, pp 2362-2384
+
+\bibitem{DharRoss}
+Dhar, Paramita; Ross, Stephen L, "School Discrict Quality and Property Values: Examining Differences Along School District Boundaries," Journal of Urban Economics, Vol 71 (2012), pp 18-25
+
+\bibitem{Dowdingetal}
+Dowding, Keith; John, Peter; Biggs, Stephen, "Tiebout: A Survey of the Empirical Literature," Urban Studies, Vol 31, Issue 4-5, 1994, pp 767-797
+
+\bibitem{Dubeetal}
+Dube, Arindagit; Lester, T. William; Reich, Michael, "Minimum Wage Effects Across State Borders: Estimates Using Contiguous Counties," The Review of Economics and Statistics, Vol. 92 No. 4, (November 2010) pp. 945-964
+
+\bibitem{Durantonetal}
+Duranton, Gilles; Gobillon, Laurent; Overman, Henry, "Assessing the Effects of Location Taxation using Micro Geographic Data," Economic Journal (2011), vol. 121(555), 1017-1046
+
+
+\bibitem{GabeBell2004}
+Gabe, Todd M; Bell, Kathleen P., "Tradeoffs Between Local Taxes and Government Spending as Determinants of Business Location," Journal of Regional Science, Vol. 44, pp. 21-41, February 2004 
+
+\bibitem{Guimareaes2003}
+Guimarães, Paulo, Figueirdo, Octávio, Woodward, Douglas, "A Tractable Approach to the Firm Location Decision Problem," The Review of Economics and Statistics, February 2003, Vol. 85, No. 1, Pages 201-204
+
+\bibitem{HannToddVann}
+Hahn, Jinyong; Todd, Petra; Van der Klaauw, Wilbert, "Identification and Estimation of Treatment Effects with a Regression Discontinuity Design," Econometrica, Vol. 69 No. 1 (Jan 2001), pp 201-209
+
+\bibitem{Helms85}
+Helms, L. Jay, "The Effect of State and Local Taxes on Economic Growth: A Time Series-Cross Section Approach," The Review of Economics and Statistics (1985), vol. LXVIII, pp. 574-582
+
+\bibitem{HendersonMcNamara}
+Henderson, Jason R., McNamara, Kevin T., "The Location of Food Manufacturing Plant Investments in Corn Belt Counties" Journal of Agricultural and Resource Economics Vol. 25, No. 2 (December 2000), pp. 680-697 
+
+\bibitem{HendArzaghi}
+Henderson, J. Vernon, and Arzaghi, Mohammad, "Networking off Madison Avenue," Review of Economic Studies (2005), vol 75 no 4, pp. 1011-1038
+\bibitem{Hines96}
+Hines, James R., "Altered States taxes and the Location of Foreign Direct Investment in America," American Economic Review (1996), Vol. 86, pp. 1076-1094
+
+\bibitem{Holmes98}
+Holmes, Thomas J, "The Effect of State Policies on the Location of Manufacturing: Evidence from State Borders," Journal of Political Economy, Vol. 106, No. 4 (August 1998), pp. 667-705
+
+\bibitem{McFadden1974}
+McFadden, Daniel, "Conditional Logit Analysis of Qualitative Choice Behavior," in P. Zarembka (ed.), Frontiers in Econometrics, 105-142, Academic Press: New York, 1974.
+
+\bibitem{McKinnish2005}
+McKinnish, Terra. "Importing the Poor Welfare Magnetism and Cross-Border Welfare Migration." Journal of Human Resources, Vol 40, No. 1 (2005): 57-76
+
+\bibitem{McKinnish2007}
+McKinnish, Terra. "Welfare-induced migration at state borders: New evidence from Micro Data." Journal of Public economics, Vol 91, N0. 3 (2007): 437-450
+
+\bibitem{MertensRavn}
+Mertens, Karel, and Ravn, Morten O, "The Dynamic Effects of Personal and Corporate Income Tax Changes in the United States," American Economic Review, 2013, Vol 103(4), pp 1212-47
+
+\bibitem{OjedeYamarik12}
+Ojede, Andrew; Yamarik, Steven, "Tax Policy and State Economic Growth: The Long-Run and Short-Run of it," Economics Letters (2012), vo. 116(2), pp. 161-165
+
+\bibitem{Papke91}
+Papke, Leslie E, "Interstate Business Tax Differentials and new Firm Location: Evidence from Panel Data," Journal of Public Economics (1991), Vol. 45, pp. 47-68
+
+\bibitem{RathelotSillard08}
+Rathelot, Roland; Sillard, Patrick, "The Importance of Local Corporate Taxes in Business Location Decisions: Evidence from French Micro Data," Economic Journal (2008), vol. 188(527), pp 499-514
+
+\bibitem{Rohlin2011}
+Rohlin, Shawn M. "State Minimum Wages and Business Location: Evidence from a Refined Border Approach," Journal of Urban Economics, Vol. 69 (2011), pp. 103-117
+
+\bibitem{Rohlinetal14}
+Rohlin, Shawn; Rosenthal, Stuart; Ross, Amanda, "Tax Avoidance and Business Location in a State Border Model," Journal of Urban Economics (2014), Vol. 83(C), pp. 34-49
+
+\bibitem{RomerRomer}
+Romer, Christina D, Romer, David H. "The Macroeconomic Effects of Tax Changes: Estimates Based on a New Measure of Fiscal Shocks," American Economic Review, 2007, vol. 100(3), pp 763-801.
+
+\bibitem{RosenthalStrange03}
+Rosenthal, Stuart S, and Strange, William C, "Geography, Industrial Organization, and Agglomeration," The review of Economics and Statistics, 2003 vol. 85(2), pp 377-393
+
+\bibitem{RosenthalStrange05}
+Rosenthal, Stuart S and Strange, William C, "the geography of entrepreneurship in the New York Metropolitan Area," Economic Policy review, 2005, Dec issue, pp 29-53
+
+\bibitem{Schmenner75}
+Schmenner, Roger, "City Taxes and Industry Location," Unpublished paper (1975), Harvard Business School
+
+\bibitem{Schmenner82}
+Schmenner, Roger, "Making Business Location Decisions," Prentice-Hall (1982), Englewood Cliffs, NJ
+
+\bibitem{Tiebout56}
+Tiebout, CM, "A Pure Theory of Local Expenditures" Journal of Political Economy 1956
+
+\bibitem{Thomason}
+Thomason, Terry and John F. Burton, Jr. 2001. “The Effects of Changes in the Oregon Workers’ Compensation Pro-
+gram on Employees’ Benefits and Employers’ Costs,” Workers’ Compensation Policy Review 1, No. 4 (July/August): 7-23, reprinted in Burton, Blum, and Yates (2005): 387-45. 
+
+\bibitem{WasylenkoMcGuire85}
+Wasylenko, Michael; McGuire, Therese, "Jobs and Taxes: The Effect of Business Climate on States Employment Growth Rates," National Tax Journal (1985), Vol. 38(4), pp. 497-511
+\end{thebibliography}
+
+
+\section{Appendix: Figures \& Tables}
+
+\begin{table}[!htbp] \centering 
+  \caption{Generating Subject Neighbor Pairs} 
+  \label{gensubnbr} 
+\begin{tabular}{@{\extracolsep{5pt}}ll} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Step & Description\\ 
+\hline \\[-1.8ex] 
+1 & Download the County Adjacency Table (CAT) from the census \href{https://www.census.gov/geo/reference/county-adjacency.html}{here} \\
+2 & Load the CSV into a statistical software of choice \\
+3 & Assign joint state and county FIPS values to NA's in the loaded data set \\
+4 & Sort through the first column of the CAT for every adjacent county in another state \\
+5 & The first column is the "subject" counties, and the adjacents are the "neighbors" \\
+\hline \\[-1.8ex]
+\end{tabular} 
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+  \caption{Generating Subject Neighbor Pairs} 
+  \label{genextrd} 
+\begin{tabular}{@{\extracolsep{5pt}}ll} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Step & Description\\ 
+\hline \\[-1.8ex] 
+1 & Load the CAT into a statistical software of choice \\
+2 & Assign joint state and county FIPS values to NA's in the loaded data set \\
+3 & Load the original subject neighbor pairs (OSN) into statistical software of choice \\
+4 & For every neighbor in OSN, find every adjacent county in its own state \\
+5 & Exclude from this match any county that was in OSN alreads \\
+6 & match the subject from OSN to each of these new neighbors \\ 
+7 & The first column is the "subject" and the second as the "neighbor's neighbor" \\
+\hline \\[-1.8ex]
+\end{tabular} 
+\end{table} 
+
+\begin{figure}[h]\label{rb}
+    \centering
+    \caption{Example of Border Matching}
+    \begin{minipage}{0.70\textwidth}
+    \includegraphics[scale = 0.5]{../analysis/output/borders_temp.png}
+    {\footnotesize Red rectangles are subject counties, and blue are neighbor counties. In this example Subject 1 would be only matched to Neighbor 1, while "Subject 2" would be paired with Neighbor 1-3. Similarly, when we broaden the bandwidth, Subject 1 would be matched with Nbr's Nbr 1, whle Subject 2 would be paired with Nbr's Nbr 1 and 2 \par}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[h]\label{eb}
+    \centering
+    \caption{Original Bandwidth Borders}\par\medskip
+        \begin{minipage}{0.70\textwidth}
+    \includegraphics[scale = 0.20]{../analysis/output/rb_picture.png}
+    {\footnotesize Red borders are subject counties, blue borders are neighbor counties.\par}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \caption{Extended Bandwidth Borders}\par\medskip
+            \begin{minipage}{0.70\textwidth}
+    \includegraphics[scale = 0.5]{../analysis/output/eb_picture.png}
+    {\footnotesize Red borders are subject counties, blue borders are neighbor counties. \par}
+    \end{minipage}
+\end{figure}
+
+\input{../analysis/output/_--_summary_table.tex}
+
+\begin{figure}[h]\label{pairs}
+    \centering
+    \caption{State Pair Differenced Tax Variable Cross Correlations}
+    \includegraphics[scale = 0.5]{../analysis/output/_--_pairs.png}
+\end{figure}
+
+\begin{figure}[h]\label{pairsL1}
+\centering
+\caption{State Pair and One Lag Differenced Tax Variable Cross Correlations}
+\includegraphics[scale=0.5]{../analysis/output/_--_pairsL1.png}
+\end{figure}
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 09:58:20 AM
+\begin{table}[!htbp] \centering 
+  \caption{Regression Discontinuity Models for  Total Firm Births} 
+  \label{--rd} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{births ratio} \\ 
+ & OLS & OLS & OLS & OLS & FE & FE \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ Property Tax Difference & $-$0.206 & $-$0.371$^{**}$ & $-$0.136 & $-$0.297$^{**}$ & 0.025 & 0.027 \\ 
+  & (0.151) & (0.147) & (0.148) & (0.150) & (0.119) & (0.122) \\ 
+  Income Tax Difference & $-$0.093$^{***}$ & $-$0.085$^{***}$ & $-$0.088$^{***}$ & $-$0.075$^{***}$ & $-$0.011 & $-$0.009 \\ 
+  & (0.027) & (0.026) & (0.028) & (0.026) & (0.034) & (0.035) \\ 
+  Capital Gains Tax Difference & 0.016 & 0.008 & 0.028 & 0.020 & $-$0.001 & $-$0.002 \\ 
+  & (0.023) & (0.023) & (0.024) & (0.024) & (0.012) & (0.012) \\ 
+  Sales Tax Difference & $-$0.112$^{***}$ & $-$0.101$^{***}$ & $-$0.110$^{***}$ & $-$0.087$^{***}$ & 0.002 & 0.001 \\ 
+  & (0.029) & (0.030) & (0.029) & (0.032) & (0.040) & (0.041) \\ 
+  Corp Tax Difference & 0.023 & 0.018 & 0.015 & 0.011 & $-$0.013 & $-$0.012 \\ 
+  & (0.020) & (0.018) & (0.020) & (0.019) & (0.026) & (0.026) \\ 
+  Workers Comp Tax Difference & 0.001 & 0.090 & $-$0.007 & 0.051 & 0.040 & 0.044 \\ 
+  & (0.111) & (0.108) & (0.096) & (0.105) & (0.069) & (0.070) \\ 
+  Unemp. Tax Difference & 0.008 & 0.012 & $-$0.002 & $-$0.006 & $-$0.002 & $-$0.002 \\ 
+  & (0.040) & (0.036) & (0.042) & (0.038) & (0.017) & (0.017) \\ 
+  Educ Spending Per Cap Diff & $-$0.0002 & $-$0.0003 & $-$0.0002 & $-$0.0002 & $-$0.0002 & $-$0.0002 \\ 
+  & (0.0003) & (0.0003) & (0.0003) & (0.0003) & (0.0002) & (0.0002) \\ 
+  Highway Spending Per Cap Diff & 0.0004 & 0.0004 & 0.0002 & 0.0003 & 0.0001 & 0.0001 \\ 
+  & (0.0004) & (0.0004) & (0.0004) & (0.0004) & (0.0002) & (0.0002) \\ 
+  Welfare Spending Per Cap Diff & 0.001$^{**}$ & 0.001$^{**}$ & 0.001$^{**}$ & 0.0004$^{*}$ & $-$0.00005 & $-$0.00005 \\ 
+  & (0.0003) & (0.0003) & (0.0003) & (0.0003) & (0.0001) & (0.0001) \\ 
+  Constant & $-$0.045 & $-$0.055 & $-$0.037 & $-$0.046 &  &  \\ 
+  & (0.084) & (0.086) & (0.088) & (0.087) &  &  \\ 
+ \hline \\[-1.8ex] 
+controls & Yes & Yes & No & No & Yes & Yes \\ 
+amenities & Yes & No & Yes & No & Yes & No \\ 
+\hline \\[-1.8ex] 
+Observations & 13,115 & 13,115 & 13,115 & 13,115 & 13,115 & 13,115 \\ 
+R$^{2}$ & 0.094 & 0.056 & 0.080 & 0.037 & 0.247 & 0.209 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{6}{r}{The first four columns are estimated with OLS and clustered standard errors} \\ 
+ & \multicolumn{6}{r}{at the state-pair level. Columns 5 and 6 are estimated with a fixed effect estimator} \\ 
+ & \multicolumn{6}{r}{at the state-pair level with homoskedastic standard errors.} \\ 
+\end{tabular} 
+\end{table}
+\end{landscape}
+\restoregeometry
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 09:58:19 AM
+\begin{table}[!htbp] \centering 
+  \caption{F-Tests for Joint Tax and Expenditure Effects for Total Firm Start Ups} 
+  \label{--Ftests} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Test & F-Stat & P(\textgreater F) \\ 
+\hline \\[-1.8ex] 
+No Amenities, No Controls Taxes & 3.6233 & 0.057 \\ 
+No Amenities, No Controls Expenditures & 0.9885 & 0.3201 \\ 
+No Amenities, Controls Taxes & 2.3806 & 0.1229 \\ 
+No Amenities, Controls Expenditures & 1.0261 & 0.3111 \\ 
+Amenities, No Controls Taxes & 5.2159 & 0.0224 \\ 
+Amenities, No Controls Expenditures & 2.6372 & 0.1044 \\ 
+Amenities, Controls Taxes & 3.6129 & 0.0574 \\ 
+Amenities, Controls Expenditures & 2.7089 & 0.0998 \\ 
+FE No Amenities, Controls Taxes & 0.0855 & 0.77 \\ 
+FE No Amenities, Controls Expenditures & 0.2258 & 0.6346 \\ 
+FE Amenities, Controls Taxes & 0.0666 & 0.7964 \\ 
+FE Amenities, Controls Expenditures & 0.2144 & 0.6433 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 09:58:25 AM
+\begin{table}[!htbp] \centering 
+  \caption{Extended Bandwidth Discontinuity Models for  Total Firm Births} 
+  \label{--eb} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{births ratio} \\ 
+ & OLS & OLS & OLS & OLS & FE & FE \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ Property Tax Difference & 0.039 & $-$0.019 & 0.104 & 0.074 & 0.007 & 0.006 \\ 
+  & (0.147) & (0.152) & (0.143) & (0.148) & (0.112) & (0.114) \\ 
+  Income Tax Difference & $-$0.054 & $-$0.063$^{*}$ & $-$0.043 & $-$0.050 & 0.008 & 0.012 \\ 
+  & (0.035) & (0.036) & (0.038) & (0.037) & (0.033) & (0.034) \\ 
+  Capital Gains Tax Difference & 0.039 & 0.048$^{*}$ & 0.043 & 0.053$^{*}$ & $-$0.013 & $-$0.013 \\ 
+  & (0.029) & (0.028) & (0.033) & (0.030) & (0.012) & (0.012) \\ 
+  Sales Tax Difference & $-$0.040 & $-$0.042 & $-$0.051 & $-$0.041 & 0.018 & 0.020 \\ 
+  & (0.049) & (0.054) & (0.052) & (0.055) & (0.037) & (0.038) \\ 
+  Corp Tax Difference & 0.006 & $-$0.001 & 0.004 & 0.002 & $-$0.024 & $-$0.024 \\ 
+  & (0.026) & (0.025) & (0.027) & (0.025) & (0.024) & (0.024) \\ 
+  Workers Comp Tax Difference & 0.180 & 0.300$^{**}$ & 0.139 & 0.216 & $-$0.008 & $-$0.007 \\ 
+  & (0.126) & (0.152) & (0.142) & (0.178) & (0.066) & (0.068) \\ 
+  Unemp. Tax Difference & $-$0.113$^{*}$ & $-$0.110$^{*}$ & $-$0.111 & $-$0.109 & 0.011 & 0.011 \\ 
+  & (0.062) & (0.064) & (0.068) & (0.071) & (0.018) & (0.019) \\ 
+  Educ Spending Per Cap Diff & 0.0001 & 0.0002 & 0.0002 & 0.0003 & $-$0.0001 & $-$0.0001 \\ 
+  & (0.0005) & (0.001) & (0.0005) & (0.001) & (0.0002) & (0.0002) \\ 
+  Highway Spending Per Cap Diff & 0.0002 & 0.0001 & $-$0.0002 & $-$0.0003 & 0.0001 & 0.00005 \\ 
+  & (0.0005) & (0.001) & (0.0005) & (0.001) & (0.0002) & (0.0002) \\ 
+  Welfare Spending Per Cap Diff & 0.001 & 0.001$^{*}$ & 0.001$^{*}$ & 0.001$^{*}$ & $-$0.00003 & $-$0.00004 \\ 
+  & (0.0004) & (0.0004) & (0.0004) & (0.0004) & (0.0001) & (0.0001) \\ 
+  Constant & $-$0.033 & $-$0.017 & $-$0.026 & 0.002 &  &  \\ 
+  & (0.100) & (0.111) & (0.105) & (0.113) &  &  \\ 
+ \hline \\[-1.8ex] 
+controls & Yes & Yes & No & No & Yes & Yes \\ 
+amenities & Yes & No & Yes & No & Yes & No \\ 
+\hline \\[-1.8ex] 
+Observations & 16,245 & 16,245 & 16,245 & 16,245 & 16,245 & 16,245 \\ 
+R$^{2}$ & 0.097 & 0.038 & 0.081 & 0.023 & 0.298 & 0.267 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{6}{r}{The first four columns are estimated with OLS and clustered standard errors} \\ 
+ & \multicolumn{6}{r}{at the state-pair level. Columns 5 and 6 are estimated with a fixed effect estimator} \\ 
+ & \multicolumn{6}{r}{at the state-pair level with homoskedastic standard errors.} \\ 
+\end{tabular} 
+\end{table} 
+\end{landscape}
+\restoregeometry
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 09:58:24 AM
+\begin{table}[!htbp] \centering 
+  \caption{F-Tests for Joint Tax and Expenditure Effects for Extended Bandwith Total Firm Start Ups} 
+  \label{--Ftests} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Test & F-Stat & P(\textgreater F) \\ 
+\hline \\[-1.8ex] 
+No Amenities, No Controls Taxes & 0.4263 & 0.5138 \\ 
+No Amenities, No Controls Expenditures & 1.0015 & 0.317 \\ 
+No Amenities, Controls Taxes & 0.1983 & 0.6561 \\ 
+No Amenities, Controls Expenditures & 1.0061 & 0.3159 \\ 
+Amenities, No Controls Taxes & 0.3042 & 0.5813 \\ 
+Amenities, No Controls Expenditures & 3.0012 & 0.0832 \\ 
+Amenities, Controls Taxes & 0.0935 & 0.7598 \\ 
+Amenities, Controls Expenditures & 2.6759 & 0.1019 \\ 
+FE No Amenities, Controls Taxes & 9e-04 & 0.9755 \\ 
+FE No Amenities, Controls Expenditures & 0.1695 & 0.6805 \\ 
+FE Amenities, Controls Taxes & 0 & 0.9983 \\ 
+FE Amenities, Controls Expenditures & 0.1557 & 0.6931 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 09:58:18 AM
+\begin{table}[!htbp] \centering 
+  \caption{Not Symmetric Effects for  Total Firm Births} 
+  \label{--noequality} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{births ratio} \\ 
+ & OLS & OLS \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ Property Tax Sub & $-$0.048 & $-$0.363$^{**}$ \\ 
+  & (0.185) & (0.172) \\ 
+  Property Tax Nbr & 0.209 & 0.352$^{**}$ \\ 
+  & (0.162) & (0.148) \\ 
+  Income Tax Sub & $-$0.149$^{***}$ & $-$0.125$^{***}$ \\ 
+  & (0.053) & (0.044) \\ 
+  Income Tax Nbr & 0.076$^{*}$ & 0.057$^{*}$ \\ 
+  & (0.039) & (0.032) \\ 
+  Capital Gains Tax Sub & 0.037 & 0.025 \\ 
+  & (0.034) & (0.031) \\ 
+  Capital Gains Tax nbr & $-$0.069$^{**}$ & $-$0.047 \\ 
+  & (0.034) & (0.031) \\ 
+  Sales Tax Sub & $-$0.149$^{***}$ & $-$0.142$^{***}$ \\ 
+  & (0.044) & (0.041) \\ 
+  Sales Tax Nbr & 0.036 & 0.005 \\ 
+  & (0.045) & (0.045) \\ 
+  Corp Tax Sub & 0.026 & 0.029 \\ 
+  & (0.028) & (0.027) \\ 
+  Corp Tax Nbr & 0.011 & 0.001 \\ 
+  & (0.023) & (0.024) \\ 
+  Workers Comp Tax Sub & $-$0.142 & $-$0.113 \\ 
+  & (0.131) & (0.120) \\ 
+  Workers Comp Tax Nbr & $-$0.122 & $-$0.226 \\ 
+  & (0.149) & (0.150) \\ 
+  Unemp. Tax Sub & $-$0.018 & $-$0.059 \\ 
+  & (0.043) & (0.044) \\ 
+  Unemp. Tax Nbr & $-$0.014 & $-$0.023 \\ 
+  & (0.076) & (0.057) \\ 
+  Educ Spending Per Cap Sub & $-$0.0001 & $-$0.001 \\ 
+  & (0.0004) & (0.0004) \\ 
+  Educ Spending Per Cap Nbr & 0.0002 & 0.0001 \\ 
+  & (0.0004) & (0.0004) \\ 
+  Highway Spending Per Cap Sub & 0.0004 & 0.001 \\ 
+  & (0.001) & (0.001) \\ 
+  Highway Spending Per Cap Nbr & $-$0.001 & $-$0.0004 \\ 
+  & (0.001) & (0.001) \\ 
+  Welfare Spending Per Cap Sub & 0.001$^{**}$ & 0.001$^{**}$ \\ 
+  & (0.0003) & (0.0003) \\ 
+  Welfare Spending Per Cap Sub & $-$0.0005 & $-$0.0003 \\ 
+  & (0.0003) & (0.0003) \\ 
+  Constant & 1.085 & 1.667$^{**}$ \\ 
+  & (0.863) & (0.764) \\ 
+ \hline \\[-1.8ex] 
+amenities & Yes & No \\ 
+\hline \\[-1.8ex] 
+Observations & 13,115 & 13,115 \\ 
+R$^{2}$ & 0.098 & 0.053 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{2}{r}{Each model is estimated with Ordinary Least Squares} \\ 
+ & \multicolumn{2}{r}{with clustered standard errors at the state-pair level.} \\ 
+ & \multicolumn{2}{r}{coefficient values and standard errors are reported.} \\ 
+\end{tabular} 
+\end{table} 
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 09:58:18 AM
+\begin{table}[!htbp] \centering 
+  \caption{F-Tests for Symmetry of Coefficients for Total Firm Start Ups} 
+  \label{--Ftests} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Test & F-Stat & P(\textgreater F) \\ 
+\hline \\[-1.8ex] 
+ptax\_sub = -ptax\_nbr & 0.0064 & 0.9361 \\ 
+inctax\_sub = -inctax\_nbr & 1.7426 & 0.1868 \\ 
+capgntax\_sub = -capgntax\_nbr & 0.3873 & 0.5337 \\ 
+salestax\_sub = -salestax\_nbr & 4.5658 & 0.0326 \\ 
+corptax\_sub = -corptax\_nbr & 0.6824 & 0.4088 \\ 
+wctaxfixed\_sub = -wctaxfixed\_nbr & 3.2369 & 0.072 \\ 
+uitaxrate\_sub = -uitaxrate\_nbr & 1.8872 & 0.1695 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 10:39:15 AM
+\begin{table}[!htbp] \centering 
+  \caption{MSA Estates for  Total Firm Births} 
+  \label{--metro} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{births ratio} \\ 
+ & In a MSA & Same MSA & Jointly Urban & Jointly Rural \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ Property Tax Difference & $-$0.339 & $-$0.153 & $-$0.205 & $-$0.390$^{**}$ \\ 
+  & (0.418) & (0.614) & (0.215) & (0.174) \\ 
+  Income Tax Difference & $-$0.183$^{***}$ & $-$0.309$^{***}$ & $-$0.124$^{***}$ & $-$0.041 \\ 
+  & (0.068) & (0.097) & (0.042) & (0.039) \\ 
+  Capital Gains Tax Difference & 0.117$^{*}$ & 0.228$^{***}$ & 0.074$^{*}$ & $-$0.019 \\ 
+  & (0.063) & (0.077) & (0.039) & (0.026) \\ 
+  Sales Tax Difference & $-$0.132 & $-$0.253$^{***}$ & $-$0.125$^{***}$ & $-$0.069 \\ 
+  & (0.086) & (0.086) & (0.048) & (0.053) \\ 
+  Corp Tax Difference & 0.020 & 0.031 & $-$0.037 & 0.058$^{**}$ \\ 
+  & (0.048) & (0.073) & (0.028) & (0.026) \\ 
+  Workers Comp Tax Difference & 0.425$^{**}$ & 0.438 & 0.149 & $-$0.109 \\ 
+  & (0.182) & (0.293) & (0.131) & (0.163) \\ 
+  Unemp. Tax Difference & 0.098$^{*}$ & 0.084 & 0.031 & $-$0.070 \\ 
+  & (0.060) & (0.062) & (0.048) & (0.054) \\ 
+  Educ Spending Per Cap Diff & $-$0.001 & $-$0.0004 & $-$0.0001 & $-$0.001$^{*}$ \\ 
+  & (0.001) & (0.001) & (0.0004) & (0.0004) \\ 
+  Highway Spending Per Cap Diff & $-$0.002$^{*}$ & $-$0.001 & $-$0.00002 & 0.001$^{**}$ \\ 
+  & (0.001) & (0.001) & (0.001) & (0.001) \\ 
+  Welfare Spending Per Cap Diff & 0.0001 & $-$0.0001 & 0.0002 & 0.001$^{*}$ \\ 
+  & (0.001) & (0.001) & (0.0003) & (0.0004) \\ 
+  Constant & $-$0.248 & $-$0.507$^{*}$ & $-$0.329$^{***}$ & 0.381$^{***}$ \\ 
+  & (0.214) & (0.261) & (0.113) & (0.101) \\ 
+ \hline \\[-1.8ex] 
+Observations & 2,223 & 1,383 & 8,180 & 4,935 \\ 
+R$^{2}$ & 0.117 & 0.168 & 0.050 & 0.089 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{4}{r}{All models are estimated with Ordinary Least Squares} \\ 
+ & \multicolumn{4}{r}{and clustered standard errors at the state-pair level.} \\ 
+\end{tabular} 
+\end{table} 
+
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 10:39:14 AM
+\begin{table}[!htbp] \centering 
+  \caption{F-Tests for Density Joint Tax and Expenditure Effects for Total Firm Start Ups} 
+  \label{--Ftests} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Test & F-Stat & P(\textgreater F) \\ 
+\hline \\[-1.8ex] 
+In MSA Taxes & 0.3468 & 0.556 \\ 
+In MSA Exp & 0.6577 & 0.4174 \\ 
+Same MSA Taxes & 0.0086 & 0.9261 \\ 
+Same MSA Exp & 1.0351 & 0.3091 \\ 
+Jointly Urban Taxes & 0.9263 & 0.3359 \\ 
+Jointly Urban Exp & 0.01 & 0.9203 \\ 
+Jointly Rural Taxes & 5.9731 & 0.0146 \\ 
+Jointly Rural Exp & 4.1527 & 0.4221 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 09:58:22 AM
+\begin{table}[!htbp] \centering 
+  \caption{Psuedo-RD for Stability over Time for  Total Firm Births} 
+  \label{--year} 
+\small 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{11}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-12} 
+\\[-1.8ex] & \multicolumn{11}{c}{births ratio} \\ 
+ & 1999 & 2000 & 2001 & 2002 & 2003 & 2004 & 2005 & 2006 & 2007 & 2008 & 2009 \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) & (11)\\ 
+\hline \\[-1.8ex] 
+ Prop Tax Diff & $-$0.411 & $-$0.371 & $-$0.426 & $-$0.390 & $-$0.320 & $-$0.479 & $-$0.344 & $-$0.364 & $-$0.396 & $-$0.311 & $-$0.351$^{***}$ \\ 
+  & ($-$0.411) & ($-$0.426) & ($-$0.390) & ($-$0.320) & ($-$0.479) & ($-$0.344) & ($-$0.364) & ($-$0.396) & ($-$0.311) & ($-$0.351) & (0.116) \\ 
+  Inc Tax Diff & $-$0.025 & $-$0.026 & $-$0.066 & $-$0.061 & $-$0.047 & $-$0.055 & $-$0.063 & $-$0.136 & $-$0.127 & $-$0.123 & $-$0.117$^{***}$ \\ 
+  & ($-$0.025) & ($-$0.066) & ($-$0.061) & ($-$0.047) & ($-$0.055) & ($-$0.063) & ($-$0.136) & ($-$0.127) & ($-$0.123) & ($-$0.117) & (0.026) \\ 
+  Cap Tax Diff & $-$0.045 & $-$0.040 & $-$0.025$^{***}$ & $-$0.006 & $-$0.018 & $-$0.032 & $-$0.029 & 0.054 & 0.036 & 0.032 & 0.028 \\ 
+  & ($-$0.045) & ($-$0.025) & ($-$0.006) & ($-$0.018) & ($-$0.032) & ($-$0.029) & (0.054) & (0.036) & (0.032) & (0.028) & (0.023) \\ 
+  Sal Tax Diff & $-$0.083 & $-$0.097 & $-$0.104 & $-$0.106 & $-$0.095 & $-$0.119 & $-$0.136 & $-$0.102 & $-$0.110 & $-$0.140 & $-$0.132$^{***}$ \\ 
+  & ($-$0.083) & ($-$0.104) & ($-$0.106) & ($-$0.095) & ($-$0.119) & ($-$0.136) & ($-$0.102) & ($-$0.110) & ($-$0.140) & ($-$0.132) & (0.026) \\ 
+  Corp Tax Diff & $-$0.015 & 0.011 & 0.010 & 0.007 & 0.035 & 0.030 & 0.037$^{*}$ & 0.019$^{***}$ & 0.004 & 0.014$^{**}$ & $-$0.007 \\ 
+  & ($-$0.015) & (0.010) & (0.007) & (0.035) & (0.030) & (0.037) & (0.019) & (0.004) & (0.014) & ($-$0.007) & (0.018) \\ 
+  Work Comp Diff & 0.309 & 0.225 & 0.201$^{***}$ & 0.018 & 0.029 & 0.071 & 0.066 & 0.142 & 0.102 & 0.086 & 0.089 \\ 
+  & (0.309) & (0.201) & (0.018) & (0.029) & (0.071) & (0.066) & (0.142) & (0.102) & (0.086) & (0.089) & (0.092) \\ 
+  Unemp. Tax Diff & $-$0.045 & 0.0001 & 0.015 & 0.027 & $-$0.022 & 0.062$^{***}$ & 0.003 & $-$0.014 & $-$0.034$^{*}$ & 0.020 & 0.070$^{*}$ \\ 
+  & ($-$0.045) & (0.015) & (0.027) & ($-$0.022) & (0.062) & (0.003) & ($-$0.014) & ($-$0.034) & (0.020) & (0.070) & (0.039) \\ 
+  Ln Educ Diff & $-$0.0001 & $-$0.0002 & $-$0.0003 & $-$0.0002 & $-$0.0002 & $-$0.001$^{**}$ & $-$0.0003$^{***}$ & 0.0001 & $-$0.0002 & $-$0.0001 & $-$0.0002 \\ 
+  & ($-$0.0001) & ($-$0.0003) & ($-$0.0002) & ($-$0.0002) & ($-$0.001) & ($-$0.0003) & (0.0001) & ($-$0.0002) & ($-$0.0001) & ($-$0.0002) & (0.0002) \\ 
+  Ln Hwy Diff & 0.001 & 0.002 & 0.001$^{***}$ & 0.0002 & 0.0004 & 0.0004$^{***}$ & 0.0001 & 0.0002$^{*}$ & 0.0001 & $-$0.0002 & $-$0.0004 \\ 
+  & (0.001) & (0.001) & (0.0002) & (0.0004) & (0.0004) & (0.0001) & (0.0002) & (0.0001) & ($-$0.0002) & ($-$0.0004) & (0.0003) \\ 
+  Ln Welf. Diff & 0.001 & 0.001 & 0.001 & 0.001 & 0.001 & 0.0005 & 0.001 & 0.001 & 0.001 & 0.001 & 0.001$^{***}$ \\ 
+  & (0.001) & (0.001) & (0.001) & (0.001) & (0.0005) & (0.001) & (0.001) & (0.001) & (0.001) & (0.001) & (0.0002) \\ 
+  Constant & $-$0.034 & $-$0.026$^{*}$ & $-$0.013 & $-$0.057$^{***}$ & 0.007 & $-$0.042$^{***}$ & $-$0.015 & $-$0.097 & $-$0.072 & $-$0.086 & $-$0.075 \\ 
+  & ($-$0.034) & ($-$0.013) & ($-$0.057) & (0.007) & ($-$0.042) & ($-$0.015) & ($-$0.097) & ($-$0.072) & ($-$0.086) & ($-$0.075) & (0.056) \\ 
+ \hline \\[-1.8ex] 
+controls & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+amenities & No & No & No & No & No & No & No & No & No & No & No \\ 
+\hline \\[-1.8ex] 
+Observations & 1,193 & 1,188 & 1,191 & 1,195 & 1,189 & 1,188 & 1,191 & 1,194 & 1,199 & 1,196 & 1,191 \\ 
+R$^{2}$ & 0.068 & 0.059 & 0.066 & 0.050 & 0.052 & 0.068 & 0.064 & 0.062 & 0.069 & 0.067 & 0.077 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{11}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{11}{r}{All models are estimated with Ordinary Least Squares and clustered standard errors at the state-pair level.} \\ 
+\end{tabular} 
+\end{table}
+\end{landscape}
+\restoregeometry
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\input{../analysis/output/naics_subcodes.tex}
+\end{landscape}
+\restoregeometry
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 10:38:01 AM
+\begin{table}[!htbp] \centering 
+  \caption{Counties with Income Tax Agreements for  Total Firm Births} 
+  \label{--agreement} 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{births ratio} \\ 
+ & Recipricol & Recipricol & No Recipricol & No Recipricol \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ Property Tax Difference & 0.293 & 0.306 & $-$0.319$^{**}$ & $-$0.473$^{***}$ \\ 
+  & (0.297) & (0.323) & (0.160) & (0.161) \\ 
+  Income Tax Difference & $-$0.118 & $-$0.201$^{***}$ & $-$0.060$^{**}$ & $-$0.077$^{***}$ \\ 
+  & (0.083) & (0.076) & (0.026) & (0.029) \\ 
+  Capital Gains Tax Difference & 0.077$^{**}$ & 0.157$^{**}$ & $-$0.011 & 0.024 \\ 
+  & (0.037) & (0.069) & (0.023) & (0.027) \\ 
+  Sales Tax Difference & $-$0.020 & $-$0.090 & $-$0.106$^{***}$ & $-$0.072$^{**}$ \\ 
+  & (0.063) & (0.087) & (0.031) & (0.032) \\ 
+  Corp Tax Difference & 0.085$^{**}$ & 0.061$^{*}$ & 0.027 & 0.006 \\ 
+  & (0.042) & (0.036) & (0.025) & (0.025) \\ 
+  Workers Comp Tax Difference & 0.382$^{***}$ & 0.039 & $-$0.175 & 0.087 \\ 
+  & (0.134) & (0.183) & (0.124) & (0.137) \\ 
+  Unemp. Tax Difference & $-$0.086 & $-$0.024 & 0.005 & $-$0.024 \\ 
+  & (0.074) & (0.092) & (0.040) & (0.043) \\ 
+  Educ Spending Per Cap Diff & 0.0003 & $-$0.00002 & $-$0.0003 & $-$0.0003 \\ 
+  & (0.0005) & (0.001) & (0.0003) & (0.0003) \\ 
+  Highway Spending Per Cap Diff & $-$0.001 & $-$0.001 & 0.001$^{**}$ & 0.001$^{**}$ \\ 
+  & (0.001) & (0.001) & (0.0004) & (0.0005) \\ 
+  Welfare Spending Per Cap Diff & 0.001$^{**}$ & 0.0003 & 0.0004 & 0.001$^{**}$ \\ 
+  & (0.0003) & (0.0005) & (0.0002) & (0.0003) \\ 
+  Constant & $-$0.071 & $-$0.218 & $-$0.011 & $-$0.041 \\ 
+  & (0.229) & (0.171) & (0.079) & (0.094) \\ 
+ \hline \\[-1.8ex] 
+controls & Yes & No & Yes & No \\ 
+amenities & Yes & No & Yes & No \\ 
+\hline \\[-1.8ex] 
+Observations & 2,850 & 2,850 & 10,265 & 10,265 \\ 
+R$^{2}$ & 0.151 & 0.063 & 0.131 & 0.059 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+ & \multicolumn{4}{r}{All models are estimated with Ordinary Least Squares} \\ 
+ & \multicolumn{4}{r}{and clustered standard errors at the state-pair level.} \\ 
+\end{tabular} 
+\end{table} 
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 10:38:00 AM
+\begin{table}[!htbp] \centering 
+  \caption{F-Tests for Recipricol Agreement Joint Tax and Expenditure Effects for Total Firm Start Ups} 
+  \label{--Ftests} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Test & F-Stat & P(\textgreater F) \\ 
+\hline \\[-1.8ex] 
+Recipricol, No Amenities, No Controls Taxes & 0.4536 & 0.5007 \\ 
+Recipricol, No Amenities, No Controls Expenditures & 0.5644 & 0.4526 \\ 
+Recipricol, Amenities, Controls Taxes & 1.9347 & 0.5007 \\ 
+Recipricol, Amenities, Controls Expenditures & 0.0196 & 0.4526 \\ 
+Non-Recip, No Amenities, No Controls Taxes & 5.6154 & 0.0178 \\ 
+Non-Recip, No Amenities, No Controls Expenditures & 5.3559 & 0.0207 \\ 
+Non-Recip, Amenities, Controls Taxes & 12.0609 & 5e-04 \\ 
+Non-recip, Amenities, Controls Expenditures & 4.9544 & 0.026 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+\begin{figure}[h]\label{weightedtax}
+    \centering
+    \includegraphics[scale = 0.5]{../analysis/output/_--_weightedtax.png}
+\end{figure}
+
+\input{../analysis/output/entryCorrelations.tex}
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 10:44:30 AM
+\begin{table}[!htbp] \centering 
+  \caption{Result Comparison for Total Firm Births} 
+  \label{meantable} 
+\tiny 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+mean firm entry & preffered side & abs weighted tax & preferred side & same? & sub state & nbr state \\ 
+\hline \\[-1.8ex] 
+$2.591$ & nbr & $0.010$ & sub & different & kansas & nebraska \\ 
+$2.260$ & nbr & $0.016$ & nbr & same & maryland & west virginia \\ 
+$2.194$ & sub & $0.294$ & sub & same & alabama & georgia \\ 
+$2.126$ & sub & $0.205$ & nbr & different & minnesota & wisconsin \\ 
+$1.808$ & sub & $0.097$ & nbr & different & ohio & pennsylvania \\ 
+$1.743$ & sub & $0.555$ & sub & same & colorado & kansas \\ 
+$1.568$ & nbr & $0.105$ & nbr & same & arizona & nevada \\ 
+$1.513$ & nbr & $0.256$ & sub & different & idaho & utah \\ 
+$1.477$ & sub & $0.119$ & sub & same & oklahoma & texas \\ 
+$1.376$ & nbr & $0.015$ & nbr & same & kentucky & west virginia \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Feb 15, 2016 - 10:44:31 AM
+\begin{table}[!htbp] \centering 
+  \caption{Result Comparison for Estimated Firm Enry} 
+  \label{taxtable} 
+\tiny 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+mean firm entry & preffered side & abs weighted tax & preferred side & same? & sub state & nbr state \\ 
+\hline \\[-1.8ex] 
+$0.913$ & nbr & $1.018$ & sub & different & delaware & new jersey \\ 
+$0.864$ & sub & $0.998$ & sub & same & new hampshire & vermont \\ 
+$0.477$ & sub & $0.719$ & sub & same & maine & new hampshire \\ 
+$0.033$ & sub & $0.655$ & nbr & different & nebraska & wyoming \\ 
+$0.219$ & nbr & $0.637$ & nbr & same & delaware & pennsylvania \\ 
+$0.763$ & sub & $0.636$ & sub & same & montana & north dakota \\ 
+$1.146$ & nbr & $0.608$ & nbr & same & delaware & maryland \\ 
+$0.297$ & nbr & $0.565$ & nbr & same & idaho & wyoming \\ 
+$0.295$ & nbr & $0.558$ & nbr & same & california & oregon \\ 
+$1.743$ & sub & $0.555$ & sub & same & colorado & kansas \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+
+\end{document}

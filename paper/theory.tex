@@ -1,8 +1,8 @@
 \section{Theory}
 
-As entrepreneurs and firms look to start up a business in a new location they first choose a market to enter. This choice is due to primary considerations such as labor market characteristics, or location preferences of the owner. They then pick among possible locations within that market. Our model looks at choice of firm entry across state borders, such that individuals have mobility across the border. As a result, firms treat location specific determinants of profit as the same on both sides of the border. This process leaves policy drivers as the only ? remaining difference in expected profits. We formalize the conditions for this process below. 
+As entrepreneurs and firms look to start up a business in a new location they first choose a market to enter. This choice is due to primary considerations such as labor market characteristics, or location preferences of the owner. They then pick among possible locations within that market. Our model looks at choice of firm entry across state borders, such that individuals have mobility across the border. As a result, firms treat location specific determinants of profit as the same on both sides of the border. This process leaves policy drivers as the only remaining difference in expected profits. We formalize the conditions for this process below. 
 
-Assume there exists a spatial equilibrium where wages and capital costs adjust to equalize profits across space, conditional on local tax and location specific variables affecting firm level productivity. If markets are competitive, firms will earn zero economic profits in the long run, but in the short run, demand or policy shocks can result in short run profits (or losses). We expect that if a state raises its taxes relative to its neighbors, , higher relative production costs and lower  relative profits will exist for counties in that state.  Firms looking to locate in that market will, all else equal, choose the lower cost side of the border.  The higher relative taxes rates will  deter firms from entering. Over time,  entry on the lower tax side of the border will bid up prices until after-tax prices, and profits, equalize on either side of the state border. Prices can be proxied by the tax rates directly. Firms make decisions based on information from the previous year, as governments might concurrently change policy along with market entry and there may exist costs to establishing a business.
+Assume there exists a spatial equilibrium where wages and capital costs adjust to equalize profits across space, conditional on local tax and location specific variables affecting firm level productivity. If markets are competitive, firms will earn zero economic profits in the long run, but in the short run, demand or policy shocks can result in short run profits (or losses). We expect that if a state raises its taxes relative to its neighbors, higher relative production costs and lower  relative profits will exist for counties in that state.  Firms looking to locate in that market will, all else equal, choose the lower cost side of the border.  The higher relative taxes rates will  deter firms from entering. Over time,  entry on the lower tax side of the border will bid up prices until after-tax prices, and profits, equalize on either side of the state border. Prices can be proxied by the tax rates directly. Firms make decisions based on information from the previous year, as governments might concurrently change policy along with market entry and there may exist costs to establishing a business.
 
 \begin{assumption}
 Assume that a firms' profit can be expressed as a linear function, for a given location, state, and time pair denoted $(i,j,t)$,
@@ -12,19 +12,19 @@ Assume that a firms' profit can be expressed as a linear function, for a given l
 \begin{equation}
 E[\epsilon_{ijt}] = 0
 \end{equation}
-$Z_{t-1}$ is a $1 \times K_{1}$ row vector of location specific terms, and $X_{t-1}$ is a $1 \times K_{2}$ row vector of state specific terms, and $\gamma, \beta$ are location and state specific fixed effects.
+$Z_{t-1}$ is a $1 \times K_{1}$ row vector of location specific terms, and $X_{t-1}$ is a $1 \times K_{2}$ row vector of state specific terms, and $\gamma, \beta$ are location and state specific coefficients.
 \end{assumption}
 
 Location specific variables include local agglomeration measures, labor market characteristics such as educational attainment, and other local factors that may affect firm productivity. State-level variables include taxes, regulatory policies, and government expenditures. Both sets of variables may evolve over time. Therefore this assumption simply states that the policy variables enter directly into the profit function, and that it is shared across all firm types. 
 
-Now let us focus on a market that is defined by the interval $[-1,1]$, such that for firms at location $i \in [-1,0)$ are in state A, and firms at location $i \in [0,1]$ are in state B. If a firm has two choices,  $y \in [-1,0)$ and $\hat y \in [0,1]$, the firm chooses $y$ over $\hat y$ if 
+Now let us focus on a market that is defined by the interval $[-1,1]$, such that for firms at location $i \in [-1,0)$ are in state A, and firms at location $i \in [0,1]$ are in state B. If a firm has two choices,  $y \in [-1,0)$ and $\hat y \in [0,1]$, the firm chooses $y$ over $\hat y$ if and only if 
 
 \begin{equation}\label{diff}
 E[\pi_{y,A,t}-\pi_{\hat y,B,t}] > 0
 \end{equation}
 
 \begin{assumption}\label{cont}
-$\beta_{i}$ and $Z_{t-1}$ are continuous locally on $[-1,1]$, such that for any $\epsilon > 0$, where  $|\beta_{i}-\beta_{j}| < \frac{\epsilon}{K+1}$, and $|(X_{y,t-1,k}-X_{\hat y,t-1,k})| < \frac{\epsilon}{(K+1)|\beta_{k}|} \forall k \in \{1,...,K_{1}\}$, then there exists a $\delta$ such that $|y - \hat y| < \delta$
+$\beta_{j}, \gamma_{i}$ and $Z_{t-1}$ are continuous locally for at least some distance $\epsilon > 0$ around all border points between two states.
 \end{assumption}
 
 This states that as location $y$ and location $\hat y$  get asymptotically close to the border, the difference between unobserved location specific fixed effects and observed location specific variables converge to zero. This is a technical illustration of labor and capital mobility in close geographic areas. As the distance between the two locations increases this may no longer be the case, as illustrated in Holmes (1998). 
@@ -34,4 +34,4 @@ Therefore, conditional on firms choosing locations $(y,\hat y)$ arbitrarily clos
 E[\pi_{y,A,t}-\pi_{\hat y, B, t}] =  \beta_{A}-\beta_{B}+(X_{A,t-1}-X_{B,t-1})\beta_{2}
 \end{equation}
 
-As we move away from the border location characteristics might dominate the policy effect, especially when we expect policy effects to be small. This theory favors the use of regression discontinuity techniques for estimating policy treatment effects, especially when location specific drivers of firm entry might be unknown or unobserved.
+As we move away from the border location characteristics might dominate the policy effect, especially when we expect policy effects to be small. This theory favors the use of regression discontinuity techniques for estimating policy treatment effects, especially when location specific drivers of firm entry might be unknown or unobserved. Holms (1998) show that firm level productivity also features similar discontinuities at the border, such that looking at firm location choice over areas outside of the border.
