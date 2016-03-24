@@ -131,9 +131,25 @@ master$uitax_diff <- master$uitaxrate_sub - master$uitaxrate_nbr
 
 dt <- data.table(master)
 dt[, c("ptaxL1_diff","inctaxL1_diff","capgntaxL1_diff","salestaxL1_diff","corptaxL1_diff","wctaxL1_diff","uitaxL1_diff")
-   := list(c(NA, diff(ptax_diff)),c(NA, diff(inctax_diff)),c(NA,diff(capgntax_diff)),
-           c(NA, diff(salestax_diff)),c(NA,diff(corptax_diff)),
-           c(NA, diff(wctax_diff)),c(NA,diff(uitax_diff))),by = fips]
+   := list(c(NA, diff(round(ptax_diff,2))),c(NA, diff(round(inctax_diff,2))),c(NA,diff(round(capgntax_diff,2))),
+           c(NA, diff(round(salestax_diff,2))),c(NA,diff(round(corptax_diff,2))),
+           c(NA, diff(round(wctax_diff,2))),c(NA,round(diff(uitax_diff,2)))),by = fips]
+dt[, c("ptaxL2_diff","inctaxL2_diff","capgntaxL2_diff","salestaxL2_diff","corptaxL2_diff","wctaxL2_diff","uitaxL2_diff")
+   := list(c(NA,NA,diff(round(ptax_diff,2))),c(NA,NA, diff(round(inctax_diff,2))),c(NA,NA,diff(round(capgntax_diff,2))),
+           c(NA,NA, diff(round(salestax_diff,2))),c(NA,NA,diff(round(corptax_diff,2))),
+           c(NA,NA, diff(round(wctax_diff,2))),c(NA,NA,round(diff(uitax_diff,2)))),by = fips]
+dt[, c("ptaxL3_diff","inctaxL3_diff","capgntaxL3_diff","salestaxL3_diff","corptaxL3_diff","wctaxL3_diff","uitaxL3_diff")
+   := list(c(NA,NA,NA, diff(round(ptax_diff,2))),c(NA,NA,NA, diff(round(inctax_diff,2))),c(NA,NA,NA,diff(round(capgntax_diff,2))),
+           c(NA,NA,NA, diff(round(salestax_diff,2))),c(NA,NA,NA,diff(round(corptax_diff,2))),
+           c(NA,NA,NA, diff(round(wctax_diff,2))),c(NA,NA,NA,round(diff(uitax_diff,2)))),by = fips]
+dt[, c("ptaxL4_diff","inctaxL4_diff","capgntaxL4_diff","salestaxL4_diff","corptaxL4_diff","wctaxL4_diff","uitaxL4_diff")
+   := list(c(NA,NA,NA,NA, diff(round(ptax_diff,2))),c(NA,NA,NA,NA, diff(round(inctax_diff,2))),c(NA,NA,NA,NA,diff(round(capgntax_diff,2))),
+           c(NA,NA,NA,NA, diff(round(salestax_diff,2))),c(NA,NA,NA,NA,diff(round(corptax_diff,2))),
+           c(NA,NA,NA,NA, diff(round(wctax_diff,2))),c(NA,NA,NA,NA,round(diff(uitax_diff,2)))),by = fips]
+dt[, c("ptaxL5_diff","inctaxL5_diff","capgntaxL5_diff","salestaxL5_diff","corptaxL5_diff","wctaxL5_diff","uitaxL5_diff")
+   := list(c(NA,NA,NA,NA,NA, diff(round(ptax_diff,2))),c(NA,NA,NA,NA,NA, diff(round(inctax_diff,2))),c(NA,NA,NA,NA,NA,diff(round(capgntax_diff,2))),
+           c(NA,NA,NA,NA,NA, diff(round(salestax_diff,2))),c(NA,NA,NA,NA,NA,diff(round(corptax_diff,2))),
+           c(NA,NA,NA,NA,NA, diff(round(wctax_diff,2))),c(NA,NA,NA,NA,NA,round(diff(uitax_diff,2)))),by = fips]
 
 mean_births_sub <- c()
 mean_births_nbr <- c()
@@ -159,9 +175,52 @@ diff <- as.data.frame(dep_var)
 diff$births_ratio <- log(mean_births_sub) - log(mean_births_nbr)
 diff <- diff[is.finite(diff$births_ratio),]
 
-png(filename="~/papers/firm_entry/analysis/output/_--_pairsL1.png")
-scatterplotMatrix( ~ ptaxL1_diff + capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff, data = diff)
-dev.off()
+#png(filename="~/papers/firm_entry/analysis/output/_--_pairsL1.png")
+#scatterplotMatrix( ~ ptaxL1_diff + capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff, data = diff)
+#dev.off()
+
+setorder(diff, year)
+drops <- c("X","statefips.x","countyfips.x","state.x","county.x", "base_sub","births_sub",
+           "deaths_sub","expansions_sub","contractions_sub","educ_pc_L1_sub","hwy_pc_L1_sub",
+           "welfare_pc_L1_sub","ptax_sub","inctax_sub","capgntax_sub","salestax_sub",
+           "corptax_sub","wctaxfixed_sub","uitaxrate_sub","hsplus_sub","realfuelpr_sub",
+           "unionmem_sub","popdensity_sub","pctmanuf_sub","JAN.TEMP...Z_sub","JAN.SUN...Z_sub",
+           "JUL.TEMP...Z_sub","JUL.HUM...Z_sub","TOPOG...Z_sub","LN.WATER..AREA...Z_sub",
+           "pop_sub","statefips.y","countyfips.y","state.y","county.y","base_nbr","births_nbr",
+           "deaths_nbr","expansions_nbr","contractions_nbr",      
+           "educ_pc_L1_nbr","hwy_pc_L1_nbr","welfare_pc_L1_nbr","ptax_nbr",              
+           "inctax_nbr","capgntax_nbr","salestax_nbr","corptax_nbr",           
+           "wctaxfixed_nbr","uitaxrate_nbr","hsplus_nbr","realfuelpr_nbr",        
+           "unionmem_nbr","popdensity_nbr","pctmanuf_nbr","JAN.TEMP...Z_nbr", "JAN.SUN...Z_nbr",
+           "JUL.TEMP...Z_nbr","JUL.HUM...Z_nbr","TOPOG...Z_nbr", "LN.WATER..AREA...Z_nbr",
+           "pop_nbr","lnbase_sub","lnbirths_sub", "lndeaths_sub", "lnexpan_sub","lncontr_sub",
+           "lnbase_nbr", "lnbirths_nbr","lndeaths_nbr","lnexpan_nbr","lncontr_nbr", "base_diff",
+           "base_ratio","births_diff","deaths_diff","deaths_ratio","expansions_diff","expansions_ratio",
+           "contractions_diff","contractions_ratio","net_diff")
+diff <- diff[ , !(names(diff) %in% drops)]
+diff2 <- diff[diff$year > 2004,]
+
+test <- lm(births_ratio ~ ptaxL1_diff +inctaxL1_diff +capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff
+           + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff, data = diff2)
+stprid_c_vcov <- cluster.vcov(test, diff2$stpr_id)
+test_coef <- coeftest(test, vcov = stprid_c_vcov)
+
+test_tax_joint <- linearHypothesis(test, c("ptaxL1_diff +inctaxL1_diff +capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff = 0"), vcov = stprid_c_vcov)
+test_tax_joint
+
+test2 <- lm(births_ratio ~ ptaxL2_diff +inctaxL2_diff +capgntaxL2_diff + salestaxL2_diff + corptaxL2_diff + wctaxL2_diff + uitaxL2_diff
+            + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff, data = diff2)
+stprid_c_vcov <- cluster.vcov(test2, diff2$stpr_id)
+test2_coef <- coeftest(test2, vcov = stprid_c_vcov)
+
+
+
+test2_tax_joint <- linearHypothesis(test2, c("ptaxL1_diff +inctaxL1_diff +capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff = 0"), vcov = stprid_c_vcov)
+test2_tax_joint
+
+test3 <- lm(births_ratio ~ ptaxL1_diff +inctaxL1_diff +capgntaxL1_diff + salestaxL1_diff + corptaxL1_diff + wctaxL1_diff + uitaxL1_diff +ptaxL2_diff +inctaxL2_diff +capgntaxL2_diff + salestaxL2_diff + corptaxL2_diff + wctaxL2_diff + uitaxL2_diff+ educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff, data = diff2)
+stprid_c_vcov <- cluster.vcov(test3, diff2$stpr_id)
+test3_coef <- coeftest(test3, vcov = stprid_c_vcov)
 
 
 # set up mean border areas to use
