@@ -1,0 +1,82 @@
+\documentclass{beamer}
+
+\usetheme{CambridgeUS}
+
+\usepackage{amsmath}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{relsize}
+\usepackage{amsthm}
+
+\usepackage{pgffor}%
+\usepackage{geometry}
+\usepackage{pdflscape}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\title{Discussant: Small Business Lending and Housing Equity}
+\author{Kevin D. Duncan}
+\institute{Iowa State University}
+\date{MEA, Apr 1st, 2016}
+
+\begin{document}
+
+\begin{frame}
+
+\title{Discussant: Small Business Lending and Housing Equity}
+\author{Kevin D. Duncan}
+\institute{Iowa State University}
+\date{Midwest Econ Associaton \\ April 1st, 2016}
+\maketitle
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview}
+\begin{itemize}
+\item Estimates the role of housing equity on small business loans. 
+\item Uses a linear fixed effects model using state level variables between 2000 and 2012, and regressing log lending per capita on quadratic log housing equity, log GDP per capita, and log unemployment rate.
+\item Atheoretical approach, using state level aggregate variables
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Results}
+\begin{itemize}
+\item Estimates a quadratic term for housing equity shows that there is an asymmetry in small bank lending in response to housing equity.
+\item Structural tests show that bank lending behavior was different in the post-Recession (2008 - 2012) period compared to the pre-Recession time period.
+\item When estimating counterfactuals using the whole-period model, they find that the
+loss of housing equity value alone resulted in roughly \$4 billion less small business lending in
+2012 from U.S. banks than would have occurred had housing equity remained at its 2007 level
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Comments}
+\begin{itemize}
+\item How much does the interpolation of FHFA state level price series of 2011-2012 affect the data? What are the estimates like just over 2000-2008?
+\begin{itemize}
+\item Since this is a linear extrapolation, does this actually provide the variation required to estimate the year fixed effects over this interval?
+\end{itemize}
+\item I'm a bit concerned about endogeneity, and of the validity of the proposed instrument. 
+\begin{itemize}
+\item GDP, bank lending, and unemployment can easily all be related to each other in non-trivial ways (try naive estimation of a Panel VAR). Equivalently, housing prices can just as easily fit into this panel VAR setup, possibly making it an invalid instrument.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\centering
+\huge{Thank you for your time!}
+\end{frame}
+
+\end{document}

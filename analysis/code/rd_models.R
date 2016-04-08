@@ -191,7 +191,7 @@ for (m in 1:length(naics)){
   
   
   assign(paste("pols_na_nc",naicsf[m],"reg",sep = "_"), pols_namen_nc_real)
-  assign(paste("pols_na_nc",naicsf[m], sep = "_"), coeftest(pols_namen_nc_real, vcov = stprid_c_vcov))
+  assign(paste("pols_na_nc",naicsf[m], sep = "_"), pols_namen_nc_r_coef)
   
   pols_amen_nc_real <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                           + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
@@ -221,7 +221,7 @@ for (m in 1:length(naics)){
   nacexp <- linearHypothesis(pols_namen_c_r, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
   
   assign(paste("pols_na_c",naicsf[m],"reg",sep = "_"), pols_namen_c_r)
-  assign(paste("pols_na_c",naicsf[m], sep = "_"), coeftest(pols_namen_c_r, vcov = stprid_c_vcov))
+  assign(paste("pols_na_c",naicsf[m], sep = "_"), pols_namen_c_r_coef)
   
   pols_amen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                       + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
@@ -291,9 +291,9 @@ for (m in 1:length(naics)){
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
                                        "Welfare Spending Per Cap Diff"),
-                  notes = c("The first four columns are estimated with OLS and clustered standard errors",
-                  "at the state-pair level. Columns 5 and 6 are estimated with a fixed effect estimator",
-                  "at the state-pair level with homoskedastic standard errors."),
+                  notes = c("The first four columns are estimated with OLS and clustered standard",
+                            " errors at the state-pair level. Columns 5 and 6 are estimated with",
+                            "a fixed effect estimator at the state-pair level with homoskedastic", "standard errors."),
                   omit = c("cont","Z"), omit.labels = c('controls', 'amenities'), omit.yes.no = c("Yes", "No"), omit.stat = c("f","adj.rsq","ser"),
                   column.labels = c("OLS","OLS","OLS","OLS","FE", "FE"),
                   no.space = TRUE, title = paste("Regression Discontinuity Models for ", naics_names[m], "Firm Births", sep = " ")),
@@ -313,18 +313,35 @@ for (m in 1:length(naics)){
   }
   rm(sub)
   
-  write(stargazer(pols_1999,pols_2000,pols_2001,pols_2002,pols_2003,pols_2004,pols_2005,pols_2006,pols_2007,pols_2008,pols_2009,
-                  se = list(pols_1999_vcv,pols_2001_vcv,pols_2002_vcv,pols_2003_vcv,pols_2004_vcv,pols_2005_vcv,pols_2006_vcv,
-                            pols_2007_vcv,pols_2008_vcv,pols_2009_vcv),
-                  notes = "All models are estimated with Ordinary Least Squares and clustered standard errors at the state-pair level.",
+  write(stargazer(pols_1999,pols_2000,pols_2001,pols_2002,pols_2003,pols_2004,
+                  se = list(pols_1999_vcv[,2],pols_2001_vcv[,2],pols_2002_vcv[,2],pols_2003_vcv[,2],pols_2004_vcv[,2]),
+                  notes = c("All models are estimated with Ordinary Least Squares",
+                            "and clustered standard errors at the state-pair level."),
                   dep.var.labels = c("births ratio"), label = paste(naics[m],"year",sep=""), font.size = "small",
                   covariate.labels = c("Prop Tax Diff", "Inc Tax Diff", "Cap Tax Diff",
                                        "Sal Tax Diff", "Corp Tax Diff", "Work Comp Diff",
                                        "Unemp. Tax Diff", "Ln Educ Diff", "Ln Hwy Diff",
                                        "Ln Welf. Diff"),
                   omit = c("cont","Z"), omit.labels = c("controls", "amenities"), omit.stat = c("f","adj.rsq","ser"),
-                  column.labels = c("1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"),
-                  no.space = TRUE, title = paste("Psuedo-RD for Stability over Time for ", naics_names[m], "Firm Births", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "year_rd_results.tex", sep = "_"))
+                  column.labels = c("1999","2000","2001","2002","2003","2004"),
+                  no.space = TRUE, title = paste("Psuedo-RD for Stability over Time for ", naics_names[m],
+                                                 "Firm Births Pt I", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "year_rd_results1.tex", sep = "_"))
+  
+  write(stargazer(pols_2005,pols_2006,pols_2007,pols_2008,pols_2009,
+                  se = list(pols_2005_vcv[,2],pols_2006_vcv[,2],pols_2007_vcv[,2],pols_2008_vcv[,2],pols_2009_vcv[,2]),
+                  notes = c("All models are estimated with Ordinary Least Squares",
+                            "and clustered standard errors at the state-pair level."),
+                  dep.var.labels = c("births ratio"), label = paste(naics[m],"year",sep=""), font.size = "small",
+                  covariate.labels = c("Prop Tax Diff", "Inc Tax Diff", "Cap Tax Diff",
+                                       "Sal Tax Diff", "Corp Tax Diff", "Work Comp Diff",
+                                       "Unemp. Tax Diff", "Ln Educ Diff", "Ln Hwy Diff",
+                                       "Ln Welf. Diff"),
+                  omit = c("cont","Z"), omit.labels = c("controls", "amenities"), omit.stat = c("f","adj.rsq","ser"),
+                  column.labels = c("2005","2006","2007","2008","2009"),
+                  no.space = TRUE, title = paste("Psuedo-RD for Stability over Time for ", naics_names[m],
+                                                 "Firm Births Pt II", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "year_rd_results2.tex", sep = "_"))
+  
+  
   
   
   ##### EXTEND THE BANDWIDTH
@@ -402,10 +419,6 @@ for (m in 1:length(naics)){
                                                     + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
   nancexp <- linearHypothesis(pols_namen_nc_real, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
   
-  
-  assign(paste("pols_na_nc",naicsf[m],"reg",sep = "_"), pols_namen_nc_real)
-  assign(paste("pols_na_nc",naicsf[m], sep = "_"), coeftest(pols_namen_nc_real, vcov = stprid_c_vcov))
-  
   pols_amen_nc_real <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                           + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
                           + educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff
@@ -432,9 +445,6 @@ for (m in 1:length(naics)){
   nactax <- linearHypothesis(pols_namen_c_r, c("ptax_diff + inctax_diff + capgntax_diff
                                                + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff = 0"), vcov = stprid_c_vcov)
   nacexp <- linearHypothesis(pols_namen_c_r, c(" educ_pc_L1_diff + hwy_pc_L1_diff + welfare_pc_L1_diff = 0"), vcov = stprid_c_vcov)
-  
-  assign(paste("pols_na_c",naicsf[m],"reg",sep = "_"), pols_namen_c_r)
-  assign(paste("pols_na_c",naicsf[m], sep = "_"), coeftest(pols_namen_c_r, vcov = stprid_c_vcov))
   
   pols_amen_c_r <- lm(births_ratio ~ ptax_diff + inctax_diff + capgntax_diff
                       + salestax_diff  + corptax_diff  + wctax_diff  + uitax_diff
@@ -503,9 +513,9 @@ for (m in 1:length(naics)){
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
                                        "Welfare Spending Per Cap Diff"),
-                  notes = c("The first four columns are estimated with OLS and clustered standard errors",
-                            "at the state-pair level. Columns 5 and 6 are estimated with a fixed effect estimator",
-                            "at the state-pair level with homoskedastic standard errors."),
+                  notes = c("The first four columns are estimated with OLS and clustered standard",
+                            " errors at the state-pair level. Columns 5 and 6 are estimated with",
+                            "a fixed effect estimator at the state-pair level with homoskedastic", "standard errors."),
                   omit = c("cont","Z"), omit.labels = c('controls', 'amenities'), omit.yes.no = c("Yes", "No"), omit.stat = c("f","adj.rsq","ser"),
                   column.labels = c("OLS","OLS","OLS","OLS","FE", "FE"),
                   no.space = TRUE, title = paste("Extended Bandwidth Discontinuity Models for ", naics_names[m], "Firm Births", sep = " ")),
@@ -525,25 +535,43 @@ for (m in 1:length(naics)){
   }
   rm(sub)
   
-  write(stargazer(pols_1999,pols_2000,pols_2001,pols_2002,pols_2003,pols_2004,pols_2005,pols_2006,pols_2007,pols_2008,pols_2009,
-                  se = list(pols_1999_vcv,pols_2001_vcv,pols_2002_vcv,pols_2003_vcv,pols_2004_vcv,pols_2005_vcv,pols_2006_vcv,
-                            pols_2007_vcv,pols_2008_vcv,pols_2009_vcv),
-                  notes = "All models are estimated with Ordinary Least Squares and clustered standard errors at the state-pair level.",
+  write(stargazer(pols_1999,pols_2000,pols_2001,pols_2002,pols_2003,pols_2004,
+                  se = list(pols_1999_vcv[,2],pols_2001_vcv[,2],pols_2002_vcv[,2],pols_2003_vcv[,2],pols_2004_vcv[,2]),
+                  notes = c("All models are estimated with Ordinary Least Squares",
+                            "and clustered standard errors at the state-pair level."),
                   dep.var.labels = c("births ratio"), label = paste(naics[m],"year_eb",sep=""), font.size = "small",
                   covariate.labels = c("Prop Tax Diff", "Inc Tax Diff", "Cap Tax Diff",
                                        "Sal Tax Diff", "Corp Tax Diff", "Work Comp Diff",
                                        "Unemp. Tax Diff", "Ln Educ Diff", "Ln Hwy Diff",
                                        "Ln Welf. Diff"),
                   omit = c("cont","Z"), omit.labels = c("controls", "amenities"), omit.stat = c("f","adj.rsq","ser"),
-                  column.labels = c("1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009"),
-                  no.space = TRUE, title = paste("Extended Bandwidth for Stability over Time for ", naics_names[m], "Firm Births", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "year_eb_results.tex", sep = "_"))
+                  column.labels = c("1999","2000","2001","2002","2003","2004"),
+                  no.space = TRUE, title = paste("Extended Bandwidth for Stability over Time for ", naics_names[m],
+                                                 "Firm Births Pt I", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "year_eb_results1.tex", sep = "_"))
+  
+  write(stargazer(pols_2005,pols_2006,pols_2007,pols_2008,pols_2009,
+                  se = list(pols_2005_vcv[,2],pols_2006_vcv[,2],
+                            pols_2007_vcv[,2],pols_2008_vcv[,2],pols_2009_vcv[,2]),
+                  notes = c("All models are estimated with Ordinary Least Squares",
+                            "and clustered standard errors at the state-pair level."),
+                  dep.var.labels = c("births ratio"), label = paste(naics[m],"year_eb",sep=""), font.size = "small",
+                  covariate.labels = c("Prop Tax Diff", "Inc Tax Diff", "Cap Tax Diff",
+                                       "Sal Tax Diff", "Corp Tax Diff", "Work Comp Diff",
+                                       "Unemp. Tax Diff", "Ln Educ Diff", "Ln Hwy Diff",
+                                       "Ln Welf. Diff"),
+                  omit = c("cont","Z"), omit.labels = c("controls", "amenities"), omit.stat = c("f","adj.rsq","ser"),
+                  column.labels = c("2005","2006","2007","2008","2009"),
+                  no.space = TRUE, title = paste("Extended Bandwidth for Stability over Time for ", naics_names[m],
+                                                 "Firm Births Pt I", sep = " ")), paste("~/papers/firm_entry/analysis/output/", naics[m], "year_eb_results2.tex", sep = "_"))
   rm(master)
 }
 
 stargazer(pols_na_c_11_reg, pols_na_nc_11_reg,pols_na_c_31_33_reg, pols_na_nc_31_33_reg,pols_na_c_44_45_reg,
           pols_na_nc_44_45_reg,pols_na_c_52_reg,pols_na_nc_52_reg,
-          se = list(pols_na_c_11, pols_na_nc_11,pols_na_c_31_33, pols_na_nc_31_33,pols_na_c_44_45, pols_na_nc_44_45,pols_na_c_52,pols_na_nc_52),
-          notes = "All models are estimated with Ordinary Least Squares and clustered standard errors at the state-pair level.",
+          se = list(pols_na_c_11[,2], pols_na_nc_11[,2],pols_na_c_31_33[,2], pols_na_nc_31_33[,2],pols_na_c_44_45[,2],
+                    pols_na_nc_44_45[,2],pols_na_c_52[,2],pols_na_nc_52[,2]),
+          notes = c("All models are estimated with Ordinary Least Squares",
+                    "and clustered standard errors at the state-pair level."),
           dep.var.labels = c("births ratio"), font.size = "small", label = "naics",
           covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",

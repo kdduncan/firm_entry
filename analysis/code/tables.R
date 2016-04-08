@@ -294,7 +294,7 @@ png(filename="~/papers/firm_entry/analysis/output/_--_weightedtax.png")
 qplot(abs(pols_namen_nc_r_coef[2]*ptax_diff + pols_namen_nc_r_coef[3]*inctax_diff  + pols_namen_nc_r_coef[4]*capgntax_diff
                + pols_namen_nc_r_coef[5]*salestax_diff  + pols_namen_nc_r_coef[6]*corptax_diff  + pols_namen_nc_r_coef[7]*wctax_diff
                + pols_namen_nc_r_coef[8]*uitax_diff), data=finaldat, 
-           xlab = "absolute valued weighted tax differential", geom="histogram",  main = "Weighted Tax Differentials in 2009")
+           xlab = "absolute valued weighted tax differential", geom="histogram")
 dev.off()
 
 png(filename="~/papers/firm_entry/analysis/output/_--_taxdiff.png")
@@ -304,7 +304,7 @@ dev.off()
 
 png(filename="~/papers/firm_entry/analysis/output/_--_birthsdiff.png")
 qplot(abs(births_ratio), data=finaldat,
-              xlab = "Mean Firm Births Ratio", geom="histogram",  main = "Mean Firm Births Ratio in 2009")
+              xlab = "Mean Firm Births Ratio", geom="histogram")
 dev.off()
 
 tmp <- finaldat$finish/abs(finaldat$births_ratio)
