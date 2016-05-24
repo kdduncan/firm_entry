@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.11)  8 APR 2016 11:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.11)  19 APR 2016 09:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -737,7 +737,7 @@ Overfull \hbox (8.52481pt too wide) in paragraph at lines 205--219
  [][] 
  []
 
-<../analysis/output/borders_temp.png, id=361, 642.4pt x 401.5pt>
+<../analysis/output/borders_temp.png, id=362, 642.4pt x 401.5pt>
 File: ../analysis/output/borders_temp.png Graphic file (type png)
 
 <use ../analysis/output/borders_temp.png>
@@ -752,7 +752,7 @@ Overfull \hbox (4.12308pt too wide) in paragraph at lines 225--226
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../analysis/output/rb_picture.png, id=363, 1687.30376pt x 917.4275pt>
+<../analysis/output/rb_picture.png, id=364, 1687.30376pt x 917.4275pt>
 File: ../analysis/output/rb_picture.png Graphic file (type png)
 
 <use ../analysis/output/rb_picture.png>
@@ -767,7 +767,7 @@ Overfull \hbox (20.37863pt too wide) in paragraph at lines 234--235
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../analysis/output/eb_picture.png, id=364, 654.445pt x 394.47375pt>
+<../analysis/output/eb_picture.png, id=365, 654.445pt x 394.47375pt>
 File: ../analysis/output/eb_picture.png Graphic file (type png)
 
 <use ../analysis/output/eb_picture.png>
@@ -787,23 +787,23 @@ Overfull \hbox (1288.60167pt too wide) in paragraph at lines 7--37
  [][] 
  []
 
-) <../analysis/output/_--_pairs.png, id=365, 481.8pt x 481.8pt>
+) <../analysis/output/_--_pairs.png, id=366, 481.8pt x 481.8pt>
 File: ../analysis/output/_--_pairs.png Graphic file (type png)
 
 <use ../analysis/output/_--_pairs.png>
 Package pdftex.def Info: ../analysis/output/_--_pairs.png used on input line 25
-2.
+3.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../analysis/output/_--_pairsL1.png, id=366, 481.8pt x 481.8pt>
+<../analysis/output/_--_pairsL1.png, id=367, 481.8pt x 481.8pt>
 File: ../analysis/output/_--_pairsL1.png Graphic file (type png)
 
 <use ../analysis/output/_--_pairsL1.png>
 Package pdftex.def Info: ../analysis/output/_--_pairsL1.png used on input line 
-257.
+259.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
 
@@ -812,42 +812,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [32] [33] [34 <../analysis/output/borders_temp.png> <../analysis/output/rb_pict
 ure.png>] [35 <../analysis/output/eb_picture.png> <../analysis/output/_--_pairs
 .png (PNG copy)>] [36 <../analysis/output/_--_pairsL1.png (PNG copy)>]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
-* v-part:(T,H,B)=(28.45274pt, 788.14136pt, 28.45274pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=540.60239pt
-* \textheight=788.14136pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
-* \topmargin=-80.81725pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=35.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
 (../analysis/output/_--_rd_results.tex
 
-LaTeX Warning: Float too large for page by 36.1634pt on input line 52.
+LaTeX Warning: Float too large for page by 28.69882pt on input line 53.
 
 ) [37] (../analysis/output/_--_rd_Ftests.tex
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 10.
@@ -860,45 +827,10 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 ) [38
 
 
-
-
 ]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
-* v-part:(T,H,B)=(28.45274pt, 788.14136pt, 28.45274pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=540.60239pt
-* \textheight=788.14136pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
-* \topmargin=-80.81725pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=35.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
 (../analysis/output/_--_eb_results.tex
 
-LaTeX Warning: Float too large for page by 36.1634pt on input line 52.
+LaTeX Warning: Float too large for page by 28.69882pt on input line 53.
 
 ) [39] (../analysis/output/_--_no_equality_rd_results.tex)
 (../analysis/output/_--_Ftests.tex)
@@ -924,12 +856,12 @@ Overfull \hbox (27.03073pt too wide) in paragraph at lines 7--50
  []
 
 ) (../analysis/output/_--_agreerd_Ftests.tex)
-<../analysis/output/_--_weightedtax.png, id=445, 481.8pt x 481.8pt>
+<../analysis/output/_--_weightedtax.png, id=447, 481.8pt x 481.8pt>
 File: ../analysis/output/_--_weightedtax.png Graphic file (type png)
 
 <use ../analysis/output/_--_weightedtax.png>
 Package pdftex.def Info: ../analysis/output/_--_weightedtax.png used on input l
-ine 301.
+ine 302.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
 
@@ -937,20 +869,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (../analysis/output/entryCorrelations.tex)
 (../analysis/output/_--_meantable.tex) (../analysis/output/_--_taxtable.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 311.
 
 [46
 
 
 
 
-
-
 ] [47] [48 <../analysis/output/_--_weightedtax.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 311.
  (./master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 311.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 311.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: 51403CAF2E782EAFD0CD1EEB6F7CF481;1310.
 
@@ -959,9 +889,9 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9069 strings out of 494985
- 134839 string characters out of 6180355
- 272727 words of memory out of 5000000
+ 9072 strings out of 494985
+ 134863 string characters out of 6180355
+ 272728 words of memory out of 5000000
  11883 multiletter control sequences out of 15000+600000
  16111 words of font info for 62 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -984,10 +914,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmtt10.pfb>
-Output written on master.pdf (48 pages, 2439477 bytes).
+Output written on master.pdf (48 pages, 2439724 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 477 compressed objects within 5 object streams
- 166 named destinations out of 1000 (max. 500000)
+ 565 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 169 named destinations out of 1000 (max. 500000)
  191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

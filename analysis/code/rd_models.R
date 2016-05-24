@@ -287,6 +287,7 @@ for (m in 1:length(naics)){
   write(stargazer(pols_amen_c_r, pols_namen_c_r, pols_amen_nc_real, pols_namen_nc_real, pols_amen_fe, pols_fe,
                   se = list(pols_amen_c_r_coef[,2],pols_namen_c_r_coef[,2],pols_amen_nc_r_coef[,2],pols_namen_nc_r_coef[,2],NULL, NULL),
                   label = paste(naics[m], "rd", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
+                  font.size = "footnotesize",
                   covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
@@ -508,7 +509,7 @@ for (m in 1:length(naics)){
   
   write(stargazer(pols_amen_c_r, pols_namen_c_r, pols_amen_nc_real, pols_namen_nc_real, pols_amen_fe, pols_fe,
                   se = list(pols_amen_c_r_coef[,2],pols_namen_c_r_coef[,2],pols_amen_nc_r_coef[,2],pols_namen_nc_r_coef[,2],NULL, NULL),
-                  label = paste(naics[m], "eb", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
+                  label = paste(naics[m], "eb", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE, font.size = "footnotesize",
                   covariate.labels = c("Property Tax Difference", "Income Tax Difference", "Capital Gains Tax Difference",
                                        "Sales Tax Difference", "Corp Tax Difference", "Workers Comp Tax Difference",
                                        "Unemp. Tax Difference", "Educ Spending Per Cap Diff", "Highway Spending Per Cap Diff",
