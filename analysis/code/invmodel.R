@@ -130,6 +130,27 @@ for (m in 1:length(naics)){
   stprid_c_vcov <- cluster.vcov(uitax, master$stpr_id)
   uitax_coef <- coeftest(uitax, vcov = stprid_c_vcov) # results
   
+  png(filename=paste("~/papers/firm_entry/analysis/output/predictedtax", naics[m], ".png", sep = "_"))
+  par(mfrow = c(3,3))
+  hist(master$ptax_diff-predict(ptax), main = "property tax")
+  hist(master$inctax_diff-predict(inctax), main = "income tax")
+  hist(master$salestax_diff-predict(salestax), main = "sales tax")
+  hist(master$capgntax_diff-predict(capgntax), main = "capital gains tax")
+  hist(master$corptax_diff-predict(corptax), , main = "corporate tax")
+  hist(master$wctax_diff-predict(wctax), main = "workers compensation tax")
+  hist(master$uitax_diff-predict(uitax), main = "unemployment insurance tax")
+  dev.off()
+  
+  png(filename=paste("~/papers/firm_entry/analysis/output/predictedtaxplots", naics[m], ".png", sep = "_"))
+  par(mfrow = c(3,3))
+  plot(master$ptax_diff,predict(ptax), main = "property tax")
+  plot(master$inctax_diff,predict(inctax), main = "income tax")
+  plot(master$salestax_diff,predict(salestax), main = "sales tax")
+  plot(master$capgntax_diff,predict(capgntax), main = "capital gains tax")
+  plot(master$corptax_diff,predict(corptax), , main = "corporate tax")
+  plot(master$wctax_diff,predict(wctax), main = "workers compensation tax")
+  plot(master$uitax_diff,predict(uitax), main = "unemployment insurance tax")
+  dev.off()
   
   
   write(stargazer(ptax, inctax, capgntax, salestax,  corptax, wctax, uitax,
