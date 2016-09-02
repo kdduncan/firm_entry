@@ -81,7 +81,11 @@ for (m in 1:length(naics)){
   # eclude data we only see once
   master <- master[master$births_sub > 0 & master$births_nbr > 0,] # 13115
   master <- master[table(master$stpr_id) != 11,] # 13249 for the 'all firm' case
+  master$cofip_id <- paste(master$cofip_sub,master$cofip_nbr, by = "")
   
+  test <- data.frame(master$cofip_id, master$year)
+  testrslt <- unique(test)
+  # difference in length is 75, so this is a similar number to my stata code.
   
   sum <- subset(master, select = c("births_ratio", "ptax_diff", "inctax_diff", "capgntax_diff",
                                    "salestax_diff","corptax_diff","wctax_diff","uitax_diff",

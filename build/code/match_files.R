@@ -14,6 +14,7 @@ rm(tmp)
 
 # my border-matched county data
 border_pairs <- read.csv("~/papers/firm_entry/build/input/border_fipsCodes.csv")
+border_pairs <- unique(border_pairs)
 
 # all already established neighbors
 all_nbr <- border_pairs$cofip_nbr[border_pairs$year == 1999]

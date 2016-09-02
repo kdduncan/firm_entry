@@ -141,6 +141,28 @@ for (m in 1:length(naics)){
   hist(master$uitax_diff-predict(uitax), main = "unemployment insurance tax")
   dev.off()
   
+  png(filename=paste("~/papers/firm_entry/analysis/output/residualtaxplots", naics[m], ".png", sep = "_"))
+  par(mfrow = c(3,3))
+  plot(master$ptax_diff,master$ptax_diff-predict(ptax), main = "property tax")
+  plot(master$inctax_diff,master$inctax_diff-predict(inctax), main = "income tax")
+  plot(master$salestax_diff,master$salestax_diff-predict(salestax), main = "sales tax")
+  plot(master$capgntax_diff,master$capgntax_diff-predict(capgntax), main = "capital gains tax")
+  plot(master$corptax_diff ,master$corptax_diff-predict(corptax), main = "corporate tax")
+  plot(master$wctax_diff,master$wctax_diff-predict(wctax), main = "workers compensation tax")
+  plot(master$uitax_diff,master$uitax_diff-predict(uitax), main = "unemployment insurance tax")
+  dev.off()
+  
+  png(filename=paste("~/papers/firm_entry/analysis/output/absresidualtaxplots", naics[m], ".png", sep = "_"))
+  par(mfrow = c(3,3))
+  plot(abs(master$ptax_diff),master$ptax_diff-predict(ptax), main = "property tax")
+  plot(abs(master$inctax_diff),master$inctax_diff-predict(inctax), main = "income tax")
+  plot(abs(master$salestax_diff),master$salestax_diff-predict(salestax), main = "sales tax")
+  plot(abs(master$capgntax_diff),master$capgntax_diff-predict(capgntax), main = "capital gains tax")
+  plot(abs(master$corptax_diff),master$corptax_diff-predict(corptax), main = "corporate tax")
+  plot(abs(master$wctax_diff),master$wctax_diff-predict(wctax), main = "workers compensation tax")
+  plot(abs(master$uitax_diff),master$uitax_diff-predict(uitax), main = "unemployment insurance tax")
+  dev.off()
+  
   png(filename=paste("~/papers/firm_entry/analysis/output/predictedtaxplots", naics[m], ".png", sep = "_"))
   par(mfrow = c(3,3))
   plot(master$ptax_diff,predict(ptax), main = "property tax")
@@ -152,14 +174,13 @@ for (m in 1:length(naics)){
   plot(master$uitax_diff,predict(uitax), main = "unemployment insurance tax")
   dev.off()
   
-  
-  write(stargazer(ptax, inctax, capgntax, salestax,  corptax, wctax, uitax,
+  stargazer(ptax, inctax, capgntax, salestax,  corptax, wctax, uitax,
                   se = list(ptax_coef[,2],inctax_coef[,2],capgntax_coef[,2],salestax_coef[,2],corptax_coef[,2], wctax_coef[,2],uitax_coef[,2]),
                   label = paste(naics[m], "rd", sep = ""), dep.var.labels = c("births ratio"), model.names = FALSE,
                   font.size = "footnotesize", notes = c("The first four columns are estimated with OLS and clustered standard",
                             " errors at the state-pair level. Columns 5 and 6 are estimated with",
                             "a fixed effect estimator at the state-pair level with homoskedastic", "standard errors."),
                   omit.stat = c("f","adj.rsq","ser"), column.labels = c("ptax","inctax","capgntax","sales","corp", "wc", "ui"),
-                  no.space = TRUE, title = paste("Inverted Model for ", naics_names[m], "Firm Births", sep = " ")),
+                  no.space = TRUE, title = paste("Inverted Model for ", naics_names[m], "Firm Births", sep = " "),
         paste("~/papers/firm_entry/analysis/output/", naics[m], "invrd_results.tex", sep = "_"))
 }

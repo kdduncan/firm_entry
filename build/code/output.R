@@ -22,6 +22,7 @@ taxdat <- taxdat[,-c(1,13)]
 
 # uitax data is not propery normaized in 'all_state_taxes', which we fix below
 uidat <- read.xlsx("~/papers/firm_entry/build/input/uitax_fix.xlsx",1)
+
 uidat$uitaxrate <- uidat$uitaxrate*100
 uidat$year_L1 <- uidat$Year+1
 uidat <- uidat[,-c(1:3)]
@@ -32,6 +33,7 @@ michdat <- michdat[,-c(1)]
 
 # now replace original uitax data
 taxdat <- merge(taxdat,uidat,by.x=c("year_L1","stfip"),by.y = c("year_L1","st_fips"))
+
 # rm(uidat)
 
 # length(michdat$ctax) = 32
@@ -43,11 +45,14 @@ rm(michdat)
 
 # government spending per capita, 1994-2010
 govdat <- read.xlsx("~/papers/firm_entry/build/input/govtexp_L1.xlsx", "Sheet1")
+
 govdat$stfip <- govdat$stfip_sub
 govdat <- govdat[,-c(1,3,4)]
 
 # amenities
 amenities <- read.xlsx("~/papers/firm_entry/build/input/natamenf_1_.xls", 1, startRow = 105)
+# need to check for duplicates
+
 amenities <- amenities[,-c(2,5:14)]
 amenities$FIPS.Code <- as.numeric(as.character(amenities$FIPS.Code))
 
@@ -56,6 +61,8 @@ amenities$FIPS.Code <- as.numeric(as.character(amenities$FIPS.Code))
 
 # fips codes for all US states
 fips<- read.csv("~/papers/firm_entry/build/input/BorderFips.csv")
+# need to check for duplicates
+
 fips$county <- tolower(fips$county)
 fips$state <- tolower(fips$state)
 fips$cofip <- fips$statefips*1000+fips$countyfips
@@ -65,6 +72,8 @@ fips <- fips[fips$county != "state total" & fips$county != "statewide",]
 # 1999 the different files do not line up, so we have to fix it
 # http://www.nber.org/data/census-intercensal-county-population.html
 population <- read.csv("~/papers/firm_entry/build/input/county_population.csv")
+# need to check for duplicates
+
 pop <- c()
 for (i in 1:length(fips$cofip)){
   tmp <- population[population$fips == fips$cofip[i],]
@@ -108,6 +117,7 @@ write.csv(pop_out, file = "~/papers/firm_entry/build/output/pop_1990-2014.csv")
 
 # pairs right next to each other
 border_pairs <- read.csv("~/papers/firm_entry/build/input/border_fipsCodes.csv")
+border_pairs <- unique(border_pairs)
 
 # pairs extending the bandwidth by "1" on the nbr's side ("nbr's nbr")
 increased_band <- read.csv("~/papers/firm_entry/build/output/increased_bandwidth.csv") 
