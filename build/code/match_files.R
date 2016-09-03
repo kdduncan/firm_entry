@@ -90,8 +90,16 @@ for (i in 1:length(unique(border_pairs$year))){
     bandwidth <- rbind(bandwidth, c(unique(border_pairs$year)[i], master[j,1:2]))
   }
 }
-bandwidth <- as.data.frame(lapply(bandwidth,unlist))
+
+# might have to do something that turns this back into a matrix
+# which is what I feel I had before
+# names(bandwidth)[1] <- "year"
+
+bandwidth <- as.matrix(bandwidth)
+bandwidth <- as.data.frame(bandwidth)
 names(bandwidth)[1] <- "year"
+bandwidth <- as.data.frame(lapply(bandwidth,unlist))
+
 
 # write to a csv to be used elsewhere
 write.csv(bandwidth, file = "~/papers/firm_entry/build/output/increased_bandwidth.csv") 
